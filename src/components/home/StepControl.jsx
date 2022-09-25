@@ -20,6 +20,16 @@ import Cut17 from "components/step/act2/chapter1/Cut17";
 import Cut18 from "components/step/act2/chapter1/Cut18";
 import Cut19 from "components/step/act2/chapter1/Cut19";
 import Cut20 from "components/step/act2/chapter1/Cut20";
+import Cut21 from "components/step/act2/chapter2/Cut21";
+import Cut22 from "components/step/act2/chapter2/Cut22";
+import Cut23 from "components/step/act2/chapter2/Cut23";
+import Cut24 from "components/step/act2/chapter2/Cut24";
+import Cut25 from "components/step/act2/chapter2/Cut25";
+import Cut26 from "components/step/act2/chapter2/Cut26";
+import Cut27 from "components/step/act2/chapter2/Cut27";
+import Cut28 from "components/step/act2/chapter2/Cut28";
+import Cut29 from "components/step/act2/chapter2/Cut29";
+import Cut30 from "components/step/act2/chapter2/Cut30";
 
 const StepControl = () => {
   const { step } = useProgress();
@@ -46,6 +56,16 @@ const StepControl = () => {
       {step === 18 && <Cut18 />}
       {step === 19 && <Cut19 />}
       {step === 20 && <Cut20 />}
+      {step === 21 && <Cut21 />}
+      {step === 22 && <Cut22 />}
+      {step === 23 && <Cut23 />}
+      {step === 24 && <Cut24 />}
+      {step === 25 && <Cut25 />}
+      {step === 26 && <Cut26 />}
+      {step === 27 && <Cut27 />}
+      {step === 28 && <Cut28 />}
+      {step === 29 && <Cut29 />}
+      {step === 30 && <Cut30 />}
     </>
   );
 };
