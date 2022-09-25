@@ -1,0 +1,80 @@
+import React, { useState } from "react";
+import styled from "styled-components";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import {
+  AiOutlineFullscreenExit,
+  AiOutlineFullscreen,
+  AiFillHome,
+} from "react-icons/ai";
+import { useProgress } from "store/progress";
+
+const Layout = styled.main`
+  margin: 0 auto;
+  max-width: 500px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+`;
+
+const Settings = styled.aside`
+  padding: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #eeeeee89;
+  z-index: 9;
+`;
+
+const FullscreenBtn = styled.button`
+  padding: 4px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  cursor: pointer;
+`;
+
+const Container = ({ children }) => {
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const { action } = useProgress();
+  const handle = useFullScreenHandle();
+
+  const handleFullscreen = () => {
+    isFullscreen ? handle.enter() : handle.exit();
+    setIsFullscreen((prev) => !prev);
+  };
+
+  const handleGoMain = () => {
+    action.goMain();
+  };
+
+  return (
+    <FullScreen handle={handle}>
+      <Layout>
+        <Settings>
+          <FullscreenBtn type="button" onClick={handleFullscreen}>
+            {isFullscreen ? (
+              <AiOutlineFullscreenExit />
+            ) : (
+              <AiOutlineFullscreen />
+            )}
+          </FullscreenBtn>
+          <AiFillHome onClick={handleGoMain} />
+        </Settings>
+        {children}
+      </Layout>
+    </FullScreen>
+  );
+};
+
+export default Container;
