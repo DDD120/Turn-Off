@@ -30,6 +30,9 @@ import Cut27 from "components/step/act2/chapter2/Cut27";
 import Cut28 from "components/step/act2/chapter2/Cut28";
 import Cut29 from "components/step/act2/chapter2/Cut29";
 import Cut30 from "components/step/act2/chapter2/Cut30";
+import Cut31 from "components/step/act2/chapter3/Cut31";
+import Cut32 from "components/step/act2/chapter3/Cut32";
+import Cut33 from "components/step/act2/chapter3/Cut33";
 
 const StepControl = () => {
   const { step } = useProgress();
@@ -66,6 +69,9 @@ const StepControl = () => {
       {step === 28 && <Cut28 />}
       {step === 29 && <Cut29 />}
       {step === 30 && <Cut30 />}
+      {step === 31 && <Cut31 />}
+      {step === 32 && <Cut32 />}
+      {step === 33 && <Cut33 />}
     </>
   );
 };
