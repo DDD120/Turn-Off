@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import FilesTab from "./FilesTab";
-import FilterInput from "./FilterInput";
 import ButtonBox from "./ButtonBox";
 import Button from "./Button";
 import ConfirmMsgBox from "./ConfirmMsgBox";
@@ -9,6 +8,7 @@ import ImgBox from "./ImgBox";
 import IMG1URL from "images/act2/chapter3/retouch-1.webp";
 import IMG2URL from "images/act2/chapter3/retouch-2.webp";
 import IMG3URL from "images/act2/chapter3/retouch-3.webp";
+import FilterContainer from "./FilterContainer";
 
 const Base = styled.div`
   width: 100%;
@@ -17,10 +17,6 @@ const Base = styled.div`
   flex-direction: column;
   box-shadow: 0px 0px 10px #c9ccd5;
   border-radius: 4px;
-`;
-
-const FilterContainer = styled.div`
-  padding: 10px;
 `;
 
 const INITAL_FILTER_VALUE = {
@@ -72,16 +68,7 @@ const RetouchApp = ({ isActive }) => {
         currentFile={currentFile}
         FILE_STATE={FILE_STATE}
       />
-      <FilterContainer>
-        {Object.keys(filters).map((filter) => (
-          <FilterInput
-            filter={filter}
-            filters={filters}
-            setFilters={setFilters}
-            key={filter}
-          />
-        ))}
-      </FilterContainer>
+      <FilterContainer filters={filters} setFilters={setFilters} />
       <ButtonBox leftText={"RESET"} />
       <ButtonBox>
         <Button event={handleClickResetBtn} bgColor={"#cccccc"}>

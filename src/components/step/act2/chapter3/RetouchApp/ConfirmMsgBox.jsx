@@ -9,12 +9,13 @@ const Base = styled.dialog`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
-  border: 1px solid #000;
+  background-color: #18152e;
+  border: none;
 `;
 
 const ConfirmMsg = styled.p`
-  padding: 12px;
+  color: #fff;
+  margin: 40px;
   text-align: center;
   word-break: keep-all;
 `;
@@ -37,7 +38,7 @@ const ConfirmMsgBox = ({ modalRef, currentFile, setCurrentFile }) => {
   return (
     <Base ref={modalRef}>
       <ConfirmMsg>
-        저장하시겠습니까? <br /> 한 번 저장 시 수정을 다시 못하게 됩니다.
+        저장하시겠습니까? <br /> 저장 시 수정을 다시 못하게 됩니다.
       </ConfirmMsg>
       <ButtonBox>
         <Button event={handleClickCancleBtn} bgColor={"#cccccc"}>

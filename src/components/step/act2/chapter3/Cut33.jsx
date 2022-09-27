@@ -48,14 +48,14 @@ const CutContainer = styled(motion.div)`
 const Cut33 = () => {
   return (
     <Base>
-      <Chat>
+      <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
         <img src={BUBBLE4URL} alt="말풍선" />
         <p>
-          자주 보던 화면이네 <br /> <span>(깨어있을 때 마다 보던...)</span>
+          자주 보던 화면이네 <br /> <span>(아마 누나가 공부하는 )</span>
         </p>
       </Chat>
-      <CutContainer>
-        <img src={IMG1URL} alt="" />
+      <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
+        <img src={IMG1URL} alt="사진 편집 프로그램 킨 채 잠자는 승현" />
       </CutContainer>
       <StepBtn />
     </Base>
