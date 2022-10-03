@@ -39,6 +39,11 @@ import Cut36 from "components/step/act2/chapter3/Cut36";
 import Cut37 from "components/step/act2/chapter3/Cut37";
 import Cut38 from "components/step/act2/chapter3/Cut38";
 import Cut39 from "components/step/act2/chapter3/Cut39";
+import Cut40 from "components/step/act2/chapter4/Cut40";
+import Cut41 from "components/step/act2/chapter4/Cut41";
+import Cut42 from "components/step/act2/chapter4/Cut42";
+import Cut43 from "components/step/act2/chapter4/Cut43";
+import Cut44 from "components/step/act2/chapter4/Cut44";
 
 const StepControl = () => {
   const { step } = useProgress();
@@ -84,6 +89,11 @@ const StepControl = () => {
       {step === 37 && <Cut37 />}
       {step === 38 && <Cut38 />}
       {step === 39 && <Cut39 />}
+      {step === 40 && <Cut40 />}
+      {step === 41 && <Cut41 />}
+      {step === 42 && <Cut42 />}
+      {step === 43 && <Cut43 />}
+      {step === 44 && <Cut44 />}
     </>
   );
 };

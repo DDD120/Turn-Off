@@ -47,7 +47,7 @@ const Cut38 = () => {
           <img src={BUBBLE4URL} alt="말풍선" />
           <p>잘한 건가...?</p>
         </Chat>
-        <img src={IMG1URL} alt="" />
+        <img src={IMG1URL} alt="의문이 드는 뭉게" />
       </CutContainer>
       <StepBtn color="#ffffff" />
     </Base>
