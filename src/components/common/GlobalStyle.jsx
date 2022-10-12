@@ -4,8 +4,8 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "NanumGothicBold";
     src: local("NanumGothicBold"),
-      url("../fonts/NanumGothicBold.woff2") format("woff2"),
-      url("../fonts/NanumGothicBold.woff") format("woff");
+      url("fonts/NanumGothicBold.woff2") format("woff2"),
+      url("fonts/NanumGothicBold.woff") format("woff");
     font-display: swap;
   }
 
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     display: none;
   }
 
-  li {
+  ul, li {
     list-style: none;
   }
 

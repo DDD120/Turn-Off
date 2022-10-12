@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { motion } from "framer-motion";
 
@@ -67,12 +67,18 @@ const ApplyBtn = styled.button`
 
 const SettingModal = ({
   modalRef,
-  toggleSwitchViewHistory,
-  toggleSwitchAlgorithm,
-  handleClickApplyBtn,
   isActiveViewHistory,
   isActiveAlgorithm,
+  setIsActiveViewHistory,
+  setIsActiveAlgorithm,
+  handleClickApplyBtn,
 }) => {
+  const toggleSwitchViewHistory = () => {
+    setIsActiveViewHistory(!isActiveViewHistory);
+  };
+  const toggleSwitchAlgorithm = () => {
+    setIsActiveAlgorithm(!isActiveAlgorithm);
+  };
   return (
     <Base ref={modalRef}>
       <ul>
