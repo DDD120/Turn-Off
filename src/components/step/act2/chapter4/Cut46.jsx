@@ -53,7 +53,7 @@ const Cut46 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [-10, 0] }}
       >
-        <img src={IMG1URL} alt="" />
+        <img src={IMG1URL} alt="기쁜 표정의 뭉게" />
       </CutContainer>
       <StepBtn />
     </Base>

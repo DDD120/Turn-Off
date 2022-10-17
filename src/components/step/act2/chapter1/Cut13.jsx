@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
-import MsgWindow from "./MsgWindow";
+import MsgWindow from "components/step/act2/chapter1/MsgWindow";
 import { motion } from "framer-motion";
 import IMG1URL from "images/act2/chapter1/cut13-1.webp";
 import BUBBLE3URL from "images/bubble/bubble-3.webp";

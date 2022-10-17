@@ -3,7 +3,7 @@ import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import Window from "components/common/Window";
 import Loading from "components/common/Loading";
-import MsgWindow from "./MsgWindow";
+import MsgWindow from "components/step/act2/chapter1/MsgWindow";
 import { motion } from "framer-motion";
 import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
 import {

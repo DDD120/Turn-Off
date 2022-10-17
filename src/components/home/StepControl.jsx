@@ -51,6 +51,10 @@ import Cut48 from "components/step/act2/chapter5/Cut48";
 import Cut49 from "components/step/act2/chapter5/Cut49";
 import Cut50 from "components/step/act2/chapter5/Cut50";
 import Cut51 from "components/step/act2/chapter5/Cut51";
+import Cut52 from "components/step/act2/chapter5/Cut52";
+import Cut53 from "components/step/act2/chapter5/Cut53";
+import Cut54 from "components/step/act2/chapter5/Cut54";
+import Cut55 from "components/step/act3/Cut55";
 
 const StepControl = () => {
   const { step } = useProgress();
@@ -108,6 +112,10 @@ const StepControl = () => {
       {step === 49 && <Cut49 />}
       {step === 50 && <Cut50 />}
       {step === 51 && <Cut51 />}
+      {step === 52 && <Cut52 />}
+      {step === 53 && <Cut53 />}
+      {step === 54 && <Cut54 />}
+      {step === 55 && <Cut55 />}
     </>
   );
 };
