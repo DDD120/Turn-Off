@@ -25,13 +25,23 @@ const Name = styled.div`
   margin-left: 20px;
 `;
 
-const MessageApp = ({ onMotion, isActive, messages, setMessages }) => {
+const MessageApp = ({
+  onMotion,
+  isActive,
+  messages,
+  setMessages,
+  handleShowStepBtn,
+}) => {
   return (
     <Base>
       <TopHeader>
         <Name>엄마</Name>
       </TopHeader>
-      <MsgList onMotion={onMotion} messages={messages} />
+      <MsgList
+        onMotion={onMotion}
+        messages={messages}
+        handleShowStepBtn={handleShowStepBtn}
+      />
       <InputChat isActive={isActive} setMessages={setMessages} />
     </Base>
   );

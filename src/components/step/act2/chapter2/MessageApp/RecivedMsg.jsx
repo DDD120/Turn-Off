@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import IMG1URL from "images/act2/chapter2/profile.webp";
 
 const Base = styled.li`
   width: 70%;
@@ -45,6 +46,10 @@ const ProfilePicture = styled.div`
   overflow: hidden;
   border-radius: 50%;
   background-color: #ccc;
+
+  img {
+    width: 100%;
+  }
 `;
 
 const Text = styled.p`
@@ -80,11 +85,23 @@ const item = {
   end: { opacity: 1, y: 0 },
 };
 
-const RecivedMsg = ({ onMotion = false, msgs, timestamp }) => {
+const RecivedMsg = ({
+  onMotion = false,
+  msgs,
+  timestamp,
+  handleShowStepBtn,
+}) => {
   return (
     <Base>
-      <Animation variants={onMotion && container} initial="start" animate="end">
-        <ProfilePicture></ProfilePicture>
+      <Animation
+        variants={onMotion && container}
+        initial="start"
+        animate="end"
+        onAnimationComplete={onMotion && handleShowStepBtn}
+      >
+        <ProfilePicture>
+          <img src={IMG1URL} alt="" />
+        </ProfilePicture>
         <MsgBox>
           <Name>엄마</Name>
           {msgs.map((msg, index) => {

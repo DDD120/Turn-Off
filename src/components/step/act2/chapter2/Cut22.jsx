@@ -35,12 +35,17 @@ const MsgWrapper = styled.div`
 
 const Cut22 = () => {
   const [showMsg, setShowMsg] = useState(false);
+  const [showStepBtn, setShowStepBtn] = useState(false);
 
   // eslint-disable-next-line no-unused-vars
   const Toast = useToast("이번엔 메신져 앱을 눌러보자");
 
   const handleClickMsgIcon = () => {
     setShowMsg(true);
+  };
+
+  const handleShowStepBtn = () => {
+    setShowStepBtn(true);
   };
 
   return (
@@ -87,10 +92,14 @@ const Cut22 = () => {
             animate={{ opacity: [0, 0.5, 1], scaleY: [0, 1.1, 1] }}
           >
             <MsgWrapper>
-              <MessageApp isActive={false} onMotion={true} />
+              <MessageApp
+                isActive={false}
+                onMotion={true}
+                handleShowStepBtn={handleShowStepBtn}
+              />
             </MsgWrapper>
           </Animation>
-          <StepBtn />
+          {showStepBtn && <StepBtn />}
         </>
       )}
       <ToastContainer />
