@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Base = styled.div`
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 
 const ButtonBox = ({ children }) => {
