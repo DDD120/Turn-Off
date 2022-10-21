@@ -51,7 +51,7 @@ const Cut33 = () => {
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
         <img src={BUBBLE4URL} alt="말풍선" />
         <p>
-          자주 보던 화면이네 <br /> <span>(아마 누나가 공부하는 )</span>
+          자주 보던 화면이네 <br /> <span>(옆에서 자주 구경했던...)</span>
         </p>
       </Chat>
       <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
