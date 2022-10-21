@@ -63,7 +63,7 @@ const Cut48 = () => {
             initial={{ opacity: 0, scaleY: 0 }}
             animate={{ opacity: [0, 0.5, 1], scaleY: [0, 1.04, 1] }}
           >
-            <SecurityApp />
+            <SecurityApp isActive={false} />
           </Animation>
           <StepBtn />
         </>

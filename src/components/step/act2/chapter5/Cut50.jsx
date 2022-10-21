@@ -27,7 +27,7 @@ const Cut50 = () => {
   return (
     <Base>
       <SecurityAppWrapper>
-        <SecurityApp />
+        <SecurityApp isActive={true} />
       </SecurityAppWrapper>
       <ToastContainer />
     </Base>

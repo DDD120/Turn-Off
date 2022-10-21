@@ -39,7 +39,7 @@ const Body = styled.main`
   }
 `;
 
-const SecurityApp = () => {
+const SecurityApp = ({ isActive }) => {
   const [showCheckDetail, setShowCheckDetail] = useState(false);
   const [showCure, setShowCure] = useState(false);
   const [completion, setCompletion] = useState(false);
@@ -56,7 +56,10 @@ const SecurityApp = () => {
       </Header>
       <Body>
         {!showCheckDetail && !completion && (
-          <Main clickEvent={handleClickCheckBtn} completion={completion} />
+          <Main
+            clickEvent={isActive && handleClickCheckBtn}
+            completion={completion}
+          />
         )}
         {showCheckDetail && !showCure && !completion && (
           <CheckDetail setShowCure={setShowCure} />
