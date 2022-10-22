@@ -1,17 +1,16 @@
-import Bubble2URL from "images/bubble/bubble-2.webp";
 import React, { useState } from "react";
+import BUBBLE2URL from "images/bubble/bubble-2.webp";
 import styled from "styled-components";
 import ToggleBtn from "./ToggleBtn";
 import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
+import { IMAGE, TEXT } from "components/common/GlobalStyle";
 
 const Base = styled(motion.div)`
-  padding: 0 10px;
-  overflow: hidden;
   align-self: stretch;
   position: relative;
   flex: 1;
-  background-color: #b8d3f1;
+  background-color: #a4cfff;
   transition: 0.3s;
   z-index: 1;
   &::before {
@@ -59,29 +58,20 @@ const Chat = styled.div`
 
 const Bubble = styled(motion.div)`
   width: 250px;
-
-  & > img {
-    width: 100%;
-  }
 `;
 
-const Text = styled.div`
+const TextBox = styled.div`
   color: #000;
-  text-align: center;
-  word-break: keep-all;
+`;
 
-  & > p:nth-of-type(1) {
-    position: absolute;
+const Text1 = styled.a(TEXT)`
     top: 80px;
     left: 80px;
-    transform: translate(-50%, -50%);
-  }
-  & > p:nth-of-type(2) {
-    position: absolute;
+`;
+
+const Text2 = styled.a(TEXT)`
     top: 200px;
     left: 160px;
-    transform: translate(-50%, -50%);
-  }
 `;
 
 const Cut1 = () => {
@@ -94,12 +84,16 @@ const Cut1 = () => {
       {isDark && (
         <>
           <Chat>
-            <Bubble animate={{ opacity: [0, 1], y: [10, 0] }}>
-              <img src={Bubble2URL} alt="말풍선" />
-              <Text>
-                <p>늦은 밤.</p>
-                <p>누군가에겐 한창 깨어있을 시간.</p>
-              </Text>
+            <Bubble
+              width={324}
+              height={386}
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+            >
+              <IMAGE width={324} height={386} src={BUBBLE2URL} alt="말풍선" />
+              <TextBox>
+                <Text1>늦은 밤.</Text1>
+                <Text2>누군가에겐 한창 깨어있을 시간.</Text2>
+              </TextBox>
             </Bubble>
           </Chat>
           <StepBtn startStep={true} color="#ffffff" />
