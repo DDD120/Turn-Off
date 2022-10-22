@@ -44,9 +44,11 @@ export const IMAGE = styled.img`
   width: 100%;
   height: auto;
   aspect-ratio: ${({ width, height }) => `${width}/${height}`};
+  pointer-events: none;
 `;
 
 export const TEXT = styled.p`
+  width: 70%;
   position: absolute;
   text-align: center;
   word-break: keep-all;
