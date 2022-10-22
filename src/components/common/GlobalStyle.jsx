@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -38,6 +38,21 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     border: none;
   }
+`;
+
+export const IMAGE = styled.img`
+  width: 100%;
+  height: auto;
+  aspect-ratio: ${({ width, height }) => `${width}/${height}`};
+`;
+
+export const TEXT = styled.p`
+  position: absolute;
+  text-align: center;
+  word-break: keep-all;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export default GlobalStyle;
