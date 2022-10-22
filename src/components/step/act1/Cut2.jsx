@@ -48,7 +48,7 @@ const Cut2 = () => {
           </CutContainer>
           <Chat>
             <IMAGE width="327" height="228" src={BUBBLE3URL} alt="말풍선" />
-            <TEXT>그들은 열정을 불태우면서도</TEXT>
+            <TEXT>누군가는 한창 깨어있을 시간이고</TEXT>
           </Chat>
         </Box>
         <Box
@@ -58,14 +58,14 @@ const Cut2 = () => {
         >
           <Chat>
             <IMAGE width="327" height="228" src={BUBBLE3URL} alt="말풍선" />
-            <TEXT>동시에 고통을 받기도 한다.</TEXT>
+            <TEXT>마음이 복잡해질 시간이기도 한다.</TEXT>
           </Chat>
           <CutContainer>
             <IMAGE width="364" height="484" src={IMG2URL} alt="글쓰는 장면" />
           </CutContainer>
         </Box>
+        <StepBtn />
       </div>
-      <StepBtn />
     </Base>
   );
 };

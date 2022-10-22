@@ -64,14 +64,14 @@ const TextBox = styled.div`
   color: #000;
 `;
 
-const Text1 = styled.a(TEXT)`
-    top: 80px;
-    left: 80px;
+const Text1 = styled(TEXT)`
+  top: 80px;
+  left: 80px;
 `;
 
-const Text2 = styled.a(TEXT)`
-    top: 200px;
-    left: 160px;
+const Text2 = styled(TEXT)`
+  top: 200px;
+  left: 160px;
 `;
 
 const Cut1 = () => {
@@ -91,8 +91,8 @@ const Cut1 = () => {
             >
               <IMAGE width={324} height={386} src={BUBBLE2URL} alt="말풍선" />
               <TextBox>
-                <Text1>늦은 밤.</Text1>
-                <Text2>누군가에겐 한창 깨어있을 시간.</Text2>
+                <Text1>늦은 밤</Text1>
+                <Text2>모두가 잠에 들 시간</Text2>
               </TextBox>
             </Bubble>
           </Chat>
