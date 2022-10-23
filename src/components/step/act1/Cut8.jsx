@@ -4,75 +4,72 @@ import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
 import IMG1URL from "images/act1/cut8-1.webp";
 import BUBBLE4URL from "images/bubble/bubble-4.webp";
+import { IMAGE, TEXT } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   position: relative;
 `;
 
-const Chat = styled(motion.div)`
+const Animation = styled(motion.div)`
+  width: 90%;
   position: absolute;
-  z-index: 1;
+  background-color: red;
+  z-index: 9;
+`;
 
-  &:nth-of-type(1) {
-    top: 10px;
-    left: 10px;
-  }
+const Chat = styled.div`
+  max-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+`;
 
-  &:nth-of-type(2) {
-    bottom: 10px;
-    right: 10px;
-  }
+const Chat1 = styled(Chat)`
+  transform: translateX(calc(-50% - 100px)) translateY(calc(-50% - 240px));
+`;
 
-  & > img {
-    max-width: 270px;
-    width: 100%;
-  }
-
-  & > p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    word-break: keep-all;
-  }
+const Chat2 = styled(Chat)`
+  transform: translateX(calc(-50% + 100px)) translateY(calc(-50% + 240px));
 `;
 
 const CutContainer = styled(motion.div)`
   width: 90%;
-  & > img {
-    width: 100%;
-  }
 `;
 
 const Cut8 = () => {
   return (
     <Base>
-      <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [10, 0] }}>
-        <img src={BUBBLE4URL} alt="말풍선" />
-        <p>마음대로 자고 일어날 수 있어서 부러워</p>
-      </Chat>
-      <Chat
+      <Animation
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [10, 0] }}
-        transition={{ delay: 0.4 }}
       >
-        <img src={BUBBLE4URL} alt="말풍선" />
-        <p>나도 뭉게처럼 하루종일 잤으면 좋겠다</p>
-      </Chat>
+        <Chat1>
+          <IMAGE width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+          <TEXT>마음대로 자고 일어날 수 있어서 부러워...</TEXT>
+        </Chat1>
+      </Animation>
       <CutContainer
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [10, 0] }}
         transition={{ delay: 0.2 }}
       >
-        <img src={IMG1URL} alt="승현과 뭉게" />
+        <IMAGE width={500} height={499} src={IMG1URL} alt="승현과 뭉게" />
       </CutContainer>
+      <Animation
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1], y: [10, 0] }}
+        transition={{ delay: 0.4 }}
+      >
+        <Chat2>
+          <IMAGE width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+          <TEXT>나도 뭉게처럼 하루종일 잤으면 좋겠다</TEXT>
+        </Chat2>
+      </Animation>
 
       <StepBtn />
     </Base>

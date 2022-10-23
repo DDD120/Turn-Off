@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
@@ -62,4 +62,4 @@ const WavyText = ({ text, delay = 0, duration = 0.03, ...props }) => {
   );
 };
 
-export default WavyText;
+export default memo(WavyText);

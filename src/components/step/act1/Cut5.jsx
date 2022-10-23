@@ -4,8 +4,9 @@ import WavyText from "./WavyText";
 import StepBtn from "components/common/StepBtn";
 import React, { useState, useEffect } from "react";
 import IMG1URL from "images/act1/cut5-1.webp";
+import { IMAGE } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   display: flex;
@@ -26,10 +27,6 @@ const Chat = styled.div`
 const CutContainer = styled(motion.div)`
   width: 80%;
   z-index: 1;
-
-  & > img {
-    width: 100%;
-  }
 `;
 
 const text =
@@ -58,7 +55,7 @@ const Cut5 = () => {
           duration: 0.4,
         }}
       >
-        <img src={IMG1URL} alt="괴로워하는 승현" />
+        <IMAGE width={453} height={277} src={IMG1URL} alt="괴로워하는 승현" />
       </CutContainer>
 
       {isShowBtn && <StepBtn />}

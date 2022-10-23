@@ -4,8 +4,9 @@ import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
 import IMG1URL from "images/act1/cut6-1.webp";
 import IMG2URL from "images/act1/cut6-2.webp";
+import { IMAGE, HOVER_IMAGE } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -18,15 +19,10 @@ const CutContainer = styled(motion.div)`
   transform: translate(-50%, -50%);
   width: 80%;
 
-  & > p {
+  p {
     position: absolute;
     top: 50%;
     right: 20%;
-  }
-
-  & > img {
-    width: 100%;
-    cursor: pointer;
   }
 `;
 
@@ -46,13 +42,23 @@ const Cut6 = () => {
           animate={{ opacity: [0, 1] }}
         >
           <p>하...</p>
-          <img src={IMG1URL} alt="한숨 쉬는 승현" />
+          <HOVER_IMAGE
+            width={500}
+            height={242}
+            src={IMG1URL}
+            alt="한숨 쉬는 승현"
+          />
         </CutContainer>
       ) : (
         <>
           <CutContainer animate={{ opacity: [0, 1] }}>
             <p>(힐끔)</p>
-            <img src={IMG2URL} alt="밑을 쳐다보는 승현" />
+            <IMAGE
+              width={500}
+              height={242}
+              src={IMG2URL}
+              alt="밑을 쳐다보는 승현"
+            />
           </CutContainer>
           <StepBtn />
         </>

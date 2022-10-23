@@ -4,30 +4,34 @@ import StepBtn from "components/common/StepBtn";
 import IMG1URL from "images/act1/cut9-1.webp";
 import IMG2URL from "images/act1/cut9-2.webp";
 import IMG3URL from "images/act1/cut9-3.webp";
+import { IMAGE } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   position: relative;
-  padding: 10px;
 `;
 
-const Img = styled.div`
+const ImgBox = styled.div`
   background-image: ${({ isChange }) =>
     isChange ? `url(${IMG2URL})` : `url(${IMG1URL})`};
-  width: 100%;
-  height: 240px;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 500/216;
   background-repeat: no-repeat;
   background-position: 0 0;
-  position: relative;
   background-size: contain;
   overflow: hidden;
   animation: opacity 2s 2s;
   cursor: ${({ isChange }) => isChange && "pointer"};
+  transition: 0.3s;
+
+  &:hover {
+    ${({ isChange }) => isChange && "box-shadow: 0px 0px 20px 4px #73b8c2a2"};
+  }
 
   @keyframes opacity {
     0% {
@@ -96,14 +100,9 @@ const ImgWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 240px;
-  padding: 0 10px;
-
-  & > img {
-    width: 100%;
-  }
+  transform: translate(-50%, -49%);
+  width: 90%;
+  aspect-ratio: 500/216;
 `;
 
 const Cut9 = () => {
@@ -122,11 +121,11 @@ const Cut9 = () => {
 
   return (
     <Base>
-      <Img isChange={isChange} onClick={handleClickImg} />
+      <ImgBox isChange={isChange} onClick={handleClickImg} />
       {isShow && (
         <>
           <ImgWrapper>
-            <img src={IMG3URL} alt="눈을 든 멍게" />
+            <IMAGE width={500} height={216} src={IMG3URL} alt="눈을 든 멍게" />
           </ImgWrapper>
           <StepBtn />
         </>

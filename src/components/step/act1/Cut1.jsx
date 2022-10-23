@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
 import { IMAGE, TEXT } from "components/common/GlobalStyle";
 
-const Base = styled(motion.div)`
+const Base = styled(motion.section)`
   align-self: stretch;
   position: relative;
   flex: 1;

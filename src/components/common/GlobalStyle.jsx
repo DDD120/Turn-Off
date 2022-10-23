@@ -47,6 +47,16 @@ export const IMAGE = styled.img`
   pointer-events: none;
 `;
 
+export const HOVER_IMAGE = styled(IMAGE)`
+  pointer-events: auto;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 4px #73b8c2a2;
+  }
+`;
+
 export const TEXT = styled.p`
   width: 70%;
   position: absolute;

@@ -7,7 +7,7 @@ import IMG1URL from "images/act1/cut2-1.webp";
 import IMG2URL from "images/act1/cut2-2.webp";
 import { IMAGE, TEXT } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   position: relative;
   align-self: stretch;
   flex: 1;
