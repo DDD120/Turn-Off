@@ -37,6 +37,7 @@ const Prompt = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
+  padding: 10px;
 
   & > div {
     width: 70%;
@@ -56,7 +57,7 @@ const Button = styled.button`
   font-weight: bold;
   padding: 8px 12px;
   background-color: #dfe3ee;
-  cursor: pointer;
+  cursor: ${({ active }) => active && "pointer"};
   transition: 0.3s;
 
   &:hover {

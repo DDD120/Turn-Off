@@ -3,6 +3,7 @@ import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
 import IMG1URL from "images/act2/chapter1/cut11-1.webp";
+import { DefaultImage } from "components/common/GlobalStyle";
 
 const Base = styled.div`
   align-self: stretch;
@@ -11,15 +12,11 @@ const Base = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 10px;
 `;
 
 const CutContainer = styled(motion.div)`
   position: relative;
-
-  & > img {
-    width: 100%;
-  }
+  width: 90%;
 `;
 
 const Text = styled.div`
@@ -29,6 +26,11 @@ const Text = styled.div`
   transform: translateY(-50%);
   padding: 2px 4px;
   background-color: #ffffff60;
+
+  @media only screen and (max-width: 420px) {
+    font-size: 0.8rem;
+    right: 10px;
+  }
 `;
 
 const Cut11 = () => {
@@ -45,7 +47,12 @@ const Cut11 = () => {
         >
           <p>...그나저나 여긴 어디지 </p>
         </Text>
-        <img src={IMG1URL} alt="위를 올려다보는 뭉게" />
+        <DefaultImage
+          width={500}
+          height={208}
+          src={IMG1URL}
+          alt="위를 올려다보는 뭉게"
+        />
       </CutContainer>
       <StepBtn />
     </Base>

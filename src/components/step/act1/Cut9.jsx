@@ -4,7 +4,7 @@ import StepBtn from "components/common/StepBtn";
 import IMG1URL from "images/act1/cut9-1.webp";
 import IMG2URL from "images/act1/cut9-2.webp";
 import IMG3URL from "images/act1/cut9-3.webp";
-import { IMAGE } from "components/common/GlobalStyle";
+import { DefaultImage } from "components/common/GlobalStyle";
 
 const Base = styled.section`
   align-self: stretch;
@@ -100,7 +100,7 @@ const ImgWrapper = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -49%);
+  transform: translate(-50%, -50%);
   width: 90%;
   aspect-ratio: 500/216;
 `;
@@ -125,7 +125,12 @@ const Cut9 = () => {
       {isShow && (
         <>
           <ImgWrapper>
-            <IMAGE width={500} height={216} src={IMG3URL} alt="눈을 든 멍게" />
+            <DefaultImage
+              width={500}
+              height={216}
+              src={IMG3URL}
+              alt="눈을 든 멍게"
+            />
           </ImgWrapper>
           <StepBtn />
         </>

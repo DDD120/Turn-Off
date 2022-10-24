@@ -4,7 +4,7 @@ import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
 import BUBBLE4URL from "images/bubble/bubble-4.webp";
 import IMG1URL from "images/act1/cut4-1.webp";
-import { IMAGE, TEXT } from "components/common/GlobalStyle";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
 const Base = styled.section`
   align-self: stretch;
@@ -21,7 +21,7 @@ const Chat = styled(motion.div)`
   margin-bottom: 10px;
 `;
 
-const ChatText = styled(TEXT)`
+const ChatText = styled(DefaultText)`
   font-size: 1.2rem;
 `;
 
@@ -55,12 +55,17 @@ const Cut4 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 0.5, 1], y: [-10, 10, 0] }}
       >
-        <IMAGE width="346" height="224" src={BUBBLE4URL} alt="말풍선" />
+        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
         <ChatText>바로 나일 거다</ChatText>
       </Chat>
 
       <CutContainer>
-        <IMAGE width="500" height="415" src={IMG1URL} alt="누워 있는 승현" />
+        <DefaultImage
+          width={500}
+          height={415}
+          src={IMG1URL}
+          alt="누워 있는 승현"
+        />
         <Text>하...</Text>
         <Text>망했다...</Text>
       </CutContainer>

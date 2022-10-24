@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import BUBBLE2URL from "images/bubble/bubble-2.webp";
 import BUBBLE3URL from "images/bubble/bubble-3.webp";
 import IMG1URL from "images/act2/chapter1/cut19-1.webp";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
 const Base = styled.div`
   align-self: stretch;
@@ -15,59 +16,57 @@ const Base = styled.div`
   position: relative;
 `;
 
-const Chat = styled(motion.div)`
-  width: 45%;
+const Animation = styled(motion.div)`
+  width: 90%;
   position: absolute;
+  z-index: 1;
+`;
 
-  & > img {
+const Chat = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+
+  p {
     width: 100%;
-  }
-
-  & > p {
     position: absolute;
-
     text-align: center;
     word-break: keep-all;
   }
 `;
 
 const Chat1 = styled(Chat)`
-  top: 5%;
-  left: 10%;
+  transform: translateX(calc(-50% - 100px)) translateY(calc(-50% - 180px));
   z-index: 1;
 
-  & > p:nth-of-type(1) {
+  p:nth-of-type(1) {
     width: 20%;
-    top: 10%;
-    left: 20%;
+    top: 30px;
+    left: 30px;
   }
 
-  & > p:nth-of-type(2) {
+  p:nth-of-type(2) {
     width: 50%;
-    bottom: 20%;
-    right: 10%;
+    bottom: 30px;
+    right: 20px;
+  }
+
+  @media only screen and (max-width: 420px) {
+    width: 50%;
+    font-size: 0.8rem;
   }
 `;
 
 const Chat2 = styled(Chat)`
-  bottom: 10%;
-  right: 12%;
-
-  & > p {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  transform: translateX(calc(-50% + 100px)) translateY(calc(-50% + 140px));
 `;
 
 const CutContainer = styled.div`
   width: 80%;
   position: relative;
-  & > img {
-    width: 100%;
-  }
 
-  & > span {
+  span {
     position: absolute;
     top: 60%;
     right: 30%;
@@ -77,25 +76,46 @@ const CutContainer = styled.div`
 const Cut19 = () => {
   return (
     <Base>
-      <Chat1
+      <Animation
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [-10, 0] }}
       >
-        <img src={BUBBLE2URL} alt="말풍선" />
-        <p>뭐가 이렇게 많아...</p>
-        <p>별로 중요한 내용은 없는 것 같은데</p>
-      </Chat1>
+        <Chat1>
+          <DefaultImage
+            width={324}
+            height={386}
+            src={BUBBLE2URL}
+            alt="말풍선"
+          />
+          <p>뭐가 이렇게 많아...</p>
+          <p>별로 중요한 내용은 없는 것 같은데</p>
+        </Chat1>
+      </Animation>
+
       <CutContainer>
-        <img src={IMG1URL} alt="당황하는 뭉게" />
+        <DefaultImage
+          width={500}
+          height={322}
+          src={IMG1URL}
+          alt="당황하는 뭉게"
+        />
         <span>헉...</span>
       </CutContainer>
-      <Chat2
+      <Animation
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [-10, 0] }}
       >
-        <img src={BUBBLE3URL} alt="말풍선" />
-        <p>그냥 다 지워도 되겠지? </p>
-      </Chat2>
+        <Chat2>
+          <DefaultImage
+            width={327}
+            height={228}
+            src={BUBBLE3URL}
+            alt="말풍선"
+          />
+          <DefaultText>그냥 다 지워도 되겠지? </DefaultText>
+        </Chat2>
+      </Animation>
+
       <StepBtn />
     </Base>
   );

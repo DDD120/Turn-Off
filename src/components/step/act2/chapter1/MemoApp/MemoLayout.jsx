@@ -72,9 +72,7 @@ const MemoLayout = ({ dragRef, initial, setHasChildElement = false }) => {
         bottom="200"
         right="-200"
       >
-        “새는 힘겹게 투쟁해 알에서 나온다. 알은 세계다. 태어나려는 자는 한
-        세계를 깨뜨려야 한다. 새는 신에게로 날아간다. 그 신의 이름은
-        아프락사스다.”
+        졸린데 잠이 안와
       </Memo>
       <Memo
         dragRef={dragRef}
@@ -96,7 +94,7 @@ const MemoLayout = ({ dragRef, initial, setHasChildElement = false }) => {
         bottom="10"
         right="-10"
       >
-        아까 잡은 벌레 좀 내 생각에서 나가주라!!!
+        아까 잡았던 벌레 또 나오면 어떡하지???
       </Memo>
       <Memo
         dragRef={dragRef}
@@ -118,7 +116,7 @@ const MemoLayout = ({ dragRef, initial, setHasChildElement = false }) => {
         left="-30"
         bottom="120"
       >
-        콘서트 예매 성공했으면
+        콘서트 예매 떨려
       </Memo>
       <Memo
         dragRef={dragRef}

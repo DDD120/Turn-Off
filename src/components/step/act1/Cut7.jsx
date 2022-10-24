@@ -5,7 +5,7 @@ import StepBtn from "components/common/StepBtn";
 import IMG1URL from "images/act1/cut7-1.webp";
 import BUBBLE5URL from "images/bubble/bubble-5.webp";
 import ZzzAnimation from "./ZzzAnimation";
-import { IMAGE, TEXT } from "components/common/GlobalStyle";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
 const Base = styled.section`
   align-self: stretch;
@@ -36,14 +36,14 @@ const Cut7 = () => {
         animate={{ opacity: [0, 1], y: [10, 0] }}
       >
         <ZzzAnimation />
-        <IMAGE width={312} height={236} src={IMG1URL} alt="자는 뭉게" />
+        <DefaultImage width={312} height={236} src={IMG1URL} alt="자는 뭉게" />
       </CutContainer>
       <Chat
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [10, 0], scale: [0.8, 1] }}
       >
-        <IMAGE width={306} height={209} src={BUBBLE5URL} alt="말풍선" />
-        <TEXT>아주 푹 자고 있구먼</TEXT>
+        <DefaultImage width={306} height={209} src={BUBBLE5URL} alt="말풍선" />
+        <DefaultText>아주 푹 자고 있구먼</DefaultText>
       </Chat>
       <StepBtn />
     </Base>

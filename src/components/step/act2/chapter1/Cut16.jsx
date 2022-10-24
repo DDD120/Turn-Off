@@ -4,6 +4,7 @@ import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
 import BUBBLE4URL from "images/bubble/bubble-4.webp";
 import IMG1URL from "images/act2/chapter1/cut16-1.webp";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
 const Base = styled.div`
   align-self: stretch;
@@ -18,44 +19,31 @@ const Base = styled.div`
   flex-direction: column;
   gap: 14px;
   position: relative;
-  padding: 10px;
 `;
 
 const Chat = styled(motion.div)`
   width: 56%;
   position: relative;
-
-  & > img {
-    width: 100%;
-  }
-
-  & > p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    word-break: keep-all;
-  }
 `;
 
 const CutContainer = styled(motion.div)`
   width: 60%;
-
-  & > img {
-    width: 100%;
-  }
 `;
 
 const Cut16 = () => {
   return (
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [-10, 0] }}>
-        <img src={BUBBLE4URL} alt="말풍선" />
-        <p>앗 그러면 지금 컴퓨터 내가 사용할 수 있나?</p>
+        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+        <DefaultText>앗 그러면 지금 컴퓨터 내가 사용할 수 있나?</DefaultText>
       </Chat>
       <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <img src={IMG1URL} alt="설레하는 뭉게" />
+        <DefaultImage
+          width={293}
+          height={325}
+          src={IMG1URL}
+          alt="설레하는 뭉게"
+        />
       </CutContainer>
 
       <StepBtn />

@@ -40,24 +40,15 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const IMAGE = styled.img`
+export const DefaultImage = styled.img`
   width: 100%;
+  display: block;
   height: auto;
   aspect-ratio: ${({ width, height }) => `${width}/${height}`};
   pointer-events: none;
 `;
 
-export const HOVER_IMAGE = styled(IMAGE)`
-  pointer-events: auto;
-  transition: 0.3s;
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 20px 4px #73b8c2a2;
-  }
-`;
-
-export const TEXT = styled.p`
+export const DefaultText = styled.p`
   width: 70%;
   position: absolute;
   text-align: center;

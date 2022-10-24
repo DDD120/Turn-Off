@@ -4,7 +4,7 @@ import styled from "styled-components";
 import ToggleBtn from "./ToggleBtn";
 import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
-import { IMAGE, TEXT } from "components/common/GlobalStyle";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
 const Base = styled(motion.section)`
   align-self: stretch;
@@ -64,12 +64,12 @@ const TextBox = styled.div`
   color: #000;
 `;
 
-const Text1 = styled(TEXT)`
+const Text1 = styled(DefaultText)`
   top: 80px;
   left: 80px;
 `;
 
-const Text2 = styled(TEXT)`
+const Text2 = styled(DefaultText)`
   top: 200px;
   left: 160px;
 `;
@@ -89,7 +89,12 @@ const Cut1 = () => {
               height={386}
               animate={{ opacity: [0, 1], y: [10, 0] }}
             >
-              <IMAGE width={324} height={386} src={BUBBLE2URL} alt="말풍선" />
+              <DefaultImage
+                width={324}
+                height={386}
+                src={BUBBLE2URL}
+                alt="말풍선"
+              />
               <TextBox>
                 <Text1>늦은 밤</Text1>
                 <Text2>모두가 잠에 들 시간</Text2>

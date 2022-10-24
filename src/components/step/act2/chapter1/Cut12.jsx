@@ -5,6 +5,7 @@ import StepBtn from "components/common/StepBtn";
 import MsgWindow from "./MsgWindow";
 import IMG1URL from "images/act2/chapter1/cut12-1.webp";
 import SOUND1 from "sounds/cut12.wav";
+import { DefaultImage } from "components/common/GlobalStyle";
 
 const Base = styled.div`
   align-self: stretch;
@@ -50,12 +51,11 @@ const Cut12 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1, 0.5, 0], x: [-10, 10], y: [-10, 10] }}
       >
-        <img src={IMG1URL} alt="띠링-" />
+        <DefaultImage width={322} height={292} src={IMG1URL} alt="띠링-" />
       </Effect>
-      {/* <audio ref={audioRef} src={SOUND1} type="audio/wav" /> */}
       <audio ref={audioRef}>
         <source src={SOUND1} type="audio/wav" />
-        <track src="" kind="captions" label="" />
+        <track src="" kind="captions" label="띠링 알림소리" />
       </audio>
       <MsgWindowWrapper
         initial={{ opacity: 0 }}
@@ -63,7 +63,6 @@ const Cut12 = () => {
       >
         <MsgWindow />
       </MsgWindowWrapper>
-
       <StepBtn />
     </Base>
   );

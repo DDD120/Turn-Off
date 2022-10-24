@@ -11,6 +11,7 @@ import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
 import { IconWrapper, Active } from "components/common/WindowStyle";
 import BUBBLE2URL from "images/bubble/bubble-2.webp";
+import { DefaultImage } from "components/common/GlobalStyle";
 
 const Base = styled.div`
   align-self: stretch;
@@ -34,10 +35,6 @@ const Chat = styled(motion.div)`
   width: 50%;
   position: relative;
   margin: 0 auto;
-
-  & > img {
-    width: 100%;
-  }
 
   & > p {
     text-align: center;
@@ -75,7 +72,12 @@ const Cut17 = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: [0, 1], y: [10, 0] }}
         >
-          <img src={BUBBLE2URL} alt="말풍선" />
+          <DefaultImage
+            width={324}
+            height={386}
+            src={BUBBLE2URL}
+            alt="말풍선"
+          />
           <p>지금 켜져 있는 실행 프로그램은 5개.</p>
           <p>이 프로그램들을 작업 완료하면 되겠지?</p>
         </Chat>

@@ -15,6 +15,7 @@ import {
   FcPlus,
 } from "react-icons/fc";
 import BUBBLE6URL from "images/bubble/bubble-6.webp";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
 const Base = styled.div`
   align-self: stretch;
@@ -27,26 +28,12 @@ const Base = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 10px;
 `;
 
 const Chat = styled(motion.div)`
   width: 40%;
   position: absolute;
   top: 20%;
-
-  & > img {
-    width: 100%;
-  }
-
-  & > p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    word-break: keep-all;
-    text-align: center;
-  }
 
   @media only screen and (max-width: 768px) {
     width: 60%;
@@ -93,8 +80,13 @@ const Cut14 = () => {
       {!isClicked ? (
         <>
           <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-            <img src={BUBBLE6URL} alt="말풍선" />
-            <p>뭐 일단 확인을 눌러볼까?</p>
+            <DefaultImage
+              width={452}
+              height={140}
+              src={BUBBLE6URL}
+              alt="말풍선"
+            />
+            <DefaultText>뭐 일단 확인을 눌러볼까?</DefaultText>
           </Chat>
 
           <MsgWindowWrapper>
