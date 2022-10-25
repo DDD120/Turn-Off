@@ -4,50 +4,53 @@ import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
 import IMG1URL from "images/act2/chapter2/cut23-1.webp";
 import BUBBLE2URL from "images/bubble/bubble-2.webp";
+import { DefaultImage } from "components/common/GlobalStyle";
 
 const Base = styled.div`
-  padding: 10px;
   align-self: stretch;
   flex: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const CutContainer = styled(motion.div)`
-  width: 100%;
+const Animation = styled(motion.div)`
+  width: 90%;
   position: absolute;
-  top: 10%;
+`;
 
-  & > img {
-    width: 100%;
-  }
+const CutContainer = styled.div`
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
 
-  & > p {
+  p {
     position: absolute;
     top: 50%;
     right: 24%;
   }
 `;
 
-const Chat = styled(motion.div)`
-  width: 50%;
+const Chat = styled.div`
+  width: 60%;
   position: absolute;
-  left: 20%;
-  top: 54%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   word-break: keep-all;
 
-  & > img {
-    width: 100%;
-  }
-
-  & > p:nth-of-type(1) {
+  p:nth-of-type(1) {
     width: 30%;
     position: absolute;
-    top: 14%;
+    top: 16%;
     left: 14%;
   }
 
-  & > p:nth-of-type(2) {
+  p:nth-of-type(2) {
     width: 30%;
     position: absolute;
     bottom: 30%;
@@ -56,21 +59,35 @@ const Chat = styled(motion.div)`
 
   @media only screen and (max-width: 360px) {
     font-size: 0.8rem;
+    p:nth-of-type(1) {
+      position: absolute;
+      top: 14%;
+    }
   }
 `;
 
 const Cut23 = () => {
   return (
     <Base>
-      <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <img src={IMG1URL} alt="감동받은 표정의 뭉게" />
+      <CutContainer>
+        <DefaultImage width={500} height={372} src={IMG1URL} />
         <p>힝...</p>
       </CutContainer>
-      <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [10, 0] }}>
-        <img src={BUBBLE2URL} alt="말풍선" />
-        <p>어머니... 못본지 넘 오래 됐어</p>
-        <p>보고싶다</p>
-      </Chat>
+      <Animation
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1], y: [10, 0] }}
+      >
+        <Chat>
+          <DefaultImage
+            width={324}
+            height={386}
+            src={BUBBLE2URL}
+            alt="말풍선"
+          />
+          <p>어머니... 못본지 넘 오래 됐어</p>
+          <p>보고싶다</p>
+        </Chat>
+      </Animation>
 
       <StepBtn />
     </Base>

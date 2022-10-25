@@ -5,7 +5,7 @@ import newBadWords from "./badwords";
 
 const TextField = styled.div`
   flex: 1;
-  background-color: #ffce63;
+
   display: flex;
 `;
 
@@ -24,9 +24,15 @@ const Text = styled.textarea`
 `;
 
 const SendBtn = styled.button`
-  cursor: pointer;
+  background-color: #ffce63;
+  cursor: ${({ isActive }) => isActive && "pointer"};
   padding: 10px 20px;
   font-family: "NanumGothicBold";
+  transition: 0.3s;
+
+  &:hover {
+    filter: ${({ isActive }) => isActive && "brightness(0.9)"};
+  }
 `;
 
 const InputChat = ({ isActive, setMessages }) => {
@@ -46,7 +52,10 @@ const InputChat = ({ isActive, setMessages }) => {
   return (
     <TextField>
       <Text ref={msgRef} />
-      <SendBtn onClick={isActive ? handleClickSendBtn : undefined}>
+      <SendBtn
+        isActive={isActive}
+        onClick={isActive ? handleClickSendBtn : undefined}
+      >
         전송
       </SendBtn>
     </TextField>

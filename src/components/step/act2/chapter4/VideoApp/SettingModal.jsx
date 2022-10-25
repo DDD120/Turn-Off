@@ -59,7 +59,7 @@ const ApplyBtn = styled.button`
     ${({ isSatisfied }) =>
       isSatisfied &&
       css`
-        filter-color: brightness(0.9);
+        filter: brightness(0.9);
         cursor: pointer;
       `}
   }
