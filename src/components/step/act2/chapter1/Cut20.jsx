@@ -16,7 +16,7 @@ import useToast from "hooks/useToast";
 import Window from "components/common/Window";
 import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;

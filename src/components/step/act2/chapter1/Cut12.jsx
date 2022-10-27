@@ -7,7 +7,7 @@ import IMG1URL from "images/act2/chapter1/cut12-1.webp";
 import SOUND1 from "sounds/cut12.wav";
 import { DefaultImage } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   background-color: #ffffff;

@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { AiFillSetting } from "react-icons/ai";
-
 import Loading from "components/common/Loading";
+import { DefaultImage } from "components/common/GlobalStyle";
 
 const Base = styled.ul`
   background-color: #fff;
@@ -104,7 +104,12 @@ const ViewHistoryList = ({ videos, isLoading, handleClickSettingBtn }) => {
           {videos.map((video, index) => (
             <ViewHistoryItem key={index}>
               <ImgContainer>
-                <img src={video.thumbnail} alt={video.title} />
+                <DefaultImage
+                  width={423}
+                  height={290}
+                  src={video.thumbnail}
+                  alt={video.title}
+                />
                 <RunningTime>{video.running_time}</RunningTime>
                 <PlayBar currentTime={video.current_time} />
               </ImgContainer>

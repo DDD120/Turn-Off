@@ -7,7 +7,7 @@ import IMG1URL from "images/act2/chapter1/cut13-1.webp";
 import BUBBLE3URL from "images/bubble/bubble-3.webp";
 import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   background-color: #ffffff;

@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 import Window from "components/common/Window";
 import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   display: flex;

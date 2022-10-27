@@ -10,7 +10,7 @@ import useToast from "hooks/useToast";
 import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -69,7 +69,7 @@ const Cut30 = () => {
             initial={{ opacity: 0, scaleY: 0 }}
             animate={{ opacity: [0, 0.5, 1], scaleY: [0, 1.04, 1] }}
           >
-            <VideoApp isActiveApp={false} />
+            <VideoApp isActive={false} />
           </Animation>
           <StepBtn />
         </>

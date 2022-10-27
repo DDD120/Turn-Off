@@ -4,8 +4,9 @@ import BUBBLE3URL from "images/bubble/bubble-3.webp";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -20,17 +21,7 @@ const Chat = styled(motion.div)`
   position: relative;
   width: 50%;
 
-  img {
-    width: 100%;
-  }
-
   p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    word-break: keep-all;
-    text-align: center;
     span {
       font-size: 0.8rem;
     }
@@ -38,22 +29,23 @@ const Chat = styled(motion.div)`
 `;
 
 const CutContainer = styled(motion.div)`
-  width: 100%;
-
-  img {
-    width: 100%;
-  }
+  width: 90%;
 `;
 
 const Cut39 = () => {
   return (
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <img src={BUBBLE3URL} alt="말풍선" />
-        <p>나중에 또 수정할 수 있겠지... 뭐</p>
+        <DefaultImage width={327} height={228} src={BUBBLE3URL} alt="말풍선" />
+        <DefaultText>나중에 또 수정할 수 있겠지... 뭐</DefaultText>
       </Chat>
       <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <img src={IMG1URL} alt="" />
+        <DefaultImage
+          width={500}
+          height={318}
+          src={IMG1URL}
+          alt="머리를 긁적이는 뒷모습의 뭉게"
+        />
       </CutContainer>
       <StepBtn />
     </Base>

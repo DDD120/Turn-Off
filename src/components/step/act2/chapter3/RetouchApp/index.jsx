@@ -9,6 +9,7 @@ import IMG1URL from "images/act2/chapter3/retouch-1.webp";
 import IMG2URL from "images/act2/chapter3/retouch-2.webp";
 import IMG3URL from "images/act2/chapter3/retouch-3.webp";
 import FilterContainer from "./FilterContainer";
+import { useProgress } from "store/progress";
 
 const Base = styled.div`
   width: 100%;
@@ -36,11 +37,11 @@ const FILE_STATE = [
     img_url: IMG1URL,
   },
   {
-    title: "뭉게와 함께 카페에서.jpng",
+    title: "눈 내리는 날 뭉게랑.jpng",
     img_url: IMG2URL,
   },
   {
-    title: "바다 갔던 날.jpng",
+    title: "여름밤.jpng",
     img_url: IMG3URL,
   },
 ];
@@ -49,8 +50,9 @@ const RetouchApp = ({ isActive }) => {
   const [currentFile, setCurrentFile] = useState(0);
   const [filters, setFilters] = useState(INITAL_FILTER_VALUE);
   const modalRef = useRef(null);
+  const { action } = useProgress();
 
-  const handleClickResetBtn = () => {
+  const resetFilters = () => {
     setFilters(INITAL_FILTER_VALUE);
   };
 
@@ -58,6 +60,20 @@ const RetouchApp = ({ isActive }) => {
     if (isActive) {
       modalRef.current.showModal();
     }
+  };
+
+  const handleClickCancleBtn = () => {
+    modalRef.current.close();
+  };
+
+  const handleClickConfirmBtn = () => {
+    if (currentFile === 2) {
+      action.increase();
+      return;
+    }
+    resetFilters();
+    modalRef.current.close();
+    setCurrentFile((prev) => prev + 1);
   };
 
   return (
@@ -71,7 +87,7 @@ const RetouchApp = ({ isActive }) => {
       <FilterContainer filters={filters} setFilters={setFilters} />
       <ButtonBox leftText={"RESET"} />
       <ButtonBox>
-        <Button event={handleClickResetBtn} bgColor={"#cccccc"}>
+        <Button event={resetFilters} bgColor={"#cccccc"}>
           RESET
         </Button>
         <Button event={handleClickSaveBtn} bgColor={"#4dabf7"}>
@@ -80,8 +96,8 @@ const RetouchApp = ({ isActive }) => {
       </ButtonBox>
       <ConfirmMsgBox
         modalRef={modalRef}
-        currentFile={currentFile}
-        setCurrentFile={setCurrentFile}
+        handleClickCancleBtn={handleClickCancleBtn}
+        handleClickConfirmBtn={handleClickConfirmBtn}
       />
     </Base>
   );

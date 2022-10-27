@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import IMG1URL from "images/act2/chapter1/cut11-1.webp";
 import { DefaultImage } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   display: flex;

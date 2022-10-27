@@ -3,7 +3,7 @@ import StepBtn from "components/common/StepBtn";
 import styled from "styled-components";
 import FilterContainer from "./RetouchApp/FilterContainer";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   background-color: #18152e;
@@ -27,15 +27,15 @@ const Chat = styled.div`
 `;
 
 const Chat1 = styled(Chat)`
-  top: 30%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -200px);
 `;
 
 const Chat2 = styled(Chat)`
-  bottom: 20%;
+  bottom: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 200px);
 `;
 
 const INITAL_FILTER_VALUE = {

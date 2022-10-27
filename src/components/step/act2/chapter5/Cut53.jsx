@@ -8,7 +8,7 @@ import useToast from "hooks/useToast";
 import { ToastContainer } from "react-toastify";
 import { useProgress } from "store/progress";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -58,7 +58,7 @@ const Button = styled.button`
 `;
 
 const Cut53 = () => {
-  const [showCloseMsgBox, setShowCloseMsgBox] = useState(true);
+  const [showCloseMsgBox, setShowCloseMsgBox] = useState(false);
   // eslint-disable-next-line no-unused-vars
   const Toast = useToast("컴퓨터를 종료하자");
   const { action } = useProgress();

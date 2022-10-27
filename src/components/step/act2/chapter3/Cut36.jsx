@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import useToast from "hooks/useToast";
 import styled from "styled-components";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   display: flex;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   background-color: ${({ isClose }) => (isClose ? "#000" : "#193e68")};
@@ -23,7 +23,7 @@ const Cut54 = () => {
   const handleWindowClose = () => {
     setTimeout(() => {
       setIsClose(true);
-    }, 4000);
+    }, 5000);
   };
 
   return (

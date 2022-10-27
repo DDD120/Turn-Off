@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { AiFillSecurityScan, AiFillCloseCircle } from "react-icons/ai";
 import IMG1URL from "images/act2/chapter5/bad_state.webp";
 import IMG2URL from "images/act2/chapter5/good_state.webp";
+import { DefaultImage } from "components/common/GlobalStyle";
 
 const State = styled.div`
   flex: 1;
@@ -22,7 +23,6 @@ const StateImg = styled.div`
   overflow: hidden;
 
   img {
-    width: 100%;
     border-radius: 50%;
   }
 `;
@@ -89,7 +89,9 @@ const Main = ({ completion, clickEvent }) => {
     <>
       <State>
         <StateImg isGood={completion}>
-          <img
+          <DefaultImage
+            width={376}
+            height={376}
             src={completion ? state.good.img.url : state.bad.img.url}
             alt={completion ? state.good.img.alt : state.good.img.alt}
           />

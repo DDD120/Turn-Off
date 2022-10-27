@@ -3,8 +3,9 @@ import StepBtn from "components/common/StepBtn";
 import IMG1URL from "images/act2/chapter5/cut51-1.webp";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { DefaultImage } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   background-color: #ffffff;
@@ -21,10 +22,6 @@ const Base = styled.div`
 const CutContainer = styled.div`
   width: 60%;
   text-align: center;
-
-  img {
-    width: 100%;
-  }
 `;
 
 const Chat = styled(motion.p)`
@@ -43,7 +40,12 @@ const Cut51 = () => {
         >
           됐다!
         </Chat>
-        <img src={IMG1URL} alt="밝은 표정의 뭉게" />
+        <DefaultImage
+          width={416}
+          height={484}
+          src={IMG1URL}
+          alt="밝은 표정의 뭉게"
+        />
       </CutContainer>
       <StepBtn />
     </Base>

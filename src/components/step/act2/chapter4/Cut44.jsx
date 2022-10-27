@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
 import IMG1URL from "images/act2/chapter4/cut44-1.webp";
 import BUBBLE6URL from "images/bubble/bubble-6.webp";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   display: flex;
@@ -21,26 +22,11 @@ const CutContainer = styled.div`
   justify-content: center;
   width: 60%;
   position: relative;
-  img {
-    width: 100%;
-  }
 `;
 
 const Chat = styled(motion.div)`
   position: relative;
   width: 80%;
-  & > img {
-    width: 100%;
-  }
-
-  & > p {
-    word-break: keep-all;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 `;
 
 const Chat1 = styled(Chat)`
@@ -59,21 +45,36 @@ const Cut44 = () => {
   return (
     <Base>
       <CutContainer>
-        <img src={IMG1URL} alt="영상을 클릭하는 뭉게 손가락" />
+        <DefaultImage
+          width={359}
+          height={453}
+          src={IMG1URL}
+          alt="망설여하는 뭉게"
+        />
         <Chat1
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1], y: [10, 0] }}
         >
-          <img src={BUBBLE6URL} alt="말풍선" />
-          <p>...아냐 한 번 보면 계속 볼 것 같아 </p>
+          <DefaultImage
+            width={452}
+            height={140}
+            src={BUBBLE6URL}
+            alt="말풍선"
+          />
+          <DefaultText>...아냐 한 번 보면 계속 볼 것 같아 </DefaultText>
         </Chat1>
         <Chat2
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1], y: [10, 0] }}
           transition={{ delay: 0.2 }}
         >
-          <img src={BUBBLE6URL} alt="말풍선" />
-          <p>하던 일이나 마저 하자</p>
+          <DefaultImage
+            width={452}
+            height={140}
+            src={BUBBLE6URL}
+            alt="말풍선"
+          />
+          <DefaultText>하던 일이나 마저 하자</DefaultText>
         </Chat2>
       </CutContainer>
 

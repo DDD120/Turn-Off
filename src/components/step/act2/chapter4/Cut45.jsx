@@ -10,7 +10,7 @@ import useToast from "hooks/useToast";
 import { motion, AnimatePresence } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -57,7 +57,7 @@ const Cut45 = () => {
       <AnimatePresence>
         {!isCompleted && (
           <Animation exit={{ opacity: [1, 0.5, 0], scaleY: [1, 1.04, 0] }}>
-            <VideoApp closeVideoApp={closeVideoApp} isActiveApp={true} />
+            <VideoApp closeVideoApp={closeVideoApp} isActive={true} />
           </Animation>
         )}
       </AnimatePresence>

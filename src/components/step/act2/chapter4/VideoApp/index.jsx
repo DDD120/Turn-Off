@@ -94,7 +94,7 @@ let videos = [
   },
 ];
 
-const VideoApp = ({ isActiveApp, closeVideoApp }) => {
+const VideoApp = ({ isActive, closeVideoApp }) => {
   const modalRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isActiveViewHistory, setIsActiveViewHistory] = useState(false);
@@ -104,7 +104,7 @@ const VideoApp = ({ isActiveApp, closeVideoApp }) => {
     if (isActiveViewHistory && isActiveAlgorithm) {
       return;
     }
-    if (isActiveApp) {
+    if (isActive) {
       modalRef.current.showModal();
     }
     return;

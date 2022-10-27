@@ -6,7 +6,7 @@ import useToast from "hooks/useToast";
 import SecurityApp from "./SecurityApp";
 import { motion } from "framer-motion";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;

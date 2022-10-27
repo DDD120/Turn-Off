@@ -13,7 +13,7 @@ import { IconWrapper, Active } from "components/common/WindowStyle";
 import BUBBLE2URL from "images/bubble/bubble-2.webp";
 import { DefaultImage } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;

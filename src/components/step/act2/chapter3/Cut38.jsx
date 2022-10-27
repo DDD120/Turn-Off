@@ -4,8 +4,9 @@ import BUBBLE4URL from "images/bubble/bubble-4.webp";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -15,25 +16,15 @@ const Base = styled.div`
 
 const CutContainer = styled.div`
   position: absolute;
-  bottom: -10px;
   width: 50%;
-
-  img {
-    width: 100%;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const Chat = styled(motion.div)`
   position: relative;
-
-  p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    word-break: keep-all;
-    text-align: center;
-  }
+  margin-bottom: 10px;
 `;
 
 const Cut38 = () => {
@@ -44,12 +35,22 @@ const Cut38 = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1], y: [-10, 0] }}
         >
-          <img src={BUBBLE4URL} alt="말풍선" />
-          <p>잘한 건가...?</p>
+          <DefaultImage
+            width={346}
+            height={224}
+            src={BUBBLE4URL}
+            alt="말풍선"
+          />
+          <DefaultText>잘한 건가...?</DefaultText>
         </Chat>
-        <img src={IMG1URL} alt="의문이 드는 뭉게" />
+        <DefaultImage
+          width={369}
+          height={745}
+          src={IMG1URL}
+          alt="의문이 드는 뭉게"
+        />
       </CutContainer>
-      <StepBtn color="#ffffff" />
+      <StepBtn />
     </Base>
   );
 };

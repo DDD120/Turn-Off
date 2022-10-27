@@ -10,7 +10,7 @@ import SecurityApp from "./SecurityApp";
 import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;

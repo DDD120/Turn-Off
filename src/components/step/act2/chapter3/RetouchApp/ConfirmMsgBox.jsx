@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useProgress } from "store/progress";
+
 import Button from "./Button";
 import ButtonBox from "./ButtonBox";
 
@@ -20,21 +20,11 @@ const ConfirmMsg = styled.p`
   word-break: keep-all;
 `;
 
-const ConfirmMsgBox = ({ modalRef, currentFile, setCurrentFile }) => {
-  const { action } = useProgress();
-
-  const handleClickCancleBtn = () => {
-    modalRef.current.close();
-  };
-  const handleClickConfirmBtn = () => {
-    if (currentFile === 2) {
-      action.increase();
-      return;
-    }
-    modalRef.current.close();
-    setCurrentFile((prev) => prev + 1);
-  };
-
+const ConfirmMsgBox = ({
+  modalRef,
+  handleClickCancleBtn,
+  handleClickConfirmBtn,
+}) => {
   return (
     <Base ref={modalRef}>
       <ConfirmMsg>

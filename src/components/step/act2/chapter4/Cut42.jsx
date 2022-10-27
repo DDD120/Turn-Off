@@ -4,8 +4,9 @@ import BUBBLE7URL from "images/bubble/bubble-7.webp";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -20,19 +21,6 @@ const Chat = styled(motion.div)`
   position: relative;
   width: 50%;
 
-  img {
-    width: 100%;
-  }
-
-  p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    word-break: keep-all;
-    text-align: center;
-  }
-
   @media only screen and (max-width: 420px) {
     font-size: 0.9rem;
   }
@@ -40,21 +28,22 @@ const Chat = styled(motion.div)`
 
 const CutContainer = styled.div`
   width: 90%;
-
-  img {
-    width: 100%;
-  }
 `;
 
 const Cut42 = () => {
   return (
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [-10, 0] }}>
-        <img src={BUBBLE7URL} alt="말풍선" />
-        <p>아마도 누나가 아까 봤었던 영상 목록인가봐</p>
+        <DefaultImage width={237} height={244} src={BUBBLE7URL} alt="말풍선" />
+        <DefaultText>아마도 누나가 아까 봤었던 영상 목록인가봐</DefaultText>
       </Chat>
       <CutContainer>
-        <img src={IMG1URL} alt="누워서 스마트폰으로 영상보는 승현" />
+        <DefaultImage
+          width={500}
+          height={169}
+          src={IMG1URL}
+          alt="누워서 스마트폰으로 영상보는 승현"
+        />
       </CutContainer>
       <StepBtn />
     </Base>

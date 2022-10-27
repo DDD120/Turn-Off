@@ -17,7 +17,7 @@ import {
 import BUBBLE6URL from "images/bubble/bubble-6.webp";
 import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   background-color: #ffffff;

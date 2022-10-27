@@ -6,7 +6,7 @@ import IMG1URL from "images/act2/chapter2/cut25-1.webp";
 import BUBBLE4URL from "images/bubble/bubble-4.webp";
 import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   display: flex;
