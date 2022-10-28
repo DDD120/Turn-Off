@@ -4,8 +4,9 @@ import BUBBLE4URL from "images/bubble/bubble-4.webp";
 import StepBtn from "components/common/StepBtn";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -18,40 +19,28 @@ const Base = styled.div`
 
 const CutContainer = styled.div`
   width: 50%;
-
-  img {
-    width: 100%;
-  }
 `;
 
 const Chat = styled(motion.div)`
   position: relative;
   width: 50%;
-
-  img {
-    width: 100%;
-  }
-
-  p {
-    word-break: keep-all;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 `;
 
 const Cut56 = () => {
   return (
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [-10, 0] }}>
-        <p>으음 잘잤다</p>
-        <img src={BUBBLE4URL} alt="말풍선" />
+        <DefaultText>으음 잘잤다</DefaultText>
+        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
       </Chat>
 
       <CutContainer>
-        <img src={IMG1URL} alt="" />
+        <DefaultImage
+          width={253}
+          height={233}
+          src={IMG1URL}
+          alt="기지개 켜는 승현"
+        />
       </CutContainer>
       <StepBtn />
     </Base>

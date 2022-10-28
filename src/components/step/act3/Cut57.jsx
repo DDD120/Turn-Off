@@ -4,8 +4,9 @@ import BUBBLE4URL from "images/bubble/bubble-4.webp";
 import StepBtn from "components/common/StepBtn";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -17,25 +18,10 @@ const Base = styled.div`
 
 const CutContainer = styled.div`
   width: 90%;
-
-  img {
-    width: 100%;
-  }
 `;
 
 const Chat = styled(motion.div)`
   width: 50%;
-  img {
-    width: 100%;
-  }
-  p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    word-break: keep-all;
-    text-align: center;
-  }
 `;
 
 const Chat1 = styled(Chat)`
@@ -51,22 +37,26 @@ const Cut57 = () => {
   return (
     <Base>
       <Chat1 initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <img src={BUBBLE4URL} alt="말풍선" />
-        <p>언제 잠든 거지?</p>
+        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+        <DefaultText>언제 잠든 거지?</DefaultText>
       </Chat1>
 
       <CutContainer>
-        <img src={IMG1URL} alt="밝은 표정의 뭉게" />
+        <DefaultImage
+          width={500}
+          height={309}
+          src={IMG1URL}
+          alt="의아한 표정의 승현"
+        />
       </CutContainer>
       <Chat2
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1] }}
         transition={{ delay: 0.2 }}
       >
-        <img src={BUBBLE4URL} alt="말풍선" />
-        <p>오랜만에 개운하네 피곤한 것도 없고</p>
+        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+        <DefaultText>그래도 꽤 일찍 잠든 것 같은데</DefaultText>
       </Chat2>
-
       <StepBtn />
     </Base>
   );

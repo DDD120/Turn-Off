@@ -4,8 +4,9 @@ import BUBBLE3URL from "images/bubble/bubble-3.webp";
 import StepBtn from "components/common/StepBtn";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -18,38 +19,29 @@ const Base = styled.div`
 
 const CutContainer = styled.div`
   width: 90%;
-
-  img {
-    width: 100%;
-  }
 `;
 
 const Chat = styled(motion.div)`
   position: relative;
   width: 50%;
-
-  img {
-    width: 100%;
-  }
-  p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    word-break: keep-all;
-    text-align: center;
-  }
 `;
 
 const Cut61 = () => {
   return (
     <Base>
       <CutContainer>
-        <img src={IMG1URL} alt="옆모습 승현" />
+        <DefaultImage
+          width={500}
+          height={241}
+          src={IMG1URL}
+          alt="옆모습 승현"
+        />
       </CutContainer>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <img src={BUBBLE3URL} alt="말풍선" />
-        <p>그럼 오늘도</p>
+        <DefaultImage width={327} height={228} src={BUBBLE3URL} alt="말풍선" />
+        <DefaultText>
+          오랜만에 개운하게 일어난 것 같아. 피곤한 것도 없고
+        </DefaultText>
       </Chat>
       <StepBtn />
     </Base>

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import IMG1URL from "images/act3/cut55-1.webp";
 import IMG2URL from "images/act3/cut55-2.webp";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
+import { DefaultImage } from "components/common/GlobalStyle";
 
-const Base = styled.div`
+const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
@@ -15,12 +16,19 @@ const Base = styled.div`
 `;
 
 const CutContainer = styled(motion.div)`
-  cursor: pointer;
   width: 90%;
 
-  img {
-    width: 100%;
-  }
+  ${({ isClicked }) =>
+    !isClicked &&
+    css`
+      pointer-events: auto;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0px 0px 20px 4px #73b8c2a2;
+      }
+    `}
 `;
 
 const Cut55 = () => {
@@ -36,8 +44,14 @@ const Cut55 = () => {
         onClick={handleClickImg}
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1] }}
+        isClicked={isClicked}
       >
-        <img src={isClicked ? IMG2URL : IMG1URL} alt="" />
+        <DefaultImage
+          width={500}
+          height={412}
+          src={isClicked ? IMG2URL : IMG1URL}
+          alt=""
+        />
       </CutContainer>
       {isClicked && <StepBtn />}
     </Base>

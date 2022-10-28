@@ -3,7 +3,7 @@ import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { useProgress } from "store/progress";
 
-const Base = styled.div`
+const Base = styled.section`
   position: relative;
   align-self: stretch;
   flex: 1;
