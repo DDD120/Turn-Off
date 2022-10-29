@@ -4,9 +4,8 @@ import { toast } from "react-toastify";
 import TOAST_IMGURL from "images/act2/toast.webp";
 
 const ToastImg = styled.img`
-  width: 25px;
-  height: 25px;
-  margin-right: 12px;
+  width: 20px;
+  height: 20px;
 `;
 
 const useToast = (text) => {

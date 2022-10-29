@@ -28,7 +28,7 @@ const Cut30 = () => {
   const [showVideoApp, setShowVideoApp] = useState(false);
 
   // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("그 다음은 사진 보정 프로그램!");
+  const Toast = useToast("동영상 시청 프로그램을 켜보자");
 
   const handleClickVideoIcon = () => {
     setShowVideoApp(true);
