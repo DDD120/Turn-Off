@@ -3,5 +3,14 @@ module.exports = {
     title: `turn-off`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-resolve-src"],
+  plugins: [
+    "gatsby-plugin-resolve-src",
+    "gatsby-plugin-styled-components",
+    {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "ko",
+      },
+    },
+  ],
 };
