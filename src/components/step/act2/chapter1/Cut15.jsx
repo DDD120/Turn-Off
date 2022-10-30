@@ -27,8 +27,8 @@ const Chat = styled(motion.div)`
   position: relative;
   cursor: pointer;
 
-  ${({ isClicked }) =>
-    !isClicked &&
+  ${({ $isClicked }) =>
+    !$isClicked &&
     css`
       pointer-events: auto;
       transition: 0.3s;
@@ -80,7 +80,7 @@ const Cut15 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [-10, 0] }}
         onClick={handleClickChat}
-        isClicked={isClicked}
+        $isClicked={isClicked}
       >
         <DefaultImage width={452} height={140} src={BUBBLE6URL} alt="말풍선" />
         <DefaultText>음... 이건 우리 누나 컴퓨터 배경이잖아?!</DefaultText>

@@ -19,8 +19,8 @@ const CutContainer = styled(motion.div)`
   transform: translate(-50%, -50%);
   width: 80%;
 
-  ${({ isClicked }) =>
-    !isClicked &&
+  ${({ $isClicked }) =>
+    !$isClicked &&
     css`
       pointer-events: auto;
       transition: 0.3s;
@@ -52,7 +52,7 @@ const Cut6 = () => {
           onClick={handleClickImg}
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1] }}
-          isClicked={isClicked}
+          $isClicked={isClicked}
         >
           <p>하...</p>
           <DefaultImage

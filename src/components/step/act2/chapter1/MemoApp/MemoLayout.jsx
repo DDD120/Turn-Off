@@ -23,7 +23,7 @@ const MemoLayout = ({ dragRef, initial, setHasChildElement = false }) => {
   return (
     <motion.div
       ref={memoLayoutRef}
-      variants={initial && container}
+      variants={initial ? container : undefined}
       initial="start"
       animate="end"
     >
