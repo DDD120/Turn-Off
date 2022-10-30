@@ -57,7 +57,7 @@ const SecurityApp = ({ isActive }) => {
       <Body>
         {!showCheckDetail && !completion && (
           <Main
-            clickEvent={isActive && handleClickCheckBtn}
+            clickEvent={isActive ? handleClickCheckBtn : undefined}
             completion={completion}
           />
         )}

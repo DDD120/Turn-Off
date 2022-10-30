@@ -62,7 +62,13 @@ const Container = ({ children }) => {
     <FullScreen handle={handle}>
       <Layout>
         <Settings>
-          <FullscreenBtn type="button" onClick={handleFullscreen}>
+          <FullscreenBtn
+            type="button"
+            onClick={handleFullscreen}
+            aria-label={
+              isFullscreen ? "set not full screen" : "set full screen"
+            }
+          >
             {isFullscreen ? (
               <AiOutlineFullscreenExit />
             ) : (
