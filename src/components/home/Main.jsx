@@ -4,6 +4,7 @@ import LOGOURL from "images/logo.webp";
 import HowToPlay from "./HowToPlay";
 import { useProgress } from "store/progress";
 import { DefaultImage } from "components/common/GlobalStyle";
+import MenuBtn from "components/common/MenuBtn";
 
 const Base = styled.section`
   text-align: center;
@@ -32,21 +33,6 @@ const Information = styled.div`
   width: 60%;
   word-break: keep-all;
   margin: 0 auto 20px;
-`;
-
-const Menu = styled.button`
-  width: 50%;
-  font-size: 1.4rem;
-  cursor: pointer;
-  margin: 4px 0;
-  padding: 12px 24px;
-  background-color: #e5ecf2;
-  border-radius: 4px;
-  transition: 0.3s;
-
-  &:hover {
-    background-color: #bfe1ff;
-  }
 `;
 
 const Main = () => {
@@ -80,13 +66,13 @@ const Main = () => {
         </Information>
         <ul>
           <li>
-            <Menu onClick={startNew}>새로시작</Menu>
+            <MenuBtn handleClickEvent={startNew}>새로시작</MenuBtn>
           </li>
           <li>
-            <Menu onClick={startLoad}>이어보기</Menu>
+            <MenuBtn handleClickEvent={startLoad}>이어보기</MenuBtn>
           </li>
           <li>
-            <Menu onClick={showHowToPlay}>진행 방식</Menu>
+            <MenuBtn handleClickEvent={showHowToPlay}>진행 방식</MenuBtn>
           </li>
         </ul>
       </Home>
