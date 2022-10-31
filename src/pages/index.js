@@ -1,17 +1,12 @@
 import * as React from "react";
-import Container from "components/common/Container";
-import GlobalStyle from "components/common/GlobalStyle";
-import { ProgressProvider } from "store/progress";
 import Home from "components/home";
+import Layout from "components/Layout";
 
 const IndexPage = () => {
   return (
-    <ProgressProvider>
-      <Container>
-        <GlobalStyle />
-        <Home />
-      </Container>
-    </ProgressProvider>
+    <Layout>
+      <Home />
+    </Layout>
   );
 };
 

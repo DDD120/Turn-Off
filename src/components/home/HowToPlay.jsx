@@ -13,6 +13,7 @@ const Base = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 auto;
 `;
 
 const Title = styled.p`
@@ -27,7 +28,6 @@ const Content = styled.div`
 
 const List = styled.ul`
   display: flex;
-
   flex-direction: column;
   height: 100%;
   gap: 10px;
