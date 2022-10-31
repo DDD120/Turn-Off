@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `turn-off`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://turn-off.netlify.app/`,
   },
   plugins: [
     "gatsby-plugin-resolve-src",

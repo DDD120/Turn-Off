@@ -49,4 +49,5 @@ const ErrorPage = () => {
   );
 };
 
+export const Head = () => <title>Turn Off / 404</title>;
 export default ErrorPage;
