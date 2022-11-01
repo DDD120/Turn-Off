@@ -3,8 +3,7 @@ import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import IMG1URL from "images/act1/cut9-1.webp";
 import IMG2URL from "images/act1/cut9-2.webp";
-import IMG3URL from "images/act1/cut9-3.webp";
-import { DefaultImage } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -125,11 +124,13 @@ const Cut9 = () => {
       {isShow && (
         <>
           <ImgWrapper>
-            <DefaultImage
+            <StaticImage
               width={500}
               height={216}
-              src={IMG3URL}
+              src="../../../images/act1/cut9-3.webp"
               alt="눈을 든 멍게"
+              layout="constrained"
+              placeholder="none"
             />
           </ImgWrapper>
           <StepBtn />

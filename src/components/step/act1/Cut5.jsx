@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import WavyText from "./WavyText";
 import StepBtn from "components/common/StepBtn";
 import React, { useState, useEffect } from "react";
-import IMG1URL from "images/act1/cut5-1.webp";
-import { DefaultImage } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -55,11 +54,13 @@ const Cut5 = () => {
           duration: 0.4,
         }}
       >
-        <DefaultImage
+        <StaticImage
           width={453}
           height={277}
-          src={IMG1URL}
+          src="../../../images/act1/cut5-1.webp"
           alt="괴로워하는 승현"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
 

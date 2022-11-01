@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
-import BUBBLE4URL from "images/bubble/bubble-4.webp";
-import IMG1URL from "images/act1/cut4-1.webp";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -55,16 +54,24 @@ const Cut4 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 0.5, 1], y: [-10, 10, 0] }}
       >
-        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+        <StaticImage
+          width={346}
+          height={224}
+          src="../../../images/bubble/bubble-4.webp"
+          alt="말풍선"
+          layout="constrained"
+        />
         <ChatText>바로 나일 거다</ChatText>
       </Chat>
 
       <CutContainer>
-        <DefaultImage
+        <StaticImage
           width={500}
           height={415}
-          src={IMG1URL}
+          src="../../../images/act1/cut4-1.webp"
           alt="누워 있는 승현"
+          layout="constrained"
+          placeholder="none"
         />
         <Text>하...</Text>
         <Text>망했다...</Text>

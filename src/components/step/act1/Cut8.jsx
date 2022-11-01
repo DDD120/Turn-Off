@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
-import IMG1URL from "images/act1/cut8-1.webp";
-import BUBBLE4URL from "images/bubble/bubble-4.webp";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -48,11 +47,13 @@ const Cut8 = () => {
         animate={{ opacity: [0, 1], y: [10, 0] }}
       >
         <Chat1>
-          <DefaultImage
+          <StaticImage
             width={346}
             height={224}
-            src={BUBBLE4URL}
+            src="../../../images/bubble/bubble-4.webp"
             alt="말풍선"
+            layout="constrained"
+            placeholder="none"
           />
           <DefaultText>마음대로 자고 일어날 수 있어서 부러워...</DefaultText>
         </Chat1>
@@ -62,11 +63,13 @@ const Cut8 = () => {
         animate={{ opacity: [0, 1], y: [10, 0] }}
         transition={{ delay: 0.2 }}
       >
-        <DefaultImage
+        <StaticImage
           width={500}
           height={499}
-          src={IMG1URL}
+          src="../../../images/act1/cut8-1.webp"
           alt="승현과 뭉게"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
       <Animation
@@ -75,11 +78,13 @@ const Cut8 = () => {
         transition={{ delay: 0.4 }}
       >
         <Chat2>
-          <DefaultImage
+          <StaticImage
             width={346}
             height={224}
-            src={BUBBLE4URL}
+            src="../../../images/bubble/bubble-4.webp"
             alt="말풍선"
+            layout="constrained"
+            placeholder="none"
           />
           <DefaultText>나도 뭉게처럼 하루종일 잤으면 좋겠다</DefaultText>
         </Chat2>

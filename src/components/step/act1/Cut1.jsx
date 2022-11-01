@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import BUBBLE2URL from "images/bubble/bubble-2.webp";
 import styled from "styled-components";
 import ToggleBtn from "./ToggleBtn";
 import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled(motion.section)`
   align-self: stretch;
@@ -84,16 +84,14 @@ const Cut1 = () => {
       {isDark && (
         <>
           <Chat>
-            <Bubble
-              width={324}
-              height={386}
-              animate={{ opacity: [0, 1], y: [10, 0] }}
-            >
-              <DefaultImage
+            <Bubble animate={{ opacity: [0, 1], y: [10, 0] }}>
+              <StaticImage
                 width={324}
                 height={386}
-                src={BUBBLE2URL}
+                src="../../../images/bubble/bubble-2.webp"
                 alt="말풍선"
+                layout="constrained"
+                placeholder="none"
               />
               <TextBox>
                 <Text1>늦은 밤</Text1>

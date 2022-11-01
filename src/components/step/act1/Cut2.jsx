@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import StepBtn from "components/common/StepBtn";
-import BUBBLE3URL from "images/bubble/bubble-3.webp";
-import IMG1URL from "images/act1/cut2-1.webp";
-import IMG2URL from "images/act1/cut2-2.webp";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   position: relative;
@@ -44,19 +42,21 @@ const Cut2 = () => {
       <div>
         <Box initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [10, 0] }}>
           <CutContainer>
-            <DefaultImage
+            <StaticImage
               width={364}
               height={484}
-              src={IMG1URL}
+              src="../../../images/act1/cut2-1.webp"
               alt="글쓰는 장면"
+              layout="constrained"
             />
           </CutContainer>
           <Chat>
-            <DefaultImage
+            <StaticImage
               width={327}
               height={228}
-              src={BUBBLE3URL}
+              src="../../../images/bubble/bubble-3.webp"
               alt="말풍선"
+              layout="constrained"
             />
             <DefaultText>누군가는 한창 깨어있을 시간이고</DefaultText>
           </Chat>
@@ -67,20 +67,23 @@ const Cut2 = () => {
           transition={{ delay: 0.5 }}
         >
           <Chat>
-            <DefaultImage
+            <StaticImage
               width={327}
               height={228}
-              src={BUBBLE3URL}
+              src="../../../images/bubble/bubble-3.webp"
               alt="말풍선"
+              layout="constrained"
             />
             <DefaultText>마음이 복잡해질 시간이기도 한다.</DefaultText>
           </Chat>
           <CutContainer>
-            <DefaultImage
+            <StaticImage
               width={364}
               height={484}
-              src={IMG2URL}
+              src="../../../images/act1/cut2-2.webp"
               alt="글쓰는 장면"
+              layout="constrained"
+              placeholder="none"
             />
           </CutContainer>
         </Box>
