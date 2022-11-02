@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
-import IMG1URL from "images/act2/chapter2/cut21-1.webp";
-import BUBBLE6URL from "images/bubble/bubble-6.webp";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -30,7 +29,14 @@ const Cut21 = () => {
   return (
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [10, 0] }}>
-        <DefaultImage width={452} height={140} src={BUBBLE6URL} alt="말풍선" />
+        <StaticImage
+          width={452}
+          height={140}
+          src="../../../../images/bubble/bubble-6.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>
           하나 완료! <br /> 그 다음엔...
         </DefaultText>
@@ -39,11 +45,13 @@ const Cut21 = () => {
         initial={{ opcity: 0 }}
         animate={{ opacity: [0, 1], y: [10, 0] }}
       >
-        <DefaultImage
+        <StaticImage
           width={390}
           height={482}
-          src={IMG1URL}
+          src="../../../../images/act2/chapter2/cut21-1.webp"
           alt="다음 앱을 누르려는 손"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
       <StepBtn />

@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
-import IMG1URL from "images/act2/chapter2/cut30-1.webp";
-import BUBBLE6URL from "images/bubble/bubble-6.webp";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -30,16 +29,25 @@ const Cut30 = () => {
   return (
     <Base>
       <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <DefaultImage
+        <StaticImage
           width={500}
           height={253}
-          src={IMG1URL}
+          src="../../../../images/act2/chapter2/cut30-1.webp"
           alt="마음에 들어하는 뭉게"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
 
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <DefaultImage width={452} height={140} src={BUBBLE6URL} alt="말풍선" />
+        <StaticImage
+          width={452}
+          height={140}
+          src="../../../../images/bubble/bubble-6.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>
           아무튼 이렇게 같은 언어로 마음을 전할 수 있다니 좋다
         </DefaultText>

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import IMG1URL from "images/act2/chapter2/profile.webp";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.li`
   width: 70%;
@@ -100,7 +100,14 @@ const RecivedMsg = ({
         onAnimationComplete={onMotion && handleShowStepBtn}
       >
         <ProfilePicture>
-          <img src={IMG1URL} alt="" />
+          <StaticImage
+            width={359}
+            height={358}
+            src="../../../../../images/act2/chapter2/profile.webp"
+            alt="엄마 프로필 사진"
+            layout="constrained"
+            placeholder="none"
+          />
         </ProfilePicture>
         <MsgBox>
           <Name>엄마</Name>

@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
-import IMG1URL from "images/act2/chapter2/cut23-1.webp";
-import BUBBLE2URL from "images/bubble/bubble-2.webp";
-import { DefaultImage } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -70,7 +68,14 @@ const Cut23 = () => {
   return (
     <Base>
       <CutContainer>
-        <DefaultImage width={500} height={372} src={IMG1URL} />
+        <StaticImage
+          width={500}
+          height={372}
+          src="../../../../images/act2/chapter2/cut23-1.webp"
+          alt="울상인 표정의 뭉게"
+          layout="constrained"
+          placeholder="none"
+        />
         <p>힝...</p>
       </CutContainer>
       <Animation
@@ -78,11 +83,13 @@ const Cut23 = () => {
         animate={{ opacity: [0, 1], y: [10, 0] }}
       >
         <Chat>
-          <DefaultImage
+          <StaticImage
             width={324}
             height={386}
-            src={BUBBLE2URL}
+            src="../../../../images/bubble/bubble-2.webp"
             alt="말풍선"
+            layout="constrained"
+            placeholder="none"
           />
           <p>어머니... 못본지 넘 오래 됐어</p>
           <p>보고싶다</p>
