@@ -60,6 +60,7 @@ const Cut4 = () => {
           src="../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"
+          placeholder="none"
         />
         <ChatText>바로 나일 거다</ChatText>
       </Chat>

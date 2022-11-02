@@ -52,7 +52,6 @@ const Cut6 = () => {
           animate={{ opacity: [0, 1] }}
           $isClicked={isClicked}
         >
-          <p>하...</p>
           <StaticImage
             width={500}
             height={242}
@@ -61,10 +60,15 @@ const Cut6 = () => {
             layout="constrained"
             placeholder="none"
           />
+          <p>하...</p>
         </CutContainer>
       ) : (
         <>
-          <CutContainer animate={{ opacity: [0, 1] }}>
+          <CutContainer
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            $isClicked={isClicked}
+          >
             <StaticImage
               width={500}
               height={242}

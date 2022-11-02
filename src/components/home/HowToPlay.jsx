@@ -12,8 +12,8 @@ const Base = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
 `;
 
 const Title = styled.p`

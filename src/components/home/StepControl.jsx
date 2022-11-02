@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { useProgress } from "store/progress";
+import Main from "./Main";
 const Cut1 = lazy(() => import("components/step/act1/Cut1"));
 const Cut2 = lazy(() => import("components/step/act1/Cut2"));
 const Cut3 = lazy(() => import("components/step/act1/Cut3"));
@@ -68,7 +69,7 @@ const StepControl = () => {
   const { step } = useProgress();
 
   return (
-    <Suspense fallback={<div></div>}>
+    <Suspense fallback={" "}>
       {step === 1 && <Cut1 />}
       {step === 2 && <Cut2 />}
       {step === 3 && <Cut3 />}
@@ -132,6 +133,7 @@ const StepControl = () => {
       {step === 61 && <Cut61 />}
       {step === 62 && <Cut62 />}
       {step === 63 && <Cut63 />}
+      {(step < 1 || step > 63) && <Main />}
     </Suspense>
   );
 };

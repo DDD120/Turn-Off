@@ -48,6 +48,7 @@ const Cut2 = () => {
               src="../../../images/act1/cut2-1.webp"
               alt="글쓰는 장면"
               layout="constrained"
+              placeholder="none"
             />
           </CutContainer>
           <Chat>
@@ -57,6 +58,7 @@ const Cut2 = () => {
               src="../../../images/bubble/bubble-3.webp"
               alt="말풍선"
               layout="constrained"
+              placeholder="none"
             />
             <DefaultText>누군가는 한창 깨어있을 시간이고</DefaultText>
           </Chat>
@@ -73,6 +75,7 @@ const Cut2 = () => {
               src="../../../images/bubble/bubble-3.webp"
               alt="말풍선"
               layout="constrained"
+              placeholder="none"
             />
             <DefaultText>마음이 복잡해질 시간이기도 한다.</DefaultText>
           </Chat>
