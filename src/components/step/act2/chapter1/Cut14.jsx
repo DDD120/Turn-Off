@@ -14,8 +14,8 @@ import {
   FcStart,
   FcPlus,
 } from "react-icons/fc";
-import BUBBLE6URL from "images/bubble/bubble-6.webp";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -80,11 +80,13 @@ const Cut14 = () => {
       {!isClicked ? (
         <>
           <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-            <DefaultImage
+            <StaticImage
               width={452}
               height={140}
-              src={BUBBLE6URL}
+              src="../../../../images/bubble/bubble-6.webp"
               alt="말풍선"
+              layout="constrained"
+              placeholder="none"
             />
             <DefaultText>뭐 일단 확인을 눌러볼까?</DefaultText>
           </Chat>

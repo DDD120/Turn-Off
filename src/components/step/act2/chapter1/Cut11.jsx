@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
-import IMG1URL from "images/act2/chapter1/cut11-1.webp";
-import { DefaultImage } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -40,6 +39,14 @@ const Cut11 = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [-10, 0] }}
       >
+        <StaticImage
+          width={500}
+          height={208}
+          src="../../../../images/act2/chapter1/cut11-1.webp"
+          alt="위를 올려다보는 뭉게"
+          layout="constrained"
+          placeholder="none"
+        />
         <Text
           initial={{ opacity: 0 }}
           animate={{ opacity: [0, 1], y: [-10, 0] }}
@@ -47,12 +54,6 @@ const Cut11 = () => {
         >
           <p>...그나저나 여긴 어디지 </p>
         </Text>
-        <DefaultImage
-          width={500}
-          height={208}
-          src={IMG1URL}
-          alt="위를 올려다보는 뭉게"
-        />
       </CutContainer>
       <StepBtn />
     </Base>

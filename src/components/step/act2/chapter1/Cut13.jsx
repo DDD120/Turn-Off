@@ -3,9 +3,8 @@ import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import MsgWindow from "components/step/act2/chapter1/MsgWindow";
 import { motion } from "framer-motion";
-import IMG1URL from "images/act2/chapter1/cut13-1.webp";
-import BUBBLE3URL from "images/bubble/bubble-3.webp";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -60,27 +59,14 @@ const MsgWindowWrapper = styled.div`
 const Cut13 = () => {
   return (
     <Base>
-      <Animation
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 1], y: [-10, 0] }}
-      >
-        <Chat1>
-          <DefaultImage
-            width={327}
-            height={228}
-            src={BUBBLE3URL}
-            alt="말풍선1"
-          />
-          <DefaultText>이건 뭐지? 승현...이면 우리 누나인데</DefaultText>
-        </Chat1>
-      </Animation>
-
       <CutContainer>
-        <DefaultImage
+        <StaticImage
           width={496}
           height={619}
-          src={IMG1URL}
+          src="../../../../images/act2/chapter1/cut13-1.webp"
           alt="메시창 앞 뭉게"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
       <MsgWindowWrapper>
@@ -89,14 +75,32 @@ const Cut13 = () => {
       <Animation
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [-10, 0] }}
+      >
+        <Chat1>
+          <StaticImage
+            width={327}
+            height={228}
+            src="../../../../images/bubble/bubble-3.webp"
+            alt="말풍선"
+            layout="constrained"
+            placeholder="none"
+          />
+          <DefaultText>이건 뭐지? 승현...이면 우리 누나인데</DefaultText>
+        </Chat1>
+      </Animation>
+      <Animation
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1], y: [-10, 0] }}
         transition={{ delay: 0.2 }}
       >
         <Chat2>
-          <DefaultImage
+          <StaticImage
             width={327}
             height={228}
-            src={BUBBLE3URL}
-            alt="말풍선2"
+            src="../../../../images/bubble/bubble-3.webp"
+            alt="말풍선"
+            layout="constrained"
+            placeholder="none"
           />
           <DefaultText>'진행 중인 작업을 완료해라'라...</DefaultText>
         </Chat2>

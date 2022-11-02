@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
-import BUBBLE6URL from "images/bubble/bubble-6.webp";
-import IMG1URL from "images/act2/chapter1/cut15-1.webp";
-import IMG2URL from "images/act2/chapter1/cut15-2.webp";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -82,15 +80,24 @@ const Cut15 = () => {
         onClick={handleClickChat}
         $isClicked={isClicked}
       >
-        <DefaultImage width={452} height={140} src={BUBBLE6URL} alt="말풍선" />
+        <StaticImage
+          width={452}
+          height={140}
+          src="../../../../images/bubble/bubble-6.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>음... 이건 우리 누나 컴퓨터 배경이잖아?!</DefaultText>
       </Chat>
       <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <DefaultImage
+        <StaticImage
           width={362}
           height={581}
-          src={IMG1URL}
+          src="../../../../images/act2/chapter1/cut15-1.webp"
           alt="생각난 뭉게"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
       {isClicked && (
@@ -103,11 +110,13 @@ const Cut15 = () => {
               <Chat2>
                 <p>밤 늦게까지 그 앞에 앉아있던 모습이 생각나</p>
               </Chat2>
-              <DefaultImage
+              <StaticImage
                 width={377}
                 height={253}
-                src={IMG2URL}
+                src="../../../../images/act2/chapter1/cut15-2.webp"
                 alt="밤늦게까지 깨어있는 승현"
+                layout="constrained"
+                placeholder="none"
               />
             </CutContainer2>
           </Think>
