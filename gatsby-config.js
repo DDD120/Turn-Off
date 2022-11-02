@@ -15,5 +15,18 @@ module.exports = {
         lang: "ko",
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Turn Off",
+        short_name: "Turn Off",
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#a4cfff",
+        display: "standalone",
+        icon: "src/images/favicon.webp",
+        crossOrigin: `use-credentials`,
+      },
+    },
   ],
 };
