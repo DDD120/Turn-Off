@@ -1,10 +1,9 @@
 import React from "react";
-import IMG1URL from "images/act3/cut60-1.webp";
-import BUBBLE6URL from "images/bubble/bubble-6.webp";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
 import { motion } from "framer-motion";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -30,15 +29,24 @@ const Cut60 = () => {
   return (
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [-10, 0] }}>
-        <DefaultImage width={452} height={140} src={BUBBLE6URL} alt="말풍선" />
+        <StaticImage
+          width={452}
+          height={140}
+          src="../../../images/bubble/bubble-6.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>귀여워 ㅎㅎ</DefaultText>
       </Chat>
       <CutContainer>
-        <DefaultImage
+        <StaticImage
           width={498}
           height={555}
-          src={IMG1URL}
+          src="../../../images/act3/cut60-1.webp"
           alt="자는 뭉게 쓰다듬는 승현"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
       <StepBtn />

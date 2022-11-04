@@ -18,8 +18,8 @@ const Base = styled.section`
 const CutContainer = styled(motion.div)`
   width: 90%;
 
-  ${({ isClicked }) =>
-    !isClicked &&
+  ${({ $isclicked }) =>
+    !$isclicked &&
     css`
       pointer-events: auto;
       transition: 0.3s;
@@ -32,10 +32,10 @@ const CutContainer = styled(motion.div)`
 `;
 
 const Cut55 = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isclicked, setIsclicked] = useState(false);
 
   const handleClickImg = () => {
-    setIsClicked(true);
+    setIsclicked(true);
   };
 
   return (
@@ -44,16 +44,16 @@ const Cut55 = () => {
         onClick={handleClickImg}
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1] }}
-        isClicked={isClicked}
+        $isclicked={isclicked}
       >
         <DefaultImage
           width={500}
           height={412}
-          src={isClicked ? IMG2URL : IMG1URL}
-          alt=""
+          src={isclicked ? IMG2URL : IMG1URL}
+          alt={isclicked ? "눈을 뜬 승현" : "침대에 눈 감고 있는 승현"}
         />
       </CutContainer>
-      {isClicked && <StepBtn />}
+      {isclicked && <StepBtn />}
     </Base>
   );
 };

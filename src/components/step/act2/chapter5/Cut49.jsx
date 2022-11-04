@@ -1,10 +1,9 @@
 import React from "react";
-import IMG1URL from "images/act2/chapter5/cut49-1.webp";
 import styled from "styled-components";
 import StepBtn from "components/common/StepBtn";
-import BUBBLE4URL from "images/bubble/bubble-4.webp";
 import { motion } from "framer-motion";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -38,17 +37,26 @@ const Cut49 = () => {
   return (
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+        <StaticImage
+          width={346}
+          height={224}
+          src="../../../../images/bubble/bubble-4.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>
           어라 불안정 하다고? 어떡하지? 이거 누르면 해결되나?
         </DefaultText>
       </Chat>
       <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <DefaultImage
+        <StaticImage
           width={500}
           height={199}
-          src={IMG1URL}
+          src="../../../../images/act2/chapter5/cut49-1.webp"
           alt="당황하는 뭉게"
+          layout="constrained"
+          placeholder="none"
         />
         <p>으아아</p>
       </CutContainer>

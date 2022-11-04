@@ -1,9 +1,8 @@
 import React from "react";
 import StepBtn from "components/common/StepBtn";
-import IMG1URL from "images/act2/chapter5/cut51-1.webp";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { DefaultImage } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -40,11 +39,13 @@ const Cut51 = () => {
         >
           됐다!
         </Chat>
-        <DefaultImage
+        <StaticImage
           width={416}
           height={484}
-          src={IMG1URL}
+          src="../../../../images/act2/chapter5/cut51-1.webp"
           alt="밝은 표정의 뭉게"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
       <StepBtn />

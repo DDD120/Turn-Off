@@ -1,10 +1,9 @@
 import React from "react";
-import IMG1URL from "images/act2/chapter5/cut52-1.webp";
-import BUBBLE4URL from "images/bubble/bubble-4.webp";
 import StepBtn from "components/common/StepBtn";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -22,6 +21,7 @@ const CutContainer = styled.div`
 
 const Chat = styled(motion.div)`
   width: 50%;
+  z-index: 1;
 `;
 
 const Chat1 = styled(Chat)`
@@ -37,16 +37,25 @@ const Cut52 = () => {
   return (
     <Base>
       <Chat1 initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+        <StaticImage
+          width={346}
+          height={224}
+          src="../../../../images/bubble/bubble-4.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>이제 다 완료했으니</DefaultText>
       </Chat1>
 
       <CutContainer>
-        <DefaultImage
+        <StaticImage
           width={434}
           height={218}
-          src={IMG1URL}
+          src="../../../../images/act2/chapter5/cut52-1.webp"
           alt="밝은 표정의 뭉게"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
       <Chat2
@@ -54,7 +63,14 @@ const Cut52 = () => {
         animate={{ opacity: [0, 1] }}
         transition={{ delay: 0.2 }}
       >
-        <DefaultImage width={346} height={224} src={BUBBLE4URL} alt="말풍선" />
+        <StaticImage
+          width={346}
+          height={224}
+          src="../../../../images/bubble/bubble-4.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>종료 할 수 있겠지?</DefaultText>
       </Chat2>
 

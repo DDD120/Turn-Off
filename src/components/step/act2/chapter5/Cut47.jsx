@@ -3,9 +3,9 @@ import StepBtn from "components/common/StepBtn";
 import { FcPlus } from "react-icons/fc";
 import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
 import styled from "styled-components";
-import BUBBLE3URL from "images/bubble/bubble-3.webp";
 import { motion } from "framer-motion";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -39,7 +39,14 @@ const Cut47 = () => {
         </Bottom>
       </CutContainer>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [10, 0] }}>
-        <DefaultImage width={327} height={228} src={BUBBLE3URL} alt="말풍선" />
+        <StaticImage
+          width={327}
+          height={228}
+          src="../../../../images/bubble/bubble-3.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>이제 마지막 하나 남았어!</DefaultText>
       </Chat>
       <StepBtn />

@@ -1,10 +1,9 @@
 import React from "react";
-import IMG1URL from "images/act3/cut61-1.webp";
-import BUBBLE3URL from "images/bubble/bubble-3.webp";
 import StepBtn from "components/common/StepBtn";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { DefaultImage, DefaultText } from "components/common/GlobalStyle";
+import { DefaultText } from "components/common/GlobalStyle";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Base = styled.section`
   align-self: stretch;
@@ -30,15 +29,24 @@ const Cut61 = () => {
   return (
     <Base>
       <CutContainer>
-        <DefaultImage
+        <StaticImage
           width={500}
           height={241}
-          src={IMG1URL}
+          src="../../../images/act3/cut61-1.webp"
           alt="옆모습 승현"
+          layout="constrained"
+          placeholder="none"
         />
       </CutContainer>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
-        <DefaultImage width={327} height={228} src={BUBBLE3URL} alt="말풍선" />
+        <StaticImage
+          width={327}
+          height={228}
+          src="../../../images/bubble/bubble-3.webp"
+          alt="말풍선"
+          layout="constrained"
+          placeholder="none"
+        />
         <DefaultText>
           오랜만에 개운하게 일어난 것 같아. 피곤한 것도 없고
         </DefaultText>
