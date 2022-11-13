@@ -1,139 +1,282 @@
 import React, { Suspense, lazy } from "react";
 import { useProgress } from "store/progress";
 import Main from "./Main";
-const Cut1 = lazy(() => import("components/step/act1/Cut1"));
-const Cut2 = lazy(() => import("components/step/act1/Cut2"));
-const Cut3 = lazy(() => import("components/step/act1/Cut3"));
-const Cut4 = lazy(() => import("components/step/act1/Cut4"));
-const Cut5 = lazy(() => import("components/step/act1/Cut5"));
-const Cut6 = lazy(() => import("components/step/act1/Cut6"));
-const Cut7 = lazy(() => import("components/step/act1/Cut7"));
-const Cut8 = lazy(() => import("components/step/act1/Cut8"));
-const Cut9 = lazy(() => import("components/step/act1/Cut9"));
-const Cut10 = lazy(() => import("components/step/act2/chapter1/Cut10"));
-const Cut11 = lazy(() => import("components/step/act2/chapter1/Cut11"));
-const Cut12 = lazy(() => import("components/step/act2/chapter1/Cut12"));
-const Cut13 = lazy(() => import("components/step/act2/chapter1/Cut13"));
-const Cut14 = lazy(() => import("components/step/act2/chapter1/Cut14"));
-const Cut15 = lazy(() => import("components/step/act2/chapter1/Cut15"));
-const Cut16 = lazy(() => import("components/step/act2/chapter1/Cut16"));
-const Cut17 = lazy(() => import("components/step/act2/chapter1/Cut17"));
-const Cut18 = lazy(() => import("components/step/act2/chapter1/Cut18"));
-const Cut19 = lazy(() => import("components/step/act2/chapter1/Cut19"));
-const Cut20 = lazy(() => import("components/step/act2/chapter1/Cut20"));
-const Cut21 = lazy(() => import("components/step/act2/chapter2/Cut21"));
-const Cut22 = lazy(() => import("components/step/act2/chapter2/Cut22"));
-const Cut23 = lazy(() => import("components/step/act2/chapter2/Cut23"));
-const Cut24 = lazy(() => import("components/step/act2/chapter2/Cut24"));
-const Cut25 = lazy(() => import("components/step/act2/chapter2/Cut25"));
-const Cut26 = lazy(() => import("components/step/act2/chapter2/Cut26"));
-const Cut27 = lazy(() => import("components/step/act2/chapter2/Cut27"));
-const Cut28 = lazy(() => import("components/step/act2/chapter2/Cut28"));
-const Cut29 = lazy(() => import("components/step/act2/chapter2/Cut29"));
-const Cut30 = lazy(() => import("components/step/act2/chapter2/Cut30"));
-const Cut31 = lazy(() => import("components/step/act2/chapter3/Cut31"));
-const Cut32 = lazy(() => import("components/step/act2/chapter3/Cut32"));
-const Cut33 = lazy(() => import("components/step/act2/chapter3/Cut33"));
-const Cut34 = lazy(() => import("components/step/act2/chapter3/Cut34"));
-const Cut35 = lazy(() => import("components/step/act2/chapter3/Cut35"));
-const Cut36 = lazy(() => import("components/step/act2/chapter3/Cut36"));
-const Cut37 = lazy(() => import("components/step/act2/chapter3/Cut37"));
-const Cut38 = lazy(() => import("components/step/act2/chapter3/Cut38"));
-const Cut39 = lazy(() => import("components/step/act2/chapter3/Cut39"));
-const Cut40 = lazy(() => import("components/step/act2/chapter4/Cut40"));
-const Cut41 = lazy(() => import("components/step/act2/chapter4/Cut41"));
-const Cut42 = lazy(() => import("components/step/act2/chapter4/Cut42"));
-const Cut43 = lazy(() => import("components/step/act2/chapter4/Cut43"));
-const Cut44 = lazy(() => import("components/step/act2/chapter4/Cut44"));
-const Cut45 = lazy(() => import("components/step/act2/chapter4/Cut45"));
-const Cut46 = lazy(() => import("components/step/act2/chapter4/Cut46"));
-const Cut47 = lazy(() => import("components/step/act2/chapter5/Cut47"));
-const Cut48 = lazy(() => import("components/step/act2/chapter5/Cut48"));
-const Cut49 = lazy(() => import("components/step/act2/chapter5/Cut49"));
-const Cut50 = lazy(() => import("components/step/act2/chapter5/Cut50"));
-const Cut51 = lazy(() => import("components/step/act2/chapter5/Cut51"));
-const Cut52 = lazy(() => import("components/step/act2/chapter5/Cut52"));
-const Cut53 = lazy(() => import("components/step/act2/chapter5/Cut53"));
-const Cut54 = lazy(() => import("components/step/act2/chapter5/Cut54"));
-const Cut55 = lazy(() => import("components/step/act3/Cut55"));
-const Cut56 = lazy(() => import("components/step/act3/Cut56"));
-const Cut57 = lazy(() => import("components/step/act3/Cut57"));
-const Cut58 = lazy(() => import("components/step/act3/Cut58"));
-const Cut59 = lazy(() => import("components/step/act3/Cut59"));
-const Cut60 = lazy(() => import("components/step/act3/Cut60"));
-const Cut61 = lazy(() => import("components/step/act3/Cut61"));
-const Cut62 = lazy(() => import("components/step/act3/Cut62"));
-const Cut63 = lazy(() => import("components/step/act3/Cut63"));
+const Act1Cut1 = lazy(() => import("components/step/act1/Act1Cut1"));
+const Act1Cut2 = lazy(() => import("components/step/act1/Act1Cut2"));
+const Act1Cut3 = lazy(() => import("components/step/act1/Act1Cut3"));
+const Act1Cut4 = lazy(() => import("components/step/act1/Act1Cut4"));
+const Act1Cut5 = lazy(() => import("components/step/act1/Act1Cut5"));
+const Act1Cut6 = lazy(() => import("components/step/act1/Act1Cut6"));
+const Act1Cut7 = lazy(() => import("components/step/act1/Act1Cut7"));
+const Act1Cut8 = lazy(() => import("components/step/act1/Act1Cut8"));
+const Act1Cut9 = lazy(() => import("components/step/act1/Act1Cut9"));
+const Act1Cut10 = lazy(() => import("components/step/act1/Act1Cut10"));
+const Act1Cut11 = lazy(() => import("components/step/act1/Act1Cut11"));
+const Act1Cut12 = lazy(() => import("components/step/act1/Act1Cut12"));
+const Act1Cut13 = lazy(() => import("components/step/act1/Act1Cut13"));
+const Act1Cut14 = lazy(() => import("components/step/act1/Act1Cut14"));
+const Act1Cut15 = lazy(() => import("components/step/act1/Act1Cut15"));
+const Act1Cut16 = lazy(() => import("components/step/act1/Act1Cut16"));
+const Act1Cut17 = lazy(() => import("components/step/act1/Act1Cut17"));
+const Chapter1Cut1 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut1")
+);
+const Chapter1Cut2 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut2")
+);
+const Chapter1Cut3 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut3")
+);
+const Chapter1Cut4 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut4")
+);
+const Chapter1Cut5 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut5")
+);
+const Chapter1Cut6 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut6")
+);
+const Chapter1Cut7 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut7")
+);
+const Chapter1Cut8 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut8")
+);
+const Chapter1Cut9 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut9")
+);
+const Chapter1Cut10 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut10")
+);
+const Chapter1Cut11 = lazy(() =>
+  import("components/step/act2/chapter1/Chapter1Cut11")
+);
+const Chapter2Cut1 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut1")
+);
+const Chapter2Cut2 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut2")
+);
+const Chapter2Cut3 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut3")
+);
+const Chapter2Cut4 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut4")
+);
+const Chapter2Cut5 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut5")
+);
+const Chapter2Cut6 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut6")
+);
+const Chapter2Cut7 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut7")
+);
+const Chapter2Cut8 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut8")
+);
+const Chapter2Cut9 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut9")
+);
+const Chapter2Cut10 = lazy(() =>
+  import("components/step/act2/chapter2/Chapter2Cut10")
+);
+const Chapter3Cut1 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut1")
+);
+const Chapter3Cut2 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut2")
+);
+const Chapter3Cut3 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut3")
+);
+const Chapter3Cut4 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut4")
+);
+const Chapter3Cut5 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut5")
+);
+const Chapter3Cut6 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut6")
+);
+const Chapter3Cut7 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut7")
+);
+const Chapter3Cut8 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut8")
+);
+const Chapter3Cut9 = lazy(() =>
+  import("components/step/act2/chapter3/Chapter3Cut9")
+);
+const Chapter4Cut1 = lazy(() =>
+  import("components/step/act2/chapter4/Chapter4Cut1")
+);
+const Chapter4Cut2 = lazy(() =>
+  import("components/step/act2/chapter4/Chapter4Cut2")
+);
+const Chapter4Cut3 = lazy(() =>
+  import("components/step/act2/chapter4/Chapter4Cut3")
+);
+const Chapter4Cut4 = lazy(() =>
+  import("components/step/act2/chapter4/Chapter4Cut4")
+);
+const Chapter4Cut5 = lazy(() =>
+  import("components/step/act2/chapter4/Chapter4Cut5")
+);
+const Chapter4Cut6 = lazy(() =>
+  import("components/step/act2/chapter4/Chapter4Cut6")
+);
+const Chapter4Cut7 = lazy(() =>
+  import("components/step/act2/chapter4/Chapter4Cut7")
+);
+const Chapter5Cut1 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut1")
+);
+const Chapter5Cut2 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut2")
+);
+const Chapter5Cut3 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut3")
+);
+const Chapter5Cut4 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut4")
+);
+const Chapter5Cut5 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut5")
+);
+const Chapter5Cut6 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut6")
+);
+const Chapter5Cut7 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut7")
+);
+const Chapter5Cut8 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut8")
+);
+const Chapter5Cut9 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut9")
+);
+const Chapter5Cut10 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut10")
+);
+const Chapter5Cut11 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut11")
+);
+const Chapter5Cut12 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut12")
+);
+const Chapter5Cut13 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut13")
+);
+const Chapter5Cut14 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut14")
+);
+const Chapter5Cut15 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut15")
+);
+
+const Chapter5Cut16 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut16")
+);
+const Chapter5Cut17 = lazy(() =>
+  import("components/step/act2/chapter5/Chapter5Cut17.jsx")
+);
+const Act3Cut1 = lazy(() => import("components/step/act3/Act3Cut1"));
+const Act3Cut2 = lazy(() => import("components/step/act3/Act3Cut2"));
+const Act3Cut3 = lazy(() => import("components/step/act3/Act3Cut3"));
+const Act3Cut4 = lazy(() => import("components/step/act3/Act3Cut4"));
+const Act3Cut5 = lazy(() => import("components/step/act3/Act3Cut5"));
+const Act3Cut6 = lazy(() => import("components/step/act3/Act3Cut6"));
+const Act3Cut7 = lazy(() => import("components/step/act3/Act3Cut7"));
+const Act3Cut8 = lazy(() => import("components/step/act3/Act3Cut8"));
+const Act3Cut9 = lazy(() => import("components/step/act3/Act3Cut9"));
 
 const StepControl = () => {
   const { step } = useProgress();
 
   return (
     <Suspense fallback={" "}>
-      {step === 1 && <Cut1 />}
-      {step === 2 && <Cut2 />}
-      {step === 3 && <Cut3 />}
-      {step === 4 && <Cut4 />}
-      {step === 5 && <Cut5 />}
-      {step === 6 && <Cut6 />}
-      {step === 7 && <Cut7 />}
-      {step === 8 && <Cut8 />}
-      {step === 9 && <Cut9 />}
-      {step === 10 && <Cut10 />}
-      {step === 11 && <Cut11 />}
-      {step === 12 && <Cut12 />}
-      {step === 13 && <Cut13 />}
-      {step === 14 && <Cut14 />}
-      {step === 15 && <Cut15 />}
-      {step === 16 && <Cut16 />}
-      {step === 17 && <Cut17 />}
-      {step === 18 && <Cut18 />}
-      {step === 19 && <Cut19 />}
-      {step === 20 && <Cut20 />}
-      {step === 21 && <Cut21 />}
-      {step === 22 && <Cut22 />}
-      {step === 23 && <Cut23 />}
-      {step === 24 && <Cut24 />}
-      {step === 25 && <Cut25 />}
-      {step === 26 && <Cut26 />}
-      {step === 27 && <Cut27 />}
-      {step === 28 && <Cut28 />}
-      {step === 29 && <Cut29 />}
-      {step === 30 && <Cut30 />}
-      {step === 31 && <Cut31 />}
-      {step === 32 && <Cut32 />}
-      {step === 33 && <Cut33 />}
-      {step === 34 && <Cut34 />}
-      {step === 35 && <Cut35 />}
-      {step === 36 && <Cut36 />}
-      {step === 37 && <Cut37 />}
-      {step === 38 && <Cut38 />}
-      {step === 39 && <Cut39 />}
-      {step === 40 && <Cut40 />}
-      {step === 41 && <Cut41 />}
-      {step === 42 && <Cut42 />}
-      {step === 43 && <Cut43 />}
-      {step === 44 && <Cut44 />}
-      {step === 45 && <Cut45 />}
-      {step === 46 && <Cut46 />}
-      {step === 47 && <Cut47 />}
-      {step === 48 && <Cut48 />}
-      {step === 49 && <Cut49 />}
-      {step === 50 && <Cut50 />}
-      {step === 51 && <Cut51 />}
-      {step === 52 && <Cut52 />}
-      {step === 53 && <Cut53 />}
-      {step === 54 && <Cut54 />}
-      {step === 55 && <Cut55 />}
-      {step === 56 && <Cut56 />}
-      {step === 57 && <Cut57 />}
-      {step === 58 && <Cut58 />}
-      {step === 59 && <Cut59 />}
-      {step === 60 && <Cut60 />}
-      {step === 61 && <Cut61 />}
-      {step === 62 && <Cut62 />}
-      {step === 63 && <Cut63 />}
-      {(step < 1 || step > 63) && <Main />}
+      {step === 1 && <Act1Cut1 />}
+      {step === 2 && <Act1Cut2 />}
+      {step === 3 && <Act1Cut3 />}
+      {step === 4 && <Act1Cut4 />}
+      {step === 5 && <Act1Cut5 />}
+      {step === 6 && <Act1Cut6 />}
+      {step === 7 && <Act1Cut7 />}
+      {step === 8 && <Act1Cut8 />}
+      {step === 9 && <Act1Cut9 />}
+      {step === 10 && <Act1Cut10 />}
+      {step === 11 && <Act1Cut11 />}
+      {step === 12 && <Act1Cut12 />}
+      {step === 13 && <Act1Cut13 />}
+      {step === 14 && <Act1Cut14 />}
+      {step === 15 && <Act1Cut15 />}
+      {step === 16 && <Act1Cut16 />}
+      {step === 17 && <Act1Cut17 />}
+      {step === 18 && <Chapter1Cut1 />}
+      {step === 19 && <Chapter1Cut2 />}
+      {step === 20 && <Chapter1Cut3 />}
+      {step === 21 && <Chapter1Cut4 />}
+      {step === 22 && <Chapter1Cut5 />}
+      {step === 23 && <Chapter1Cut6 />}
+      {step === 24 && <Chapter1Cut7 />}
+      {step === 25 && <Chapter1Cut8 />}
+      {step === 26 && <Chapter1Cut9 />}
+      {step === 27 && <Chapter1Cut10 />}
+      {step === 28 && <Chapter1Cut11 />}
+      {step === 29 && <Chapter2Cut1 />}
+      {step === 30 && <Chapter2Cut2 />}
+      {step === 31 && <Chapter2Cut3 />}
+      {step === 32 && <Chapter2Cut4 />}
+      {step === 33 && <Chapter2Cut5 />}
+      {step === 34 && <Chapter2Cut6 />}
+      {step === 35 && <Chapter2Cut7 />}
+      {step === 36 && <Chapter2Cut8 />}
+      {step === 37 && <Chapter2Cut9 />}
+      {step === 38 && <Chapter2Cut10 />}
+      {step === 39 && <Chapter3Cut1 />}
+      {step === 40 && <Chapter3Cut2 />}
+      {step === 41 && <Chapter3Cut3 />}
+      {step === 42 && <Chapter3Cut4 />}
+      {step === 43 && <Chapter3Cut5 />}
+      {step === 44 && <Chapter3Cut6 />}
+      {step === 45 && <Chapter3Cut7 />}
+      {step === 46 && <Chapter3Cut8 />}
+      {step === 47 && <Chapter3Cut9 />}
+      {step === 48 && <Chapter4Cut1 />}
+      {step === 49 && <Chapter4Cut2 />}
+      {step === 50 && <Chapter4Cut3 />}
+      {step === 51 && <Chapter4Cut4 />}
+      {step === 52 && <Chapter4Cut5 />}
+      {step === 53 && <Chapter4Cut6 />}
+      {step === 54 && <Chapter4Cut7 />}
+      {step === 55 && <Chapter5Cut1 />}
+      {step === 56 && <Chapter5Cut2 />}
+      {step === 57 && <Chapter5Cut3 />}
+      {step === 58 && <Chapter5Cut4 />}
+      {step === 59 && <Chapter5Cut5 />}
+      {step === 60 && <Chapter5Cut6 />}
+      {step === 61 && <Chapter5Cut7 />}
+      {step === 62 && <Chapter5Cut8 />}
+      {step === 63 && <Chapter5Cut9 />}
+      {step === 64 && <Chapter5Cut10 />}
+      {step === 65 && <Chapter5Cut11 />}
+      {step === 66 && <Chapter5Cut12 />}
+      {step === 67 && <Chapter5Cut13 />}
+      {step === 68 && <Chapter5Cut14 />}
+      {step === 69 && <Chapter5Cut15 />}
+      {step === 70 && <Chapter5Cut16 />}
+      {step === 71 && <Chapter5Cut17 />}
+      {step === 72 && <Act3Cut1 />}
+      {step === 73 && <Act3Cut2 />}
+      {step === 74 && <Act3Cut3 />}
+      {step === 75 && <Act3Cut4 />}
+      {step === 76 && <Act3Cut5 />}
+      {step === 77 && <Act3Cut6 />}
+      {step === 78 && <Act3Cut7 />}
+      {step === 79 && <Act3Cut8 />}
+      {step === 80 && <Act3Cut9 />}
+      {(step < 1 || step > 80) && <Main />}
     </Suspense>
   );
 };
