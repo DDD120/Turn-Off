@@ -101,7 +101,7 @@ const Chapter1Cut10 = () => {
         <StaticImage
           width={500}
           height={322}
-          src="../../../../images/act2/chapter1/act1_10-1.webp"
+          src="../../../../images/act2/chapter1/chapter1_10-1.webp"
           alt="당황하는 뭉게"
           layout="constrained"
           placeholder="none"
