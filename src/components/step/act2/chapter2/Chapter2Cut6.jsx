@@ -43,8 +43,6 @@ const Chapter2Cut6 = () => {
       </CutContainer>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [-10, 0] }}>
         <StaticImage
-          width={306}
-          height={209}
           src="../../../../images/bubble/bubble-5.webp"
           alt="말풍선"
           layout="fullWidth"

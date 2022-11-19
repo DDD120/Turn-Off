@@ -34,7 +34,7 @@ const Chapter5Cut15 = () => {
           height={364}
           src="../../../../images/act2/chapter5/chapter5_15-1.webp"
           alt="기쁜 뭉게"
-          layout="fullWidth"
+          layout="constrained"
           placeholder="none"
         />
       </CutContainer>
@@ -42,7 +42,7 @@ const Chapter5Cut15 = () => {
         <StaticImage
           width={327}
           height={228}
-          src="../../../images/bubble/bubble-3.webp"
+          src="../../../../images/bubble/bubble-3.webp"
           alt="말풍선"
           layout="constrained"
           placeholder="none"

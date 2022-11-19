@@ -29,8 +29,6 @@ const Act1Cut10 = () => {
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
         <StaticImage
-          width={346}
-          height={224}
           src="../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="fullWidth"

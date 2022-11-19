@@ -32,7 +32,7 @@ const Chapter5Cut13 = () => {
         <StaticImage
           width={346}
           height={224}
-          src="../../../images/bubble/bubble-4.webp"
+          src="../../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"
           placeholder="none"

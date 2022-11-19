@@ -276,7 +276,7 @@ const StepControl = () => {
       {step === 78 && <Act3Cut7 />}
       {step === 79 && <Act3Cut8 />}
       {step === 80 && <Act3Cut9 />}
-      {(step < 1 || step > 80) && <Main />}
+      {!(step >= 1 && step <= 80) && <Main />}
     </Suspense>
   );
 };

@@ -26,8 +26,6 @@ const Act1Cut8 = () => {
         animate={{ opacity: [0, 1], scale: [0.9, 1] }}
       >
         <StaticImage
-          width={346}
-          height={224}
           src="../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="fullWidth"

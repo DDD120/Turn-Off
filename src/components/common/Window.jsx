@@ -1,5 +1,5 @@
 import React from "react";
-import { FcFolder, FcSettings, FcFullTrash, FcGoogle } from "react-icons/fc";
+import { FcFolder, FcSettings, FcFile, FcGoogle } from "react-icons/fc";
 import { Layout, Top, Main, IconWrapper } from "./WindowStyle";
 
 const Window = ({ children }) => {
@@ -30,7 +30,7 @@ const Window = ({ children }) => {
             <FcSettings />
           </IconWrapper>
           <IconWrapper>
-            <FcFullTrash />
+            <FcFile />
           </IconWrapper>
         </div>
       </Main>

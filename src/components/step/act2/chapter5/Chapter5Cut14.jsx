@@ -33,8 +33,6 @@ const Chapter5Cut14 = () => {
       </Chat>
       <CutContainer initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
         <StaticImage
-          width={236}
-          height={250}
           src="../../../../images/act2/chapter5/chapter5_14-1.webp"
           alt="상쾌한 표정의 뭉게"
           layout="fullWidth"
