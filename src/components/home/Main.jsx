@@ -30,9 +30,9 @@ const Title = styled.h1`
 `;
 
 const Information = styled.div`
-  width: 60%;
+  width: 80%;
   word-break: keep-all;
-  margin: 0 auto 20px;
+  margin: 40px auto;
 `;
 
 const Main = () => {
@@ -62,7 +62,9 @@ const Main = () => {
           <DefaultImage width={500} height={111} src={LOGOURL} alt="Turn Off" />
         </Title>
         <Information>
-          <p>강원대학교 영상문화학과 201913536 이수민 졸업작품</p>
+          <p>2022학년도 전기 강원대학교 영상문화학과 졸업작품</p>
+          <p>201913536 이수민</p>
+          <p>지도교수: 조은하</p>
         </Information>
         <ul>
           <li>
