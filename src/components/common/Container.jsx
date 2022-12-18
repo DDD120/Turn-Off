@@ -49,12 +49,12 @@ const Container = ({ children }) => {
   const { action } = useProgress();
   const handle = useFullScreenHandle();
 
-  const handleFullscreen = () => {
+  const handleFullscreenBtnClick = () => {
     isFullscreen ? handle.enter() : handle.exit();
     setIsFullscreen((prev) => !prev);
   };
 
-  const handleGoMain = () => {
+  const handleGoMainBtnClick = () => {
     action.goMain();
   };
 
@@ -64,7 +64,7 @@ const Container = ({ children }) => {
         <Settings>
           <FullscreenBtn
             type="button"
-            onClick={handleFullscreen}
+            onClick={handleFullscreenBtnClick}
             aria-label={
               isFullscreen ? "set not full screen" : "set full screen"
             }
@@ -75,7 +75,7 @@ const Container = ({ children }) => {
               <AiOutlineFullscreen />
             )}
           </FullscreenBtn>
-          <AiFillHome onClick={handleGoMain} />
+          <AiFillHome onClick={handleGoMainBtnClick} />
         </Settings>
         {children}
       </Layout>

@@ -26,10 +26,9 @@ const Animation = styled(motion.div)`
 
 const Chapter3Cut1 = () => {
   const [isShowRetouchApp, setIsShowRetouchApp] = useState(false);
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("그 다음은 사진 보정 프로그램!");
+  useToast("그 다음은 사진 보정 프로그램!");
 
-  const handleClickRetouchApp = () => {
+  const handleRetouchAppClick = () => {
     setIsShowRetouchApp(true);
   };
 
@@ -45,7 +44,7 @@ const Chapter3Cut1 = () => {
             </li>
             <li>
               <IconWrapper
-                onClick={handleClickRetouchApp}
+                onClick={handleRetouchAppClick}
                 cursor="true"
                 hover={true}
               >

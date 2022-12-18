@@ -55,7 +55,7 @@ const Button = styled.button`
   }
 `;
 
-const ConfirmMsgBox = ({ modalRef, handleClickYesBtn, handleClickNoBtn }) => {
+const ConfirmMsgBox = ({ modalRef, onYesBtnClick, onNoBtnClick }) => {
   return (
     <Base ref={modalRef}>
       <Top>
@@ -65,10 +65,10 @@ const ConfirmMsgBox = ({ modalRef, handleClickYesBtn, handleClickNoBtn }) => {
         <FcHighPriority />이 33개의 항목을 완전히 삭제하시겠습니까?
       </MsgContent>
       <ButtonBox>
-        <Button type="button" onClick={handleClickYesBtn}>
+        <Button type="button" onClick={onYesBtnClick}>
           예
         </Button>
-        <Button type="button" onClick={handleClickNoBtn}>
+        <Button type="button" onClick={onNoBtnClick}>
           아니요
         </Button>
       </ButtonBox>

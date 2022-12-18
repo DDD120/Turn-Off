@@ -27,10 +27,9 @@ const Animation = styled(motion.div)`
 const Chapter5Cut2 = () => {
   const [showSecurityApp, setShowSecurityApp] = useState(false);
 
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("마지막 보안 프로그램을 누르자");
+  useToast("마지막 보안 프로그램을 누르자");
 
-  const handleClickSecurityApp = () => {
+  const handleSecurityAppClick = () => {
     setShowSecurityApp(true);
   };
 
@@ -46,7 +45,7 @@ const Chapter5Cut2 = () => {
             </li>
             <li>
               <IconWrapper
-                onClick={handleClickSecurityApp}
+                onClick={handleSecurityAppClick}
                 cursor="true"
                 hover={true}
               >

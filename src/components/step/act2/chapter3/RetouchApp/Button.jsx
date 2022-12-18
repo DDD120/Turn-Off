@@ -13,9 +13,9 @@ const Base = styled.button`
   }
 `;
 
-const Button = ({ event, bgColor, children }) => {
+const Button = ({ onBtnClick, bgColor, children }) => {
   return (
-    <Base type="button" bgColor={bgColor} onClick={event}>
+    <Base type="button" bgColor={bgColor} onClick={onBtnClick}>
       {children}
     </Base>
   );

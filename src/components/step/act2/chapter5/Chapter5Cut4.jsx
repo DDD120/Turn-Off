@@ -21,8 +21,7 @@ const SecurityAppWrapper = styled(motion.div)`
 `;
 
 const Chapter5Cut4 = () => {
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("상태를 안전하게 바꿔보자");
+  useToast("상태를 안전하게 바꿔보자");
 
   return (
     <Base>

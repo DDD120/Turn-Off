@@ -41,13 +41,13 @@ const spring = {
 };
 
 const ToggleBtn = ({ isDark, setIsDark }) => {
-  const toggleSwitch = () => setIsDark(!isDark);
+  const handleSwitchClick = () => setIsDark(!isDark);
 
   return (
     <Switch
       type="button"
       $isDark={isDark}
-      onClick={toggleSwitch}
+      onClick={handleSwitchClick}
       initial={{ translateX: "-50%" }}
       whileTap={{ scale: 0.8 }}
     >

@@ -52,7 +52,6 @@ const Chapter3Cut2 = () => {
           placeholder="none"
         />
       </CutContainer>
-
       <StepBtn />
     </Base>
   );

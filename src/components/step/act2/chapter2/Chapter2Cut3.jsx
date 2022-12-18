@@ -95,7 +95,6 @@ const Chapter2Cut3 = () => {
           <p>보고싶다</p>
         </Chat>
       </Animation>
-
       <StepBtn />
     </Base>
   );

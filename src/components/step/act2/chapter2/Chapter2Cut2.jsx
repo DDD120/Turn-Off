@@ -37,15 +37,10 @@ const Chapter2Cut2 = () => {
   const [showMsg, setShowMsg] = useState(false);
   const [showStepBtn, setShowStepBtn] = useState(false);
 
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("이번엔 메신져 앱을 눌러보자");
+  useToast("이번엔 메신져 앱을 눌러보자");
 
-  const handleClickMsgIcon = () => {
+  const handleMsgAppClick = () => {
     setShowMsg(true);
-  };
-
-  const handleShowStepBtn = () => {
-    setShowStepBtn(true);
   };
 
   return (
@@ -59,7 +54,7 @@ const Chapter2Cut2 = () => {
               </IconWrapper>
             </li>
             <li>
-              <IconWrapper onClick={handleClickMsgIcon} cursor="true" hover>
+              <IconWrapper onClick={handleMsgAppClick} cursor="true" hover>
                 <FcSms />
               </IconWrapper>
               <Active />
@@ -94,8 +89,8 @@ const Chapter2Cut2 = () => {
             <MsgWrapper>
               <MessageApp
                 isActive={false}
-                onMotion={true}
-                handleShowStepBtn={handleShowStepBtn}
+                isMotion={true}
+                setShowStepBtn={setShowStepBtn}
               />
             </MsgWrapper>
           </Animation>

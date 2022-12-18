@@ -39,19 +39,19 @@ const Main = () => {
   const [clickedHowToPlay, setClickedHowToPlay] = useState(false);
   const { action } = useProgress();
 
-  const startNew = () => {
+  const handleStartNewBtn = () => {
     action.new();
     action.isReading();
   };
-  const startLoad = () => {
+  const handleStartLoadBtn = () => {
     action.load();
     action.isReading();
   };
-  const showHowToPlay = () => {
+  const handleShowHowToPlayBtn = () => {
     setClickedHowToPlay(true);
   };
 
-  const goHome = () => {
+  const handleGoHomeBtn = () => {
     setClickedHowToPlay(false);
   };
 
@@ -68,17 +68,17 @@ const Main = () => {
         </Information>
         <ul>
           <li>
-            <MenuBtn handleClickEvent={startNew}>새로시작</MenuBtn>
+            <MenuBtn onClickMenuBtn={handleStartNewBtn}>새로시작</MenuBtn>
           </li>
           <li>
-            <MenuBtn handleClickEvent={startLoad}>이어보기</MenuBtn>
+            <MenuBtn onClickMenuBtn={handleStartLoadBtn}>이어보기</MenuBtn>
           </li>
           <li>
-            <MenuBtn handleClickEvent={showHowToPlay}>진행 방식</MenuBtn>
+            <MenuBtn onClickMenuBtn={handleShowHowToPlayBtn}>진행 방식</MenuBtn>
           </li>
         </ul>
       </Home>
-      {clickedHowToPlay && <HowToPlay goHome={goHome} />}
+      {clickedHowToPlay && <HowToPlay onClickGoHomeBtn={handleGoHomeBtn} />}
     </Base>
   );
 };

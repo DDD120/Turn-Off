@@ -69,7 +69,7 @@ const Think = styled.div`
 const Chapter1Cut6 = () => {
   const [isClicked, setIsClicked] = useState(false);
 
-  const handleClickChat = () => {
+  const handleChatClick = () => {
     setIsClicked(true);
   };
   return (
@@ -77,7 +77,7 @@ const Chapter1Cut6 = () => {
       <Chat
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [-10, 0] }}
-        onClick={handleClickChat}
+        onClick={handleChatClick}
         $isClicked={isClicked}
       >
         <StaticImage

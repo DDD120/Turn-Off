@@ -84,7 +84,14 @@ const state = {
   },
 };
 
-const Main = ({ completion, clickEvent }) => {
+const Main = ({ completion, onBtnClick }) => {
+  const handleCheckBtnClick = () => {
+    if (onBtnClick) {
+      onBtnClick();
+    }
+    return;
+  };
+
   return (
     <>
       <State>
@@ -103,7 +110,7 @@ const Main = ({ completion, clickEvent }) => {
       </State>
 
       <Check>
-        <CheckBtn onClick={clickEvent}>
+        <CheckBtn onClick={handleCheckBtnClick}>
           <p>{completion ? state.good.btn.text : state.bad.btn.text}</p>
           <div>{completion ? state.good.btn.icon : state.bad.btn.icon}</div>
         </CheckBtn>

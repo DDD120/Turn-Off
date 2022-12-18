@@ -17,8 +17,7 @@ const Base = styled.section`
 
 const Chapter2Cut7 = () => {
   const [messages, setMessages] = useState([]);
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("엄마에게 답장을 해보자");
+  useToast("엄마에게 답장을 해보자");
 
   return (
     <Base>

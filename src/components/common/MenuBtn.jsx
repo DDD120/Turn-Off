@@ -16,8 +16,8 @@ const Base = styled.button`
   }
 `;
 
-const MenuBtn = ({ handleClickEvent = null, children }) => {
-  return <Base onClick={handleClickEvent}>{children}</Base>;
+const MenuBtn = ({ onClickMenuBtn = null, children }) => {
+  return <Base onClick={onClickMenuBtn}>{children}</Base>;
 };
 
 export default MenuBtn;

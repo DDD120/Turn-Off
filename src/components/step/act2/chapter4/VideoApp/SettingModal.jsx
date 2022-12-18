@@ -71,13 +71,10 @@ const SettingModal = ({
   isActiveAlgorithm,
   setIsActiveViewHistory,
   setIsActiveAlgorithm,
-  handleClickApplyBtn,
+  onApplyBtnClick,
 }) => {
-  const toggleSwitchViewHistory = () => {
-    setIsActiveViewHistory(!isActiveViewHistory);
-  };
-  const toggleSwitchAlgorithm = () => {
-    setIsActiveAlgorithm(!isActiveAlgorithm);
+  const handleSwitchBtnClick = (state, value) => {
+    state(!value);
   };
   return (
     <Base ref={modalRef}>
@@ -85,7 +82,9 @@ const SettingModal = ({
         <SettingMenu>
           <p>시청 기록 모두 지우기</p>
           <ToggleBtn
-            onClick={toggleSwitchViewHistory}
+            onClick={() =>
+              handleSwitchBtnClick(setIsActiveViewHistory, isActiveViewHistory)
+            }
             $isActive={isActiveViewHistory}
           >
             <Handle layout $isActive={isActiveViewHistory} />
@@ -94,7 +93,9 @@ const SettingModal = ({
         <SettingMenu>
           <p>알고리즘 일시중지</p>
           <ToggleBtn
-            onClick={toggleSwitchAlgorithm}
+            onClick={() =>
+              handleSwitchBtnClick(setIsActiveAlgorithm, isActiveAlgorithm)
+            }
             $isActive={isActiveAlgorithm}
           >
             <Handle layout $isActive={isActiveAlgorithm} />
@@ -102,7 +103,7 @@ const SettingModal = ({
         </SettingMenu>
       </ul>
       <ApplyBtn
-        onClick={handleClickApplyBtn}
+        onClick={onApplyBtnClick}
         isSatisfied={isActiveAlgorithm && isActiveAlgorithm}
       >
         적용

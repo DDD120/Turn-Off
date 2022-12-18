@@ -91,7 +91,7 @@ const NoViewHistoryMsg = styled.p`
   text-align: center;
 `;
 
-const ViewHistoryList = ({ videos, isLoading, handleClickSettingBtn }) => {
+const ViewHistoryList = ({ videos, isLoading, onSettingBtnClick }) => {
   return (
     <Base>
       {isLoading ? (
@@ -116,7 +116,7 @@ const ViewHistoryList = ({ videos, isLoading, handleClickSettingBtn }) => {
               <p>{video.title}</p>
             </ViewHistoryItem>
           ))}
-          <Setting videos={videos} onClick={handleClickSettingBtn}>
+          <Setting videos={videos} onClick={onSettingBtnClick}>
             <span>설정</span>
             <AiFillSetting />
           </Setting>

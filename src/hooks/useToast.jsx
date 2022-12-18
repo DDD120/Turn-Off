@@ -21,8 +21,6 @@ const useToast = (text) => {
       progress: undefined,
     });
   }, [text]);
-
-  return;
 };
 
 export default useToast;

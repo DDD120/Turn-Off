@@ -67,8 +67,8 @@ const Legend = styled.legend`
 const StartCureBox = styled.div`
   button {
     width: 100%;
-    background-color: ${({ allProperCheck }) =>
-      allProperCheck ? "#82c91e" : "#aaaaaa"};
+    background-color: ${({ isAllProperCheck }) =>
+      isAllProperCheck ? "#82c91e" : "#aaaaaa"};
     padding: 10px 20px;
     font-size: 1.1rem;
     cursor: pointer;
@@ -125,7 +125,7 @@ const CHECK_LIST = {
 
 const CheckDetail = ({ setShowCure }) => {
   const [checkedInputs, setCheckedInputs] = useState(CHECK_LIST);
-  const [allProperCheck, setAllProperCheck] = useState(false);
+  const [isAllProperCheck, setIsAllProperCheck] = useState(false);
 
   const setProperCheckTrue = (id) => {
     setCheckedInputs((prev) => {
@@ -164,22 +164,21 @@ const CheckDetail = ({ setShowCure }) => {
     return;
   };
 
-  const handleAllProperCheck = useCallback(() => {
+  const checkAllProperCheck = useCallback(() => {
     let checkStateArray = [];
     for (let item of Object.values(checkedInputs)) {
       checkStateArray.push(item.properCheck);
     }
-    const isAllProperCheck = !checkStateArray.includes(false);
-    return setAllProperCheck(isAllProperCheck);
+    return setIsAllProperCheck(!checkStateArray.includes(false));
   }, [checkedInputs]);
 
-  const startCure = () => {
-    allProperCheck && setShowCure(true);
+  const handleStartCureBtnClick = () => {
+    isAllProperCheck && setShowCure(true);
   };
 
   useEffect(() => {
-    handleAllProperCheck();
-  }, [checkedInputs, handleAllProperCheck]);
+    checkAllProperCheck();
+  }, [checkedInputs, checkAllProperCheck]);
 
   return (
     <Base>
@@ -215,8 +214,8 @@ const CheckDetail = ({ setShowCure }) => {
           아니오
         </label>
       </ConfirmRadioBox>
-      <StartCureBox allProperCheck={allProperCheck}>
-        <button onClick={startCure}>치료 및 최적화 진행</button>
+      <StartCureBox isAllProperCheck={isAllProperCheck}>
+        <button onClick={handleStartCureBtnClick}>치료 및 최적화 진행</button>
       </StartCureBox>
     </Base>
   );

@@ -20,7 +20,7 @@ const WarningMsg = styled.p`
   color: #666;
 `;
 
-const MsgList = ({ onMotion, messages, handleShowStepBtn }) => {
+const MsgList = ({ isMotion, messages, setShowStepBtn }) => {
   const scrollBottomRef = useRef(null);
 
   useEffect(() => {
@@ -30,8 +30,8 @@ const MsgList = ({ onMotion, messages, handleShowStepBtn }) => {
   return (
     <Base>
       <RecivedMsg
-        onMotion={onMotion}
-        handleShowStepBtn={handleShowStepBtn}
+        isMotion={isMotion}
+        setShowStepBtn={setShowStepBtn}
         msgs={[
           "사랑하는 딸~",
           "오늘 하루도 잘 지냈어?",

@@ -20,7 +20,7 @@ const CloseMsg = styled(motion.p)`
 const Chapter5Cut17 = () => {
   const [isClose, setIsClose] = useState(false);
 
-  const handleWindowClose = () => {
+  const closeWindow = () => {
     setTimeout(() => {
       setIsClose(true);
     }, 5000);
@@ -33,7 +33,7 @@ const Chapter5Cut17 = () => {
           initial={{ opacity: 1 }}
           animate={{ opacity: [1, 0.5, 1] }}
           transition={{ duration: 2, repeat: "Infinity" }}
-          onAnimationStart={handleWindowClose}
+          onAnimationStart={closeWindow}
         >
           종료하는 중 . . .
         </CloseMsg>

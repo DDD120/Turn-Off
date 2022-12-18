@@ -45,7 +45,7 @@ const Range = styled.input`
 const FilterInput = ({ filter, filters, setFilters }) => {
   const filterRef = useRef(null);
 
-  const UpdateFilter = () => {
+  const updateFilter = () => {
     setFilters((prev) => {
       return { ...prev, [filter]: filterRef.current.value };
     });
@@ -55,7 +55,7 @@ const FilterInput = ({ filter, filters, setFilters }) => {
       <RangeLabel htmlFor={filter}>{filter}</RangeLabel>
       <Range
         ref={filterRef}
-        onInput={UpdateFilter}
+        onInput={updateFilter}
         id={filter}
         type="range"
         min="0"

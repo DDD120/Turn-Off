@@ -94,19 +94,19 @@ const Content = styled.div`
   }
 `;
 
-const TrashFolder = ({ isActive, handleCloseTrashFolder }) => {
+const TrashFolder = ({ isActive, onCloseBtnClick }) => {
   const [isEmptyTrashFolder, setIsEmptyTrashFolder] = useState(false);
   const modalRef = useRef(null);
 
-  const handleClickEmptyTrash = () => {
+  const handleEmptyTrashClick = () => {
     modalRef.current.showModal();
   };
 
-  const handleClickNoBtn = () => {
+  const handleNoBtnClick = () => {
     modalRef.current.close();
   };
 
-  const handleClickYesBtn = () => {
+  const handleYesBtnClick = () => {
     modalRef.current.close();
     setIsEmptyTrashFolder(true);
   };
@@ -119,7 +119,7 @@ const TrashFolder = ({ isActive, handleCloseTrashFolder }) => {
         </Title>
         <CloseIcon
           $isEmptyTrashFolder={isEmptyTrashFolder}
-          onClick={isEmptyTrashFolder ? handleCloseTrashFolder : undefined}
+          onClick={isEmptyTrashFolder ? onCloseBtnClick : undefined}
         >
           <RiCloseFill />
         </CloseIcon>
@@ -129,7 +129,7 @@ const TrashFolder = ({ isActive, handleCloseTrashFolder }) => {
           <EmptyTrashBtn
             $isActive={isActive}
             type="button"
-            onClick={isActive ? handleClickEmptyTrash : undefined}
+            onClick={isActive ? handleEmptyTrashClick : undefined}
           >
             <HiOutlineTrash /> 휴지통 비우기
           </EmptyTrashBtn>
@@ -144,8 +144,8 @@ const TrashFolder = ({ isActive, handleCloseTrashFolder }) => {
       </Content>
       <ConfirmMsgBox
         modalRef={modalRef}
-        handleClickYesBtn={handleClickYesBtn}
-        handleClickNoBtn={handleClickNoBtn}
+        onYesBtnClick={handleYesBtnClick}
+        onNoBtnClick={handleNoBtnClick}
       />
     </Base>
   );

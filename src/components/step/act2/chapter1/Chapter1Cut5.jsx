@@ -70,7 +70,7 @@ const Chapter1Cut5 = () => {
     }, 2000);
   };
 
-  const handleClickBtn = () => {
+  const handleMsgWindowBtnClick = () => {
     setIsClicked(true);
     loading();
   };
@@ -92,7 +92,7 @@ const Chapter1Cut5 = () => {
           </Chat>
 
           <MsgWindowWrapper>
-            <MsgWindow onClick={handleClickBtn} active="true" />
+            <MsgWindow onBtnClick={handleMsgWindowBtnClick} active="true" />
           </MsgWindowWrapper>
         </>
       ) : (

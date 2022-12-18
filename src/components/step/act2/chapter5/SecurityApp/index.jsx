@@ -45,7 +45,7 @@ const SecurityApp = ({ isActive }) => {
   const [completion, setCompletion] = useState(false);
   const { action } = useProgress();
 
-  const handleClickCheckBtn = () => {
+  const handleCheckBtnClick = () => {
     completion ? action.increase() : setShowCheckDetail(true);
   };
 
@@ -57,7 +57,7 @@ const SecurityApp = ({ isActive }) => {
       <Body>
         {!showCheckDetail && !completion && (
           <Main
-            clickEvent={isActive ? handleClickCheckBtn : undefined}
+            onBtnClick={isActive ? handleCheckBtnClick : undefined}
             completion={completion}
           />
         )}
@@ -66,7 +66,7 @@ const SecurityApp = ({ isActive }) => {
         )}
         {showCure && !completion && <Cure setCompletion={setCompletion} />}
         {completion && (
-          <Main clickEvent={handleClickCheckBtn} completion={completion} />
+          <Main onBtnClick={handleCheckBtnClick} completion={completion} />
         )}
       </Body>
     </Base>

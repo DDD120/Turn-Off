@@ -26,11 +26,11 @@ const Name = styled.div`
 `;
 
 const MessageApp = ({
-  onMotion,
+  isMotion,
   isActive,
   messages,
   setMessages,
-  handleShowStepBtn,
+  setShowStepBtn,
 }) => {
   return (
     <Base>
@@ -38,9 +38,9 @@ const MessageApp = ({
         <Name>엄마</Name>
       </TopHeader>
       <MsgList
-        onMotion={onMotion}
+        isMotion={isMotion}
         messages={messages}
-        handleShowStepBtn={handleShowStepBtn}
+        setShowStepBtn={setShowStepBtn}
       />
       <InputChat isActive={isActive} setMessages={setMessages} />
     </Base>

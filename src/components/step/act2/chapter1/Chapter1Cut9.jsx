@@ -37,10 +37,9 @@ const Chapter1Cut9 = () => {
   const [isClicked, setIsClicked] = useState(false);
   const dragRef = useRef(null);
 
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("맨 왼쪽 메모장부터 클릭해볼까?");
+  useToast("맨 왼쪽 메모장부터 클릭해볼까?");
 
-  const handleClickMemo = () => {
+  const handleMemoClick = () => {
     setIsClicked(true);
   };
 
@@ -56,7 +55,7 @@ const Chapter1Cut9 = () => {
                 </IconWrapper>
               </li>
               <li>
-                <IconWrapper onClick={handleClickMemo} cursor="true" hover>
+                <IconWrapper onClick={handleMemoClick} cursor="true" hover>
                   <FcDocument />
                 </IconWrapper>
                 <Active />

@@ -85,19 +85,18 @@ const item = {
   end: { opacity: 1, y: 0 },
 };
 
-const RecivedMsg = ({
-  onMotion = false,
-  msgs,
-  timestamp,
-  handleShowStepBtn,
-}) => {
+const RecivedMsg = ({ isMotion = false, msgs, timestamp, setShowStepBtn }) => {
+  const showStepBtn = () => {
+    setShowStepBtn(true);
+  };
+
   return (
     <Base>
       <Animation
-        variants={onMotion && container}
+        variants={isMotion ? container : undefined}
         initial="start"
         animate="end"
-        onAnimationComplete={onMotion && handleShowStepBtn}
+        onAnimationComplete={isMotion ? showStepBtn : undefined}
       >
         <ProfilePicture>
           <StaticImage
@@ -113,7 +112,7 @@ const RecivedMsg = ({
           <Name>엄마</Name>
           {msgs.map((msg, index) => {
             return (
-              <Bubble variants={onMotion && item} key={index}>
+              <Bubble variants={isMotion ? item : undefined} key={index}>
                 <Text>{msg}</Text>
                 {msgs.length === index + 1 && (
                   <Timestamp>{timestamp}</Timestamp>

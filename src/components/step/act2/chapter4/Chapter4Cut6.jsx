@@ -28,8 +28,7 @@ const Animation = styled(motion.div)`
 const Chapter4Cut6 = () => {
   const [isCompleted, setIsCompleted] = useState(false);
 
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("실행을 종료할 방법을 찾아보자!");
+  useToast("실행을 종료할 방법을 찾아보자!");
 
   const closeVideoApp = () => {
     setIsCompleted(true);

@@ -76,7 +76,7 @@ const Memo = ({
   children,
 }) => {
   const [showMemo, setShowMemo] = useState(true);
-  const handleClickCloseMemo = () => {
+  const handleMemoCloseBtnClick = () => {
     if (initial) return;
     setShowMemo(false);
     setCloseCount((prev) => prev + 1);
@@ -103,7 +103,7 @@ const Memo = ({
                 제목 없음 - 메모장
               </h1>
             </Title>
-            <Close onClick={handleClickCloseMemo}>
+            <Close onClick={handleMemoCloseBtnClick}>
               <AiOutlineClose />
             </Close>
           </Head>

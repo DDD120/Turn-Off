@@ -20,7 +20,7 @@ const Title = styled.h1`
   font-size: 1rem;
   flex: 1;
 
-  & > span {
+  span {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -39,7 +39,7 @@ const Prompt = styled.div`
   font-size: 0.9rem;
   padding: 10px;
 
-  & > div {
+  div {
     width: 70%;
   }
 `;
@@ -65,7 +65,7 @@ const Button = styled.button`
   }
 `;
 
-const MsgWindow = ({ active = false, onClick = null }) => {
+const MsgWindow = ({ active = false, onBtnClick = null }) => {
   return (
     <Base>
       <Title>
@@ -80,7 +80,7 @@ const MsgWindow = ({ active = false, onClick = null }) => {
         </div>
       </Prompt>
       <ButtonBox>
-        <Button onClick={onClick} active={active}>
+        <Button onClick={onBtnClick} active={active}>
           확인
         </Button>
       </ButtonBox>

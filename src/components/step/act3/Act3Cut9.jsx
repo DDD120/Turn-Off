@@ -54,7 +54,7 @@ const GoMain = styled.button`
 const Act3Cut9 = () => {
   const { action } = useProgress();
 
-  const goMain = () => {
+  const handleGoHomeBtnClick = () => {
     action.goMain();
   };
 
@@ -62,7 +62,7 @@ const Act3Cut9 = () => {
     <Base>
       <Sun />
       <TheEnd>THE END</TheEnd>
-      <GoMain onClick={goMain}>홈으로 가기</GoMain>
+      <GoMain onClick={handleGoHomeBtnClick}>홈으로 가기</GoMain>
       <StepBtn endStep={true} />
     </Base>
   );

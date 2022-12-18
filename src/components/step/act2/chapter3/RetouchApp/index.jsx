@@ -56,17 +56,21 @@ const RetouchApp = ({ isActive }) => {
     setFilters(INITAL_FILTER_VALUE);
   };
 
-  const handleClickSaveBtn = () => {
+  const handleResetBtnClick = () => {
+    resetFilters();
+  };
+
+  const handleSaveBtnClick = () => {
     if (isActive) {
       modalRef.current.showModal();
     }
   };
 
-  const handleClickCancleBtn = () => {
+  const handleCancleBtnClick = () => {
     modalRef.current.close();
   };
 
-  const handleClickConfirmBtn = () => {
+  const handleConfirmBtnClick = () => {
     if (currentFile === 2) {
       action.increase();
       return;
@@ -85,19 +89,18 @@ const RetouchApp = ({ isActive }) => {
         FILE_STATE={FILE_STATE}
       />
       <FilterContainer filters={filters} setFilters={setFilters} />
-      <ButtonBox leftText={"RESET"} />
       <ButtonBox>
-        <Button event={resetFilters} bgColor={"#cccccc"}>
+        <Button onBtnClick={handleResetBtnClick} bgColor={"#cccccc"}>
           RESET
         </Button>
-        <Button event={handleClickSaveBtn} bgColor={"#4dabf7"}>
+        <Button onBtnClick={handleSaveBtnClick} bgColor={"#4dabf7"}>
           SAVE
         </Button>
       </ButtonBox>
       <ConfirmMsgBox
         modalRef={modalRef}
-        handleClickCancleBtn={handleClickCancleBtn}
-        handleClickConfirmBtn={handleClickConfirmBtn}
+        onCancleBtnClick={handleCancleBtnClick}
+        onConfirmBtnClick={handleConfirmBtnClick}
       />
     </Base>
   );

@@ -27,10 +27,9 @@ const Animation = styled(motion.div)`
 const Chapter4Cut1 = () => {
   const [showVideoApp, setShowVideoApp] = useState(false);
 
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("동영상 시청 프로그램을 켜보자");
+  useToast("동영상 시청 프로그램을 켜보자");
 
-  const handleClickVideoIcon = () => {
+  const handleVideoAppClick = () => {
     setShowVideoApp(true);
   };
 
@@ -46,7 +45,7 @@ const Chapter4Cut1 = () => {
             </li>
             <li>
               <IconWrapper
-                onClick={handleClickVideoIcon}
+                onClick={handleVideoAppClick}
                 cursor="true"
                 hover={true}
               >

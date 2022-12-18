@@ -65,7 +65,7 @@ const CutImgWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const HowToPlay = ({ goHome }) => {
+const HowToPlay = ({ onClickGoHomeBtn }) => {
   return (
     <Base>
       <Title>진행방식</Title>
@@ -112,7 +112,7 @@ const HowToPlay = ({ goHome }) => {
           </ListItem>
         </List>
       </Content>
-      <MenuBtn handleClickEvent={goHome}>홈으로 가기</MenuBtn>
+      <MenuBtn onClickMenuBtn={onClickGoHomeBtn}>홈으로 가기</MenuBtn>
     </Base>
   );
 };

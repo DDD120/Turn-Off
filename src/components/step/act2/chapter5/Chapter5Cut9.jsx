@@ -26,10 +26,9 @@ const Animation = styled(motion.div)`
 
 const Chapter5Cut9 = () => {
   const [showTrashFolder, setShowTrashFolder] = useState(false);
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("휴지통을 열어보자!");
+  useToast("휴지통을 열어보자!");
 
-  const handleClickHomeBtn = () => {
+  const handleHomeBtnClick = () => {
     setShowTrashFolder(true);
   };
 
@@ -45,7 +44,7 @@ const Chapter5Cut9 = () => {
             </li>
             <li>
               <IconWrapper
-                onClick={handleClickHomeBtn}
+                onClick={handleHomeBtnClick}
                 cursor="true"
                 hover="true"
               >

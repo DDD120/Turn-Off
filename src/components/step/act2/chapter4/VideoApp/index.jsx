@@ -100,7 +100,7 @@ const VideoApp = ({ isActive, closeVideoApp }) => {
   const [isActiveViewHistory, setIsActiveViewHistory] = useState(false);
   const [isActiveAlgorithm, setIsActiveAlgorithm] = useState(false);
 
-  const handleClickSettingBtn = () => {
+  const handleSettingBtnClick = () => {
     if (isActiveViewHistory && isActiveAlgorithm) {
       return;
     }
@@ -109,7 +109,7 @@ const VideoApp = ({ isActive, closeVideoApp }) => {
     }
     return;
   };
-  const handleClickApplyBtn = async () => {
+  const handleApplyBtnClick = async () => {
     if (isActiveViewHistory && isActiveAlgorithm) {
       modalRef.current.close();
       setIsLoading(true);
@@ -123,13 +123,14 @@ const VideoApp = ({ isActive, closeVideoApp }) => {
     }
     return;
   };
+
   return (
     <Base>
       <VideoHeader />
       <ViewHistoryList
         videos={videos}
         isLoading={isLoading}
-        handleClickSettingBtn={handleClickSettingBtn}
+        onSettingBtnClick={handleSettingBtnClick}
       />
       <SettingModal
         modalRef={modalRef}
@@ -137,7 +138,7 @@ const VideoApp = ({ isActive, closeVideoApp }) => {
         setIsActiveViewHistory={setIsActiveViewHistory}
         isActiveAlgorithm={isActiveAlgorithm}
         setIsActiveAlgorithm={setIsActiveAlgorithm}
-        handleClickApplyBtn={handleClickApplyBtn}
+        onApplyBtnClick={handleApplyBtnClick}
       />
       <Footer />
     </Base>

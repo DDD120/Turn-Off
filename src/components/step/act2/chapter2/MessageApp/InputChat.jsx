@@ -5,7 +5,6 @@ import newBadWords from "./badwords";
 
 const TextField = styled.div`
   flex: 1;
-
   display: flex;
 `;
 

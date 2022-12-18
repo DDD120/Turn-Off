@@ -26,11 +26,10 @@ const Base = styled.section`
 `;
 
 const Chapter1Cut11 = () => {
-  const dragRef = useRef();
   const [hasChildElement, setHasChildElement] = useState(true);
+  const dragRef = useRef();
 
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("메모장을 다 닫아버리자!");
+  useToast("메모장을 다 닫아버리자!");
 
   return (
     <Base ref={dragRef}>

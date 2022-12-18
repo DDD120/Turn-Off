@@ -18,8 +18,8 @@ const RetouchAppWrapper = styled.div`
 `;
 
 const Chapter3Cut6 = () => {
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("사진 보정을 완료하자");
+  useToast("사진 보정을 완료하자");
+
   return (
     <Base>
       <RetouchAppWrapper>

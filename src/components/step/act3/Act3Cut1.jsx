@@ -34,14 +34,14 @@ const CutContainer = styled(motion.div)`
 const Act3Cut1 = () => {
   const [isclicked, setIsclicked] = useState(false);
 
-  const handleClickImg = () => {
+  const handleImageClick = () => {
     setIsclicked(true);
   };
 
   return (
     <Base>
       <CutContainer
-        onClick={handleClickImg}
+        onClick={handleImageClick}
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1] }}
         $isclicked={isclicked}

@@ -20,21 +20,17 @@ const ConfirmMsg = styled.p`
   word-break: keep-all;
 `;
 
-const ConfirmMsgBox = ({
-  modalRef,
-  handleClickCancleBtn,
-  handleClickConfirmBtn,
-}) => {
+const ConfirmMsgBox = ({ modalRef, onCancleBtnClick, onConfirmBtnClick }) => {
   return (
     <Base ref={modalRef}>
       <ConfirmMsg>
         저장하시겠습니까? <br /> 저장 시 수정을 다시 못하게 됩니다.
       </ConfirmMsg>
       <ButtonBox>
-        <Button event={handleClickCancleBtn} bgColor={"#cccccc"}>
+        <Button onBtnClick={onCancleBtnClick} bgColor={"#cccccc"}>
           취소
         </Button>
-        <Button event={handleClickConfirmBtn} bgColor={"#4dabf7"}>
+        <Button onBtnClick={onConfirmBtnClick} bgColor={"#4dabf7"}>
           확인
         </Button>
       </ButtonBox>

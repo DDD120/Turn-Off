@@ -59,19 +59,18 @@ const Button = styled.button`
 
 const Chapter5Cut16 = () => {
   const [showCloseMsgBox, setShowCloseMsgBox] = useState(false);
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("컴퓨터를 종료하자");
+  useToast("컴퓨터를 종료하자");
   const { action } = useProgress();
 
-  const handleClickHomeBtn = () => {
+  const handleHomeBtnClick = () => {
     setShowCloseMsgBox(true);
   };
 
-  const handleCheckBtn = () => {
+  const handleCheckBtnClick = () => {
     action.increase();
   };
 
-  const handleCancelBtn = () => {
+  const handleCancelBtnClick = () => {
     setShowCloseMsgBox(false);
   };
 
@@ -82,7 +81,7 @@ const Chapter5Cut16 = () => {
           <ul>
             <li>
               <IconWrapper
-                onClick={handleClickHomeBtn}
+                onClick={handleHomeBtnClick}
                 cursor="true"
                 hover="true"
               >
@@ -99,8 +98,8 @@ const Chapter5Cut16 = () => {
             <div>
               <p>컴퓨터를 종료하시겠습니까?</p>
               <ButtonBox>
-                <Button onClick={handleCheckBtn}>확인</Button>
-                <Button onClick={handleCancelBtn}>취소</Button>
+                <Button onClick={handleCheckBtnClick}>확인</Button>
+                <Button onClick={handleCancelBtnClick}>취소</Button>
               </ButtonBox>
             </div>
           </CloseMsg>

@@ -26,10 +26,9 @@ const Animation = styled(motion.div)`
 
 const Chapter5Cut12 = () => {
   const [showTrashFolder, setShowTrashFolder] = useState(true);
-  // eslint-disable-next-line no-unused-vars
-  const Toast = useToast("휴지통을 비우자!");
+  useToast("휴지통을 비우자!");
 
-  const handleCloseTrashFolder = () => {
+  const hanldeCloseBtnClick = () => {
     setShowTrashFolder(false);
   };
 
@@ -51,7 +50,7 @@ const Chapter5Cut12 = () => {
           <Animation exit={{ opacity: [0, 0.5, 1], scaleY: [0, 1.04, 1] }}>
             <TrashFolder
               isActive={true}
-              handleCloseTrashFolder={handleCloseTrashFolder}
+              onCloseBtnClick={hanldeCloseBtnClick}
             />
           </Animation>
         </>

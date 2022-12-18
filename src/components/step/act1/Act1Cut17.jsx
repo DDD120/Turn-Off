@@ -114,13 +114,13 @@ const Act1Cut17 = () => {
     }, 3000);
   }, []);
 
-  const handleClickImg = () => {
+  const handleImageClick = () => {
     isChange && setIsShow(true);
   };
 
   return (
     <Base>
-      <ImgBox isChange={isChange} onClick={handleClickImg} />
+      <ImgBox isChange={isChange} onClick={handleImageClick} />
       {isShow && (
         <>
           <ImgWrapper>
