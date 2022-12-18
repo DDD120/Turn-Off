@@ -1,22 +1,53 @@
 {
   "name": "turn-off",
   "version": "1.0.0",
+  "main": "main.js",
   "private": true,
   "description": "turn-off",
   "author": "DDD120",
   "keywords": [
     "gatsby"
   ],
+  "build": {
+    "icon": "src/images/favicon.ico",
+    "productName": "Turn Off",
+    "files": [
+      "public/**/*",
+      "main.js"
+    ],
+    "win": {
+      "icon": "src/images/favicon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "src/images/favicon.ico",
+      "language": 1042
+    }
+  },
   "scripts": {
+    "prebuild": "npm run clean",
+    "electron": "wait-on http://localhost:8000 && electron .",
+    "electron-dev": "concurrently \"npm run develop\" \"npm run electron\"",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "electron-builder",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "wait-on": "^6.0.1",
+    "concurrently": "^7.6.0"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
     "badwords-ko": "^1.0.3",
+    "electron-serve": "^1.1.0",
     "framer-motion": "^7.3.4",
     "gatsby": "^4.22.1",
     "gatsby-plugin-html-attributes": "^1.0.5",
