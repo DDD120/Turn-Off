@@ -28,6 +28,7 @@ const Act1Cut8 = () => {
         <StaticImage
           src="../../../images/bubble/bubble-4.webp"
           alt="말풍선"
+          loading="eager"
           layout="fullWidth"
           placeholder="none"
         />

@@ -89,6 +89,7 @@ const Act1Cut1 = () => {
                 width={324}
                 height={386}
                 src="../../../images/bubble/bubble-2.webp"
+                loading="eager"
                 alt="말풍선"
                 layout="constrained"
                 placeholder="none"

@@ -127,6 +127,7 @@ const Act1Cut17 = () => {
             <StaticImage
               width={500}
               height={216}
+              loading="eager"
               src="../../../images/act1/act1_17-3.webp"
               alt="눈을 든 멍게"
               layout="constrained"

@@ -87,6 +87,7 @@ const Chapter1Cut10 = () => {
           <StaticImage
             width={324}
             height={386}
+            loading="eager"
             src="../../../../images/bubble/bubble-2.webp"
             alt="말풍선"
             layout="constrained"
@@ -101,6 +102,7 @@ const Chapter1Cut10 = () => {
         <StaticImage
           width={500}
           height={322}
+          loading="eager"
           src="../../../../images/act2/chapter1/chapter1_10-1.webp"
           alt="당황하는 뭉게"
           layout="constrained"
@@ -116,6 +118,7 @@ const Chapter1Cut10 = () => {
           <StaticImage
             width={327}
             height={228}
+            loading="eager"
             src="../../../../images/bubble/bubble-3.webp"
             alt="말풍선"
             layout="constrained"

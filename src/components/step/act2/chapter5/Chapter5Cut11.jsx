@@ -30,6 +30,7 @@ const Chapter5Cut11 = () => {
     <Base>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1] }}>
         <StaticImage
+          loading="eager"
           src="../../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="fullWidth"
@@ -43,6 +44,7 @@ const Chapter5Cut11 = () => {
         <StaticImage
           width={500}
           height={308}
+          loading="eager"
           src="../../../../images/act2/chapter5/chapter5_11-1.webp"
           alt="쓰레기통 냄새를 맡는 뭉게"
           layout="constrained"

@@ -26,6 +26,7 @@ const Act1Cut11 = () => {
         <StaticImage
           width={254}
           height={279}
+          loading="eager"
           src="../../../images/act1/act1_11-1.webp"
           alt="'이게아닌데...'라고 생각하는 뭉게"
           layout="constrained"

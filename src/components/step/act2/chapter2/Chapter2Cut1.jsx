@@ -32,6 +32,7 @@ const Chapter2Cut1 = () => {
         <StaticImage
           width={452}
           height={140}
+          loading="eager"
           src="../../../../images/bubble/bubble-6.webp"
           alt="말풍선"
           layout="constrained"
@@ -48,6 +49,7 @@ const Chapter2Cut1 = () => {
         <StaticImage
           width={390}
           height={482}
+          loading="eager"
           src="../../../../images/act2/chapter2/chapter2_1-1.webp"
           alt="다음 앱을 누르려는 손"
           layout="constrained"

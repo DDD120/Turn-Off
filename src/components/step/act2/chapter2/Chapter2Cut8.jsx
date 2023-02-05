@@ -41,6 +41,7 @@ const Cut28 = () => {
         <StaticImage
           width={500}
           height={715}
+          loading="eager"
           src="../../../../images/act2/chapter2/chapter2_8-1.webp"
           alt="이마 땀 닦는 뭉게"
           layout="constrained"
@@ -55,6 +56,7 @@ const Cut28 = () => {
           <StaticImage
             width={327}
             height={228}
+            loading="eager"
             src="../../../../images/bubble/bubble-3.webp"
             alt="맖풍선"
             layout="constrained"

@@ -40,6 +40,7 @@ const Act3Cut3 = () => {
         <StaticImage
           width={346}
           height={224}
+          loading="eager"
           src="../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"
@@ -52,6 +53,7 @@ const Act3Cut3 = () => {
         <StaticImage
           width={500}
           height={309}
+          loading="eager"
           src="../../../images/act3/act3_3-1.webp"
           alt="의아한 표정의 승현"
           layout="constrained"
@@ -66,6 +68,7 @@ const Act3Cut3 = () => {
         <StaticImage
           width={346}
           height={224}
+          loading="eager"
           src="../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"

@@ -32,6 +32,7 @@ const Act3Cut6 = () => {
         <StaticImage
           width={452}
           height={140}
+          loading="eager"
           src="../../../images/bubble/bubble-6.webp"
           alt="말풍선"
           layout="constrained"
@@ -43,6 +44,7 @@ const Act3Cut6 = () => {
         <StaticImage
           width={498}
           height={555}
+          loading="eager"
           src="../../../images/act3/act3_6-1.webp"
           alt="자는 뭉게 쓰다듬는 승현"
           layout="constrained"

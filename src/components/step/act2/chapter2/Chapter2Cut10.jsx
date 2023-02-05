@@ -32,6 +32,7 @@ const Cut30 = () => {
         <StaticImage
           width={500}
           height={253}
+          loading="eager"
           src="../../../../images/act2/chapter2/chapter2_10-1.webp"
           alt="마음에 들어하는 뭉게"
           layout="constrained"
@@ -43,6 +44,7 @@ const Cut30 = () => {
         <StaticImage
           width={452}
           height={140}
+          loading="eager"
           src="../../../../images/bubble/bubble-6.webp"
           alt="말풍선"
           layout="constrained"

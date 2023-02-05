@@ -38,6 +38,7 @@ const Chapter4Cut4 = () => {
         <StaticImage
           width={360}
           height={460}
+          loading="eager"
           src="../../../../images/act2/chapter4/chapter4_4-1.webp"
           alt="영상을 클릭하는 뭉게 손가락"
           layout="constrained"
@@ -48,6 +49,7 @@ const Chapter4Cut4 = () => {
         <StaticImage
           width={327}
           height={228}
+          loading="eager"
           src="../../../../images/bubble/bubble-3.webp"
           alt="말풍선"
           layout="constrained"

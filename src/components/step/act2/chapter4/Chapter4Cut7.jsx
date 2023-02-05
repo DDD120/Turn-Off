@@ -32,6 +32,7 @@ const Chapter4Cut7 = () => {
         <StaticImage
           width={346}
           height={224}
+          loading="eager"
           src="../../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"
@@ -46,6 +47,7 @@ const Chapter4Cut7 = () => {
         <StaticImage
           width={419}
           height={387}
+          loading="eager"
           src="../../../../images/act2/chapter4/chapter4_7-1.webp"
           alt="기쁜 표정의 뭉게"
           layout="constrained"

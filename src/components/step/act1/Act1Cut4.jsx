@@ -57,6 +57,7 @@ const Act1Cut4 = () => {
         <StaticImage
           width={346}
           height={224}
+          loading="eager"
           src="../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"

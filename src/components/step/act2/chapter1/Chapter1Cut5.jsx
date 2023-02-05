@@ -83,6 +83,7 @@ const Chapter1Cut5 = () => {
             <StaticImage
               width={452}
               height={140}
+              loading="eager"
               src="../../../../images/bubble/bubble-6.webp"
               alt="말풍선"
               layout="constrained"

@@ -47,6 +47,7 @@ const Chapter4Cut5 = () => {
         <StaticImage
           width={359}
           height={453}
+          loading="eager"
           src="../../../../images/act2/chapter4/chapter4_5-1.webp"
           alt="망설여하는 뭉게"
           layout="constrained"
@@ -59,6 +60,7 @@ const Chapter4Cut5 = () => {
           <StaticImage
             width={452}
             height={140}
+            loading="eager"
             src="../../../../images/bubble/bubble-6.webp"
             alt="말풍선"
             layout="constrained"
@@ -74,6 +76,7 @@ const Chapter4Cut5 = () => {
           <StaticImage
             width={452}
             height={140}
+            loading="eager"
             src="../../../../images/bubble/bubble-6.webp"
             alt="말풍선"
             layout="constrained"

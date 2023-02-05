@@ -38,6 +38,7 @@ const Chapter3Cut3 = () => {
         <StaticImage
           width={346}
           height={224}
+          loading="eager"
           src="../../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"
@@ -51,6 +52,7 @@ const Chapter3Cut3 = () => {
         <StaticImage
           width={408}
           height={253}
+          loading="eager"
           src="../../../../images/act2/chapter3/chapter3_3-1.webp"
           alt="사진 편집 프로그램 킨 채 잠자는 승현"
           layout="constrained"

@@ -42,6 +42,7 @@ const Chapter5Cut5 = () => {
         <StaticImage
           width={416}
           height={484}
+          loading="eager"
           src="../../../../images/act2/chapter5/chapter5_5-1.webp"
           alt="밝은 표정의 뭉게"
           layout="constrained"

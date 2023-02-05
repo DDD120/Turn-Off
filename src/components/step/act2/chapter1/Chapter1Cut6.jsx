@@ -83,6 +83,7 @@ const Chapter1Cut6 = () => {
         <StaticImage
           width={452}
           height={140}
+          loading="eager"
           src="../../../../images/bubble/bubble-6.webp"
           alt="말풍선"
           layout="constrained"
@@ -94,6 +95,7 @@ const Chapter1Cut6 = () => {
         <StaticImage
           width={362}
           height={581}
+          loading="eager"
           src="../../../../images/act2/chapter1/chapter1_6-1.webp"
           alt="생각난 뭉게"
           layout="constrained"
@@ -113,6 +115,7 @@ const Chapter1Cut6 = () => {
               <StaticImage
                 width={377}
                 height={253}
+                loading="eager"
                 src="../../../../images/act2/chapter1/chapter1_6-2.webp"
                 alt="밤늦게까지 깨어있는 승현"
                 layout="constrained"

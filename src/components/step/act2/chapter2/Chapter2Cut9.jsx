@@ -39,6 +39,7 @@ const Chapter2Cut9 = () => {
         <StaticImage
           width={453}
           height={433}
+          loading="eager"
           src="../../../../images/act2/chapter2/chapter2_9-1.webp"
           alt="뿌듯해하는 뭉게"
           layout="constrained"

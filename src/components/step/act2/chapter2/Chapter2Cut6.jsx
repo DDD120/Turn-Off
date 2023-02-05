@@ -35,6 +35,7 @@ const Chapter2Cut6 = () => {
         <StaticImage
           width={500}
           height={294}
+          loading="eager"
           src="../../../../images/act2/chapter2/chapter2_6-1.webp"
           alt="설레하는 뭉게"
           layout="constrained"
@@ -43,6 +44,7 @@ const Chapter2Cut6 = () => {
       </CutContainer>
       <Chat initial={{ opacity: 0 }} animate={{ opacity: [0, 1], y: [-10, 0] }}>
         <StaticImage
+          loading="eager"
           src="../../../../images/bubble/bubble-5.webp"
           alt="말풍선"
           layout="fullWidth"

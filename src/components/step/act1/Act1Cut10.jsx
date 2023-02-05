@@ -31,6 +31,7 @@ const Act1Cut10 = () => {
         <StaticImage
           src="../../../images/bubble/bubble-4.webp"
           alt="말풍선"
+          loading="eager"
           layout="fullWidth"
           placeholder="none"
         />
@@ -40,6 +41,7 @@ const Act1Cut10 = () => {
         <StaticImage
           width={500}
           height={355}
+          loading="eager"
           src="../../../images/act1/act1_10-1.webp"
           alt="뭉게를 쓰다듬는 승현"
           layout="constrained"

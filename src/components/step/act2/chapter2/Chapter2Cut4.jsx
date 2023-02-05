@@ -34,6 +34,7 @@ const Chapter2Cut4 = () => {
         <StaticImage
           width={500}
           height={583}
+          loading="eager"
           src="../../../../images/act2/chapter2/chapter2_4-1.webp"
           alt="뭉게를 안고 있는 승현 어머니"
           layout="constrained"
@@ -44,6 +45,7 @@ const Chapter2Cut4 = () => {
         <StaticImage
           width={327}
           height={228}
+          loading="eager"
           src="../../../../images/bubble/bubble-3.webp"
           alt="말풍선"
           layout="constrained"

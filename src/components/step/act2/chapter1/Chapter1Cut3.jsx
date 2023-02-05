@@ -63,6 +63,7 @@ const Chapter1Cut3 = () => {
         <StaticImage
           width={322}
           height={292}
+          loading="eager"
           src="../../../../images/act2/chapter1/chapter1_3-1.webp"
           alt="띠링-"
           layout="constrained"

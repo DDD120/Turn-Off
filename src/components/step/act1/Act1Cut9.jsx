@@ -31,6 +31,7 @@ const Act1Cut9 = () => {
         <StaticImage
           width={329}
           height={159}
+          loading="eager"
           src="../../../images/bubble/bubble-1.webp"
           alt="말풍선"
           layout="constrained"
@@ -42,6 +43,7 @@ const Act1Cut9 = () => {
         <StaticImage
           width={328}
           height={385}
+          loading="eager"
           src="../../../images/act1/act1_9-1.webp"
           alt="승현에게 위로하는 뭉게"
           layout="constrained"

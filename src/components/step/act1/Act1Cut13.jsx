@@ -57,6 +57,7 @@ const Act1Cut13 = () => {
         <StaticImage
           width={453}
           height={277}
+          loading="eager"
           src="../../../images/act1/act1_13-1.webp"
           alt="괴로워하는 승현"
           layout="constrained"

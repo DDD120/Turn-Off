@@ -50,6 +50,7 @@ const Act1Cut16 = () => {
           <StaticImage
             width={346}
             height={224}
+            loading="eager"
             src="../../../images/bubble/bubble-4.webp"
             alt="말풍선"
             layout="constrained"
@@ -66,6 +67,7 @@ const Act1Cut16 = () => {
         <StaticImage
           width={500}
           height={499}
+          loading="eager"
           src="../../../images/act1/act1_16-1.webp"
           alt="승현과 뭉게"
           layout="constrained"
@@ -81,6 +83,7 @@ const Act1Cut16 = () => {
           <StaticImage
             width={346}
             height={224}
+            loading="eager"
             src="../../../images/bubble/bubble-4.webp"
             alt="말풍선"
             layout="constrained"

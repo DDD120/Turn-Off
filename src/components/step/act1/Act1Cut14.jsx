@@ -55,6 +55,7 @@ const Act1_14 = () => {
           <StaticImage
             width={500}
             height={242}
+            loading="eager"
             src="../../../images/act1/act1_14-1.webp"
             alt="한숨 쉬는 승현"
             layout="constrained"
@@ -72,6 +73,7 @@ const Act1_14 = () => {
             <StaticImage
               width={500}
               height={242}
+              loading="eager"
               src="../../../images/act1/act1_14-2.webp"
               alt="밑을 쳐다보는 승현"
               layout="constrained"

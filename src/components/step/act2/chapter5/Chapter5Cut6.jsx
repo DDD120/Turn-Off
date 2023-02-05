@@ -40,6 +40,7 @@ const Cut52 = () => {
         <StaticImage
           width={346}
           height={224}
+          loading="eager"
           src="../../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"
@@ -52,6 +53,7 @@ const Cut52 = () => {
         <StaticImage
           width={434}
           height={218}
+          loading="eager"
           src="../../../../images/act2/chapter5/chapter5_6-1.webp"
           alt="밝은 표정의 뭉게"
           layout="constrained"
@@ -66,6 +68,7 @@ const Cut52 = () => {
         <StaticImage
           width={346}
           height={224}
+          loading="eager"
           src="../../../../images/bubble/bubble-4.webp"
           alt="말풍선"
           layout="constrained"
