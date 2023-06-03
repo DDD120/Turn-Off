@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import { toast } from "react-toastify";
-import TOAST_IMGURL from "images/act2/toast.webp";
+import React, { useEffect } from "react"
+import styled from "styled-components"
+import { toast } from "react-toastify"
+import TOAST_IMGURL from "images/act2/toast.webp"
 
 const ToastImg = styled.img`
   width: 20px;
   height: 20px;
-`;
+`
 
 const useToast = (text) => {
   useEffect(() => {
@@ -19,8 +19,8 @@ const useToast = (text) => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-    });
-  }, [text]);
-};
+    })
+  }, [text])
+}
 
-export default useToast;
+export default useToast

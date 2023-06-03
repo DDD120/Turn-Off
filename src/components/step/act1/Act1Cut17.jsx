@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import IMG1URL from "images/act1/act1_17-1.webp";
-import IMG2URL from "images/act1/act1_17-2.webp";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useEffect, useState } from "react"
+import styled from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import IMG1URL from "images/act1/act1_17-1.webp"
+import IMG2URL from "images/act1/act1_17-2.webp"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
-`;
+`
 
 const ImgBox = styled.div`
   background-image: ${({ isChange }) =>
@@ -93,7 +93,7 @@ const ImgBox = styled.div`
       }
     }
   }
-`;
+`
 
 const ImgWrapper = styled.div`
   position: absolute;
@@ -102,21 +102,21 @@ const ImgWrapper = styled.div`
   transform: translate(-50%, -50%);
   width: 90%;
   aspect-ratio: 500/216;
-`;
+`
 
 const Act1Cut17 = () => {
-  const [isChange, setIsChange] = useState(false);
-  const [isShow, setIsShow] = useState(false);
+  const [isChange, setIsChange] = useState(false)
+  const [isShow, setIsShow] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setIsChange(true);
-    }, 3000);
-  }, []);
+      setIsChange(true)
+    }, 3000)
+  }, [])
 
   const handleImageClick = () => {
-    isChange && setIsShow(true);
-  };
+    if (isChange) setIsShow(true)
+  }
 
   return (
     <Base>
@@ -138,7 +138,7 @@ const Act1Cut17 = () => {
         </>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default Act1Cut17;
+export default Act1Cut17

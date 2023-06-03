@@ -1,16 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import {
-  FcDocument,
-  FcSms,
-  FcEditImage,
-  FcStart,
-  FcPlus,
-} from "react-icons/fc";
-import StepBtn from "components/common/StepBtn";
-import { motion } from "framer-motion";
-import { IconWrapper, Active } from "components/common/WindowStyle";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import styled from "styled-components"
+import { FcDocument, FcSms, FcEditImage, FcStart, FcPlus } from "react-icons/fc"
+import StepBtn from "components/common/StepBtn"
+import { motion } from "framer-motion"
+import { IconWrapper, Active } from "components/common/WindowStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
@@ -20,7 +14,7 @@ const Base = styled.section`
   @media only screen and (max-width: 450px) {
     font-size: 12px;
   }
-`;
+`
 
 const Bubble = styled.div`
   position: absolute;
@@ -28,7 +22,7 @@ const Bubble = styled.div`
   bottom: 20%;
   transform: translateX(-50%);
   width: 100%;
-`;
+`
 
 const Chat = styled(motion.div)`
   width: 50%;
@@ -53,7 +47,7 @@ const Chat = styled(motion.div)`
     top: 55%;
     right: 16%;
   }
-`;
+`
 
 const Bottom = styled.div`
   position: absolute;
@@ -61,7 +55,7 @@ const Bottom = styled.div`
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-`;
+`
 
 const Chapter1Cut8 = () => {
   return (
@@ -119,7 +113,7 @@ const Chapter1Cut8 = () => {
       </Bottom>
       <StepBtn />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter1Cut8;
+export default Chapter1Cut8

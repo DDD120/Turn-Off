@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import React, { useState } from "react"
+import styled from "styled-components"
+import { FullScreen, useFullScreenHandle } from "react-full-screen"
 import {
   AiOutlineFullscreenExit,
   AiOutlineFullscreen,
   AiFillHome,
-} from "react-icons/ai";
-import { useProgress } from "store/progress";
+} from "react-icons/ai"
+import { Link } from "gatsby"
 
 const Layout = styled.main`
   margin: 0 auto;
@@ -18,7 +18,7 @@ const Layout = styled.main`
   align-items: center;
   background-color: #fff;
   overflow: hidden;
-`;
+`
 
 const Settings = styled.aside`
   padding: 4px;
@@ -32,7 +32,7 @@ const Settings = styled.aside`
   cursor: pointer;
   background-color: #eeeeee89;
   z-index: 9;
-`;
+`
 
 const FullscreenBtn = styled.button`
   padding: 4px;
@@ -42,21 +42,16 @@ const FullscreenBtn = styled.button`
   align-items: center;
   margin-right: 8px;
   cursor: pointer;
-`;
+`
 
 const Container = ({ children }) => {
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const { action } = useProgress();
-  const handle = useFullScreenHandle();
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  const handle = useFullScreenHandle()
 
   const handleFullscreenBtnClick = () => {
-    isFullscreen ? handle.enter() : handle.exit();
-    setIsFullscreen((prev) => !prev);
-  };
-
-  const handleGoMainBtnClick = () => {
-    action.goMain();
-  };
+    isFullscreen ? handle.enter() : handle.exit()
+    setIsFullscreen((prev) => !prev)
+  }
 
   return (
     <FullScreen handle={handle}>
@@ -75,12 +70,14 @@ const Container = ({ children }) => {
               <AiOutlineFullscreen />
             )}
           </FullscreenBtn>
-          <AiFillHome onClick={handleGoMainBtnClick} />
+          <Link to="/">
+            <AiFillHome />
+          </Link>
         </Settings>
         {children}
       </Layout>
     </FullScreen>
-  );
-};
+  )
+}
 
-export default Container;
+export default Container

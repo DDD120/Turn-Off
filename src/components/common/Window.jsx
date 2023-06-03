@@ -1,6 +1,6 @@
-import React from "react";
-import { FcFolder, FcSettings, FcFile, FcGoogle } from "react-icons/fc";
-import { Layout, Top, Main, IconWrapper } from "./WindowStyle";
+import React from "react"
+import { FcFolder, FcSettings, FcFile, FcGoogle } from "react-icons/fc"
+import { Layout, Top, Main, IconWrapper } from "./WindowStyle"
 
 const Window = ({ children }) => {
   return (
@@ -36,7 +36,7 @@ const Window = ({ children }) => {
       </Main>
       {children}
     </Layout>
-  );
-};
+  )
+}
 
-export default Window;
+export default Window

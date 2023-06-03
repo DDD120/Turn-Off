@@ -1,12 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { DefaultImage } from "components/common/GlobalStyle";
-import IMG1URL from "images/howtoplay-1.webp";
-import IMG2URL from "images/howtoplay-2.webp";
-import IMG3URL from "images/howtoplay-3.webp";
-import MenuBtn from "components/common/MenuBtn";
+import React from "react"
+import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
+import Menu from "components/common/Menu"
 
-const Base = styled.div`
+const Base = styled.main`
   padding: 20px 0;
   align-self: stretch;
   flex: 1;
@@ -14,17 +11,21 @@ const Base = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-`;
+  background-color: #ffffff;
+  background-image: linear-gradient(#73b7c260 1.1px, transparent 1.1px),
+    linear-gradient(to right, #73b7c260 1.1px, #ffffff 1.1px);
+  background-size: 22px 22px;
+`
 
 const Title = styled.p`
   font-size: 1.2rem;
   margin-bottom: 10px;
-`;
+`
 
 const Content = styled.div`
   flex: 1;
   align-self: stretch;
-`;
+`
 
 const List = styled.ul`
   display: flex;
@@ -32,7 +33,7 @@ const List = styled.ul`
   height: 100%;
   gap: 10px;
   padding: 10px;
-`;
+`
 
 const ListItem = styled.li`
   display: flex;
@@ -43,29 +44,29 @@ const ListItem = styled.li`
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0px 0px 10px #0000002b;
-`;
+`
 
 const ListText = styled.p`
   margin: 4px;
   word-break: keep-all;
   text-align: center;
-`;
+`
 
 const StepBtnImgWrapper = styled.div`
   width: 20%;
   margin: 0 auto;
-`;
+`
 
 const ToastImgWrapper = styled.div`
   width: 70%;
   margin: 0 auto;
-`;
+`
 const CutImgWrapper = styled.div`
   width: 60%;
   margin: 0 auto;
-`;
+`
 
-const HowToPlay = ({ onClickGoHomeBtn }) => {
+const HowToPlay = () => {
   return (
     <Base>
       <Title>진행방식</Title>
@@ -80,11 +81,14 @@ const HowToPlay = ({ onClickGoHomeBtn }) => {
               있습니다.
             </ListText>
             <StepBtnImgWrapper>
-              <DefaultImage
+              <StaticImage
                 width={104}
                 height={42}
-                src={IMG1URL}
+                src={"../images/howtoplay-1.webp"}
                 alt="화살표 버튼"
+                loading="eager"
+                layout="constrained"
+                placeholder="none"
               />
             </StepBtnImgWrapper>
           </ListItem>
@@ -94,27 +98,33 @@ const HowToPlay = ({ onClickGoHomeBtn }) => {
               그림 또는 말풍선을 클릭해보세요.
             </ListText>
             <ToastImgWrapper>
-              <DefaultImage
+              <StaticImage
                 width={440}
                 height={117}
-                src={IMG2URL}
+                src={"../images/howtoplay-2.webp"}
                 alt="미션 알림"
+                loading="eager"
+                layout="constrained"
+                placeholder="none"
               />
             </ToastImgWrapper>
             <CutImgWrapper>
-              <DefaultImage
+              <StaticImage
                 width={500}
                 height={419}
-                src={IMG3URL}
+                src={"../images/howtoplay-3.webp"}
                 alt="만화 컷"
+                loading="eager"
+                layout="constrained"
+                placeholder="none"
               />
             </CutImgWrapper>
           </ListItem>
         </List>
+        <Menu to="/">홈으로 가기</Menu>
       </Content>
-      <MenuBtn onClickMenuBtn={onClickGoHomeBtn}>홈으로 가기</MenuBtn>
     </Base>
-  );
-};
+  )
+}
 
-export default HowToPlay;
+export default HowToPlay

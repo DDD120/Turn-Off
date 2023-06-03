@@ -1,14 +1,9 @@
-import * as React from "react";
-import Home from "components/home";
-import Layout from "components/Layout";
+import * as React from "react"
+import Main from "components/Main"
 
 const IndexPage = () => {
-  return (
-    <Layout>
-      <Home />
-    </Layout>
-  );
-};
+  return <Main />
+}
 
 export const Head = () => (
   <>
@@ -17,6 +12,6 @@ export const Head = () => (
     <meta name="author" content="DDD120 : 이수민" />
     <title>Turn Off</title>
   </>
-);
+)
 
-export default IndexPage;
+export default IndexPage

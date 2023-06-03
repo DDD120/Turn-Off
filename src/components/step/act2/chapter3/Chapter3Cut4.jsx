@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import StepBtn from "components/common/StepBtn";
-import styled from "styled-components";
-import FilterContainer from "./RetouchApp/FilterContainer";
+import React, { useState } from "react"
+import StepBtn from "components/common/StepBtn"
+import styled from "styled-components"
+import FilterContainer from "./RetouchApp/FilterContainer"
 
 const Base = styled.section`
   align-self: stretch;
@@ -11,32 +11,31 @@ const Base = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-`;
+`
 
 const CutContainer = styled.div`
   width: 80%;
-
   margin: 0 auto;
-`;
+`
 
 const Chat = styled.div`
   position: absolute;
   color: #fff;
   word-break: keep-all;
   text-align: center;
-`;
+`
 
 const Chat1 = styled(Chat)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -200px);
-`;
+`
 
 const Chat2 = styled(Chat)`
   bottom: 50%;
   left: 50%;
   transform: translate(-50%, 200px);
-`;
+`
 
 const INITAL_FILTER_VALUE = {
   brightness: 100,
@@ -47,10 +46,10 @@ const INITAL_FILTER_VALUE = {
   huerotate: 0,
   blur: 0,
   sepia: 0,
-};
+}
 
 const Chapter3Cut4 = () => {
-  const [filters, setFilters] = useState(INITAL_FILTER_VALUE);
+  const [filters, setFilters] = useState(INITAL_FILTER_VALUE)
 
   return (
     <Base>
@@ -65,7 +64,7 @@ const Chapter3Cut4 = () => {
       </Chat2>
       <StepBtn color="#ffffff" />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter3Cut4;
+export default Chapter3Cut4

@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import StepPrevBtn from "./StepPrevBtn";
-import StepNextBtn from "./StepNextBtn";
+import React from "react"
+import styled from "styled-components"
+import StepPrevBtn from "./StepPrevBtn"
+import StepNextBtn from "./StepNextBtn"
 
 const Base = styled.div`
   z-index: 9;
@@ -11,7 +11,7 @@ const Base = styled.div`
   transform: translateX(-50%);
   display: flex;
   gap: 4px;
-`;
+`
 
 const StepBtn = ({ color, startStep = false, endStep = false }) => {
   return (
@@ -19,7 +19,7 @@ const StepBtn = ({ color, startStep = false, endStep = false }) => {
       {!startStep && <StepPrevBtn color={color} />}
       {!endStep && <StepNextBtn color={color} />}
     </Base>
-  );
-};
+  )
+}
 
-export default StepBtn;
+export default StepBtn

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import { motion } from "framer-motion";
-import { DefaultText } from "components/common/GlobalStyle";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import styled from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import { motion } from "framer-motion"
+import { DefaultText } from "components/common/GlobalStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
@@ -12,13 +12,13 @@ const Base = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-`;
+`
 
 const Animation = styled(motion.div)`
   width: 90%;
   position: absolute;
   z-index: 1;
-`;
+`
 
 const Chat = styled.div`
   position: absolute;
@@ -32,7 +32,7 @@ const Chat = styled.div`
     text-align: center;
     word-break: keep-all;
   }
-`;
+`
 
 const Chat1 = styled(Chat)`
   transform: translateX(calc(-50% - 100px)) translateY(calc(-50% - 180px));
@@ -55,7 +55,7 @@ const Chat1 = styled(Chat)`
     font-size: 0.8rem;
     transform: translateX(calc(-50% - 80px)) translateY(calc(-50% - 140px));
   }
-`;
+`
 
 const Chat2 = styled(Chat)`
   transform: translateX(calc(-50% + 100px)) translateY(calc(-50% + 140px));
@@ -63,7 +63,7 @@ const Chat2 = styled(Chat)`
   @media only screen and (max-width: 420px) {
     transform: translateX(calc(-50% + 60px)) translateY(calc(-50% + 140px));
   }
-`;
+`
 
 const CutContainer = styled.div`
   width: 80%;
@@ -74,7 +74,7 @@ const CutContainer = styled.div`
     top: 60%;
     right: 30%;
   }
-`;
+`
 
 const Chapter1Cut10 = () => {
   return (
@@ -130,7 +130,7 @@ const Chapter1Cut10 = () => {
 
       <StepBtn />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter1Cut10;
+export default Chapter1Cut10

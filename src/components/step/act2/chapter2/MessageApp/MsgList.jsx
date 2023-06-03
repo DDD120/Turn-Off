@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from "react";
-import styled from "styled-components";
-import RecivedMsg from "./RecivedMsg";
-import SentMsg from "./SentMsg";
+import React, { useRef, useEffect } from "react"
+import styled from "styled-components"
+import RecivedMsg from "./RecivedMsg"
+import SentMsg from "./SentMsg"
 
 const Base = styled.ul`
   flex: 7;
@@ -12,20 +12,20 @@ const Base = styled.ul`
   &::-webkit-scrollbar {
     width: 0;
   }
-`;
+`
 
 const WarningMsg = styled.p`
   text-align: center;
   margin: 8px 0;
   color: #666;
-`;
+`
 
 const MsgList = ({ isMotion, messages, setShowStepBtn }) => {
-  const scrollBottomRef = useRef(null);
+  const scrollBottomRef = useRef(null)
 
   useEffect(() => {
-    scrollBottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+    scrollBottomRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [messages])
 
   return (
     <Base>
@@ -48,11 +48,11 @@ const MsgList = ({ isMotion, messages, setShowStepBtn }) => {
               <WarningMsg>부적절한 단어가 포함되어 있습니다.</WarningMsg>
             )}
           </div>
-        );
+        )
       })}
       <li ref={scrollBottomRef} />
     </Base>
-  );
-};
+  )
+}
 
-export default MsgList;
+export default MsgList

@@ -1,12 +1,13 @@
-import React, { useState } from "react";
-import Window from "components/common/Window";
-import { Bottom, IconWrapper } from "components/common/WindowStyle";
-import { FcHome } from "react-icons/fc";
-import styled from "styled-components";
-import "react-toastify/dist/ReactToastify.min.css";
-import useToast from "hooks/useToast";
-import { ToastContainer } from "react-toastify";
-import { useProgress } from "store/progress";
+import React, { useState } from "react"
+import Window from "components/common/Window"
+import { Bottom, IconWrapper } from "components/common/WindowStyle"
+import { FcHome } from "react-icons/fc"
+import styled from "styled-components"
+import "react-toastify/dist/ReactToastify.min.css"
+import useToast from "hooks/useToast"
+import { ToastContainer } from "react-toastify"
+import { useControl } from "context/control"
+import { navigate } from "gatsby"
 
 const Base = styled.section`
   align-self: stretch;
@@ -15,12 +16,12 @@ const Base = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const CloseMsgWrapper = styled.div`
   position: absolute;
   width: 60%;
-`;
+`
 
 const CloseMsg = styled.div`
   width: 100%;
@@ -36,14 +37,14 @@ const CloseMsg = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const ButtonBox = styled.div`
   display: flex;
   justify-content: center;
   gap: 4px;
   margin-top: 10px;
-`;
+`
 
 const Button = styled.button`
   padding: 8px 12px;
@@ -55,24 +56,12 @@ const Button = styled.button`
   &:hover {
     filter: brightness(0.9);
   }
-`;
+`
 
 const Chapter5Cut16 = () => {
-  const [showCloseMsgBox, setShowCloseMsgBox] = useState(false);
-  useToast("컴퓨터를 종료하자");
-  const { action } = useProgress();
-
-  const handleHomeBtnClick = () => {
-    setShowCloseMsgBox(true);
-  };
-
-  const handleCheckBtnClick = () => {
-    action.increase();
-  };
-
-  const handleCancelBtnClick = () => {
-    setShowCloseMsgBox(false);
-  };
+  const [showCloseMsgBox, setShowCloseMsgBox] = useState(false)
+  const { step } = useControl()
+  useToast("컴퓨터를 종료하자")
 
   return (
     <Base>
@@ -81,7 +70,7 @@ const Chapter5Cut16 = () => {
           <ul>
             <li>
               <IconWrapper
-                onClick={handleHomeBtnClick}
+                onClick={() => setShowCloseMsgBox(true)}
                 cursor="true"
                 hover="true"
               >
@@ -98,15 +87,17 @@ const Chapter5Cut16 = () => {
             <div>
               <p>컴퓨터를 종료하시겠습니까?</p>
               <ButtonBox>
-                <Button onClick={handleCheckBtnClick}>확인</Button>
-                <Button onClick={handleCancelBtnClick}>취소</Button>
+                <Button onClick={() => navigate(`/play/${step + 1}`)}>
+                  확인
+                </Button>
+                <Button onClick={() => setShowCloseMsgBox(false)}>취소</Button>
               </ButtonBox>
             </div>
           </CloseMsg>
         </CloseMsgWrapper>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter5Cut16;
+export default Chapter5Cut16

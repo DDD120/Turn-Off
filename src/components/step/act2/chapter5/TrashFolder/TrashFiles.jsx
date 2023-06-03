@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   FcDocument,
   FcImageFile,
@@ -8,15 +8,15 @@ import {
   FcAudioFile,
   FcPuzzle,
   FcCommandLine,
-} from "react-icons/fc";
-import styled from "styled-components";
+} from "react-icons/fc"
+import styled from "styled-components"
 
 const File = styled.li`
   display: flex;
   align-items: center;
   gap: 4px;
   margin: 2px 0;
-`;
+`
 
 const TrashFiles = () => {
   return (
@@ -150,7 +150,7 @@ const TrashFiles = () => {
         <span>커피랑 베이글.jpg</span>
       </File>
     </ul>
-  );
-};
+  )
+}
 
-export default TrashFiles;
+export default TrashFiles

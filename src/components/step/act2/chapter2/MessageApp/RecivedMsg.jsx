@@ -1,22 +1,22 @@
-import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.li`
   width: 70%;
-`;
+`
 
 const Animation = styled(motion.div)`
   width: 100%;
   display: flex;
   gap: 20px;
   align-items: flex-start;
-`;
+`
 
 const MsgBox = styled.div`
   flex: 4;
-`;
+`
 
 const Bubble = styled(motion.span)`
   display: inline-block;
@@ -37,7 +37,7 @@ const Bubble = styled(motion.span)`
     left: 0;
     transform: translateX(calc(100% - 20px)) rotate(45deg);
   }
-`;
+`
 
 const ProfilePicture = styled.div`
   flex: 1;
@@ -50,23 +50,23 @@ const ProfilePicture = styled.div`
   img {
     width: 100%;
   }
-`;
+`
 
 const Text = styled.p`
   word-break: keep-all;
   word-wrap: break-word;
-`;
+`
 
 const Name = styled.p`
   margin-bottom: 4px;
-`;
+`
 
 const Timestamp = styled.span`
   position: absolute;
   right: -60px;
   font-size: 0.4rem;
   color: #aaa;
-`;
+`
 
 const container = {
   start: { opacity: 0, y: 10 },
@@ -78,25 +78,21 @@ const container = {
       staggerChildren: 1.5,
     },
   },
-};
+}
 
 const item = {
   start: { opacity: 0, y: 10 },
   end: { opacity: 1, y: 0 },
-};
+}
 
 const RecivedMsg = ({ isMotion = false, msgs, timestamp, setShowStepBtn }) => {
-  const showStepBtn = () => {
-    setShowStepBtn(true);
-  };
-
   return (
     <Base>
       <Animation
         variants={isMotion ? container : undefined}
         initial="start"
         animate="end"
-        onAnimationComplete={isMotion ? showStepBtn : undefined}
+        onAnimationComplete={isMotion ? () => setShowStepBtn(true) : undefined}
       >
         <ProfilePicture>
           <StaticImage
@@ -118,12 +114,12 @@ const RecivedMsg = ({ isMotion = false, msgs, timestamp, setShowStepBtn }) => {
                   <Timestamp>{timestamp}</Timestamp>
                 )}
               </Bubble>
-            );
+            )
           })}
         </MsgBox>
       </Animation>
     </Base>
-  );
-};
+  )
+}
 
-export default RecivedMsg;
+export default RecivedMsg

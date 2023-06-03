@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import StepBtn from "components/common/StepBtn";
-import MsgWindow from "./MsgWindow";
-import SOUND1 from "sounds/cut12.wav";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useEffect, useRef } from "react"
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import StepBtn from "components/common/StepBtn"
+import MsgWindow from "./MsgWindow"
+import SOUND1 from "sounds/cut12.wav"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
@@ -17,7 +17,7 @@ const Base = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-`;
+`
 
 const Effect = styled(motion.div)`
   position: absolute;
@@ -28,7 +28,7 @@ const Effect = styled(motion.div)`
     transform: translateX(-50%);
     width: 200px;
   }
-`;
+`
 
 const MsgWindowWrapper = styled(motion.div)`
   width: 60%;
@@ -36,14 +36,15 @@ const MsgWindowWrapper = styled(motion.div)`
   @media only screen and (max-width: 768px) {
     width: 80%;
   }
-`;
+`
 
 const Chapter1Cut3 = () => {
-  const audioRef = useRef();
+  const audioRef = useRef(null)
 
   useEffect(() => {
-    audioRef.current.play();
-  }, []);
+    audioRef.current.play()
+  }, [])
+
   return (
     <Base>
       <audio ref={audioRef}>
@@ -72,7 +73,7 @@ const Chapter1Cut3 = () => {
       </Effect>
       <StepBtn />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter1Cut3;
+export default Chapter1Cut3

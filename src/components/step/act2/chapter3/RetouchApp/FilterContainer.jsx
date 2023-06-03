@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import FilterInput from "./FilterInput";
+import React from "react"
+import styled from "styled-components"
+import FilterInput from "./FilterInput"
 
 const Base = styled.div`
   padding: 10px;
-`;
+`
 
 const FilterContainer = ({ filters, setFilters }) => {
   return (
@@ -18,7 +18,7 @@ const FilterContainer = ({ filters, setFilters }) => {
         />
       ))}
     </Base>
-  );
-};
+  )
+}
 
-export default FilterContainer;
+export default FilterContainer

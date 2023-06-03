@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { IoMdArrowDroprightCircle } from "react-icons/io";
-import { useProgress } from "store/progress";
+import React from "react"
+import styled from "styled-components"
+import { IoMdArrowDroprightCircle } from "react-icons/io"
+import { useControl } from "context/control"
+import { navigate } from "gatsby"
 
-const NextBtnIcon = styled.div`
+const NextIcon = styled.button`
   cursor: pointer;
   font-size: 1.5rem;
   transition: 0.3s;
@@ -12,20 +13,16 @@ const NextBtnIcon = styled.div`
   &:hover {
     color: ${({ color }) => color};
   }
-`;
+`
 
 const StepNextBtn = ({ color = "#001220" }) => {
-  const { action } = useProgress();
-
-  const handleClickNextStep = () => {
-    action.increase();
-  };
+  const { step } = useControl()
 
   return (
-    <NextBtnIcon color={color} onClick={handleClickNextStep}>
+    <NextIcon color={color} onClick={() => navigate(`/play/${step + 1}`)}>
       <IoMdArrowDroprightCircle />
-    </NextBtnIcon>
-  );
-};
+    </NextIcon>
+  )
+}
 
-export default StepNextBtn;
+export default StepNextBtn

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { AiFillSecurityScan, AiFillCloseCircle } from "react-icons/ai";
-import IMG1URL from "images/act2/chapter5/bad_state.webp";
-import IMG2URL from "images/act2/chapter5/good_state.webp";
-import { DefaultImage } from "components/common/GlobalStyle";
+import React from "react"
+import styled from "styled-components"
+import { AiFillSecurityScan, AiFillCloseCircle } from "react-icons/ai"
+import IMG1URL from "images/act2/chapter5/bad_state.webp"
+import IMG2URL from "images/act2/chapter5/good_state.webp"
+import { DefaultImage } from "components/common/GlobalStyle"
 
 const State = styled.div`
   flex: 1;
@@ -12,7 +12,7 @@ const State = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 10px;
-`;
+`
 
 const StateImg = styled.div`
   width: 60%;
@@ -25,7 +25,7 @@ const StateImg = styled.div`
   img {
     border-radius: 50%;
   }
-`;
+`
 
 const StateText = styled.div`
   text-align: center;
@@ -35,14 +35,14 @@ const StateText = styled.div`
     font-size: 0.8rem;
     margin-top: 4px;
   }
-`;
+`
 
 const Check = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const CheckBtn = styled.button`
   width: 80%;
@@ -57,7 +57,7 @@ const CheckBtn = styled.button`
     font-size: 1.05rem;
     margin-bottom: 8px;
   }
-`;
+`
 
 const state = {
   bad: {
@@ -82,41 +82,38 @@ const state = {
       icon: <AiFillCloseCircle size={50} style={{ color: "#5c940d" }} />,
     },
   },
-};
+}
 
-const Main = ({ completion, onBtnClick }) => {
+const Main = ({ isCompletion, onBtnClick }) => {
   const handleCheckBtnClick = () => {
-    if (onBtnClick) {
-      onBtnClick();
-    }
-    return;
-  };
+    if (onBtnClick) onBtnClick()
+  }
 
   return (
     <>
       <State>
-        <StateImg isGood={completion}>
+        <StateImg isGood={isCompletion}>
           <DefaultImage
             width={376}
             height={376}
-            src={completion ? state.good.img.url : state.bad.img.url}
-            alt={completion ? state.good.img.alt : state.good.img.alt}
+            src={isCompletion ? state.good.img.url : state.bad.img.url}
+            alt={isCompletion ? state.good.img.alt : state.good.img.alt}
           />
         </StateImg>
         <StateText>
-          <p>{completion ? state.good.state_text : state.bad.state_text}</p>
-          {!completion && <p>최적화를 진행해보세요.</p>}
+          <p>{isCompletion ? state.good.state_text : state.bad.state_text}</p>
+          {!isCompletion && <p>최적화를 진행해보세요.</p>}
         </StateText>
       </State>
 
       <Check>
         <CheckBtn onClick={handleCheckBtnClick}>
-          <p>{completion ? state.good.btn.text : state.bad.btn.text}</p>
-          <div>{completion ? state.good.btn.icon : state.bad.btn.icon}</div>
+          <p>{isCompletion ? state.good.btn.text : state.bad.btn.text}</p>
+          <div>{isCompletion ? state.good.btn.icon : state.bad.btn.icon}</div>
         </CheckBtn>
       </Check>
     </>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main

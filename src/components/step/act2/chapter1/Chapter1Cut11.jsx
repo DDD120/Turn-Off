@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
-import styled from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import MemoLayout from "./MemoApp/MemoLayout";
+import React, { useRef, useState } from "react"
+import styled from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import MemoLayout from "./MemoApp/MemoLayout"
 import {
   FcDocument,
   FcStart,
@@ -9,12 +9,12 @@ import {
   FcEditImage,
   FcPlus,
   FcHome,
-} from "react-icons/fc";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
-import useToast from "hooks/useToast";
-import Window from "components/common/Window";
-import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
+} from "react-icons/fc"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.min.css"
+import useToast from "hooks/useToast"
+import Window from "components/common/Window"
+import { Bottom, IconWrapper, Active } from "components/common/WindowStyle"
 
 const Base = styled.section`
   align-self: stretch;
@@ -23,13 +23,12 @@ const Base = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Chapter1Cut11 = () => {
-  const [hasChildElement, setHasChildElement] = useState(true);
-  const dragRef = useRef();
-
-  useToast("메모장을 다 닫아버리자!");
+  const [hasChildElement, setHasChildElement] = useState(true)
+  const dragRef = useRef(null)
+  useToast("메모장을 다 닫아버리자!")
 
   return (
     <Base ref={dragRef}>
@@ -43,32 +42,32 @@ const Chapter1Cut11 = () => {
             </li>
             {hasChildElement && (
               <li>
-                <IconWrapper hover={true}>
+                <IconWrapper hover>
                   <FcDocument />
                 </IconWrapper>
                 <Active />
               </li>
             )}
             <li>
-              <IconWrapper hover={true}>
+              <IconWrapper hover>
                 <FcSms />
               </IconWrapper>
               <Active />
             </li>
             <li>
-              <IconWrapper hover={true}>
+              <IconWrapper hover>
                 <FcEditImage />
               </IconWrapper>
               <Active />
             </li>
             <li>
-              <IconWrapper hover={true}>
+              <IconWrapper hover>
                 <FcStart />
               </IconWrapper>
               <Active />
             </li>
             <li>
-              <IconWrapper hover={true}>
+              <IconWrapper hover>
                 <FcPlus />
               </IconWrapper>
               <Active />
@@ -84,7 +83,7 @@ const Chapter1Cut11 = () => {
       />
       {!hasChildElement && <StepBtn />}
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter1Cut11;
+export default Chapter1Cut11

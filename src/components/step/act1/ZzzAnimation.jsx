@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import React from "react"
+import styled from "styled-components"
+import { motion } from "framer-motion"
 
 const Zzz = styled(motion.span)`
   position: absolute;
   top: 30%;
   right: 70px;
   font-weight: bold;
-`;
+`
 
 const ZzzAnimation = () => {
   return (
@@ -44,7 +44,7 @@ const ZzzAnimation = () => {
         Z
       </Zzz>
     </>
-  );
-};
+  )
+}
 
-export default ZzzAnimation;
+export default ZzzAnimation

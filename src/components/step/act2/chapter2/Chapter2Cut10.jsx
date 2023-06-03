@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import { motion } from "framer-motion";
-import { DefaultText } from "components/common/GlobalStyle";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import styled from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import { motion } from "framer-motion"
+import { DefaultText } from "components/common/GlobalStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
@@ -14,16 +14,16 @@ const Base = styled.section`
   position: relative;
   flex-direction: column;
   gap: 10px;
-`;
+`
 
 const CutContainer = styled(motion.div)`
   width: 90%;
-`;
+`
 
 const Chat = styled(motion.div)`
   position: relative;
   width: 90%;
-`;
+`
 
 const Cut30 = () => {
   return (
@@ -56,7 +56,7 @@ const Cut30 = () => {
       </Chat>
       <StepBtn />
     </Base>
-  );
-};
+  )
+}
 
-export default Cut30;
+export default Cut30

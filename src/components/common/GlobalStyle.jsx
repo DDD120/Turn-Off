@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -38,7 +38,12 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     border: none;
   }
-`;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+`
 
 export const DefaultImage = styled.img`
   width: 100%;
@@ -46,7 +51,7 @@ export const DefaultImage = styled.img`
   height: auto;
   aspect-ratio: ${({ width, height }) => `${width}/${height}`};
   pointer-events: none;
-`;
+`
 
 export const DefaultText = styled.p`
   width: 70%;
@@ -56,6 +61,6 @@ export const DefaultText = styled.p`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

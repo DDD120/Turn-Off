@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import InputChat from "./InputChat";
-import MsgList from "./MsgList";
+import React from "react"
+import styled from "styled-components"
+import InputChat from "./InputChat"
+import MsgList from "./MsgList"
 
 const Base = styled.div`
   width: 100%;
@@ -12,18 +12,18 @@ const Base = styled.div`
   box-shadow: 0px 0px 10px #c9ccd5;
   border-radius: 4px;
   overflow: hidden;
-`;
+`
 
 const TopHeader = styled.div`
   flex: 1;
   background-color: #9ccee0;
   display: flex;
   align-items: center;
-`;
+`
 
 const Name = styled.div`
   margin-left: 20px;
-`;
+`
 
 const MessageApp = ({
   isMotion,
@@ -44,7 +44,7 @@ const MessageApp = ({
       />
       <InputChat isActive={isActive} setMessages={setMessages} />
     </Base>
-  );
-};
+  )
+}
 
-export default MessageApp;
+export default MessageApp

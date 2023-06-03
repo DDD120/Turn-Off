@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import { useProgress } from "store/progress";
+import React from "react"
+import styled from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import { navigate } from "gatsby"
 
 const Base = styled.section`
   position: relative;
@@ -12,7 +12,7 @@ const Base = styled.section`
   align-items: center;
   flex-direction: column;
   background-color: #a4cfff;
-`;
+`
 
 const Sun = styled.div`
   position: absolute;
@@ -31,13 +31,13 @@ const Sun = styled.div`
     display: block;
     padding-bottom: 100%;
   }
-`;
+`
 
 const TheEnd = styled.p`
   color: #09253b;
   font-size: 1.4rem;
   margin-bottom: 20px;
-`;
+`
 
 const GoMain = styled.button`
   padding: 12px 24px;
@@ -49,23 +49,17 @@ const GoMain = styled.button`
   &:hover {
     filter: brightness(0.9);
   }
-`;
+`
 
 const Act3Cut9 = () => {
-  const { action } = useProgress();
-
-  const handleGoHomeBtnClick = () => {
-    action.goMain();
-  };
-
   return (
     <Base>
       <Sun />
       <TheEnd>THE END</TheEnd>
-      <GoMain onClick={handleGoHomeBtnClick}>홈으로 가기</GoMain>
-      <StepBtn endStep={true} />
+      <GoMain onClick={() => navigate("/")}>홈으로 가기</GoMain>
+      <StepBtn endStep />
     </Base>
-  );
-};
+  )
+}
 
-export default Act3Cut9;
+export default Act3Cut9

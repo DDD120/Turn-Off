@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const Base = styled.div`
   width: 100%;
@@ -13,7 +13,7 @@ const Base = styled.div`
   word-break: keep-all;
   display: flex;
   flex-direction: column;
-`;
+`
 
 const Title = styled.h1`
   text-align: left;
@@ -28,7 +28,7 @@ const Title = styled.h1`
     border-radius: 50%;
     margin-right: 8px;
   }
-`;
+`
 
 const Prompt = styled.div`
   background-color: #fff;
@@ -42,7 +42,7 @@ const Prompt = styled.div`
   div {
     width: 70%;
   }
-`;
+`
 
 const ButtonBox = styled.div`
   flex: 1.8;
@@ -51,7 +51,7 @@ const ButtonBox = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding: 0 10px;
-`;
+`
 
 const Button = styled.button`
   font-weight: bold;
@@ -63,7 +63,7 @@ const Button = styled.button`
   &:hover {
     background-color: ${({ active }) => active && "#a9b7dc"};
   }
-`;
+`
 
 const MsgWindow = ({ active = false, onBtnClick = null }) => {
   return (
@@ -85,7 +85,7 @@ const MsgWindow = ({ active = false, onBtnClick = null }) => {
         </Button>
       </ButtonBox>
     </Base>
-  );
-};
+  )
+}
 
-export default MsgWindow;
+export default MsgWindow

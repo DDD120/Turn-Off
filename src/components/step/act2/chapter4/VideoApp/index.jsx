@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { useRef } from "react";
-import VideoHeader from "./VideoHeader";
-import ViewHistoryList from "./ViewHistoryList";
-import SettingModal from "./SettingModal";
-import IMG1URL from "images/act2/chapter4/thumbnail-1.webp";
-import IMG2URL from "images/act2/chapter4/thumbnail-2.webp";
-import IMG3URL from "images/act2/chapter4/thumbnail-3.webp";
-import IMG4URL from "images/act2/chapter4/thumbnail-4.webp";
-import IMG5URL from "images/act2/chapter4/thumbnail-5.webp";
-import IMG6URL from "images/act2/chapter4/thumbnail-6.webp";
-import IMG7URL from "images/act2/chapter4/thumbnail-7.webp";
-import IMG8URL from "images/act2/chapter4/thumbnail-8.webp";
-import IMG9URL from "images/act2/chapter4/thumbnail-9.webp";
-import IMG10URL from "images/act2/chapter4/thumbnail-10.webp";
+import React, { useState } from "react"
+import styled from "styled-components"
+import { useRef } from "react"
+import VideoHeader from "./VideoHeader"
+import ViewHistoryList from "./ViewHistoryList"
+import SettingModal from "./SettingModal"
+import IMG1URL from "images/act2/chapter4/thumbnail-1.webp"
+import IMG2URL from "images/act2/chapter4/thumbnail-2.webp"
+import IMG3URL from "images/act2/chapter4/thumbnail-3.webp"
+import IMG4URL from "images/act2/chapter4/thumbnail-4.webp"
+import IMG5URL from "images/act2/chapter4/thumbnail-5.webp"
+import IMG6URL from "images/act2/chapter4/thumbnail-6.webp"
+import IMG7URL from "images/act2/chapter4/thumbnail-7.webp"
+import IMG8URL from "images/act2/chapter4/thumbnail-8.webp"
+import IMG9URL from "images/act2/chapter4/thumbnail-9.webp"
+import IMG10URL from "images/act2/chapter4/thumbnail-10.webp"
 
 const Base = styled.div`
   width: 100%;
@@ -23,11 +23,11 @@ const Base = styled.div`
   box-shadow: 0px 0px 10px #c9ccd5;
   border-radius: 4px;
   position: relative;
-`;
+`
 
 const Footer = styled.footer`
   height: 20px;
-`;
+`
 
 let videos = [
   {
@@ -92,37 +92,31 @@ let videos = [
     running_time: "3:34",
     current_time: "60%",
   },
-];
+]
 
 const VideoApp = ({ isActive, closeVideoApp }) => {
-  const modalRef = useRef(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isActiveViewHistory, setIsActiveViewHistory] = useState(false);
-  const [isActiveAlgorithm, setIsActiveAlgorithm] = useState(false);
+  const modalRef = useRef(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const [isActiveViewHistory, setIsActiveViewHistory] = useState(false)
+  const [isActiveAlgorithm, setIsActiveAlgorithm] = useState(false)
 
   const handleSettingBtnClick = () => {
+    if (isActiveViewHistory && isActiveAlgorithm) return
+    if (isActive) modalRef.current.showModal()
+  }
+  const handleApplyBtnClick = () => {
     if (isActiveViewHistory && isActiveAlgorithm) {
-      return;
-    }
-    if (isActive) {
-      modalRef.current.showModal();
-    }
-    return;
-  };
-  const handleApplyBtnClick = async () => {
-    if (isActiveViewHistory && isActiveAlgorithm) {
-      modalRef.current.close();
-      setIsLoading(true);
-      videos = [];
+      modalRef.current.close()
+      setIsLoading(true)
+      videos = []
       setTimeout(() => {
-        setIsLoading(false);
-      }, 2000);
+        setIsLoading(false)
+      }, 2000)
       setTimeout(() => {
-        closeVideoApp();
-      }, 3000);
+        closeVideoApp()
+      }, 3000)
     }
-    return;
-  };
+  }
 
   return (
     <Base>
@@ -142,7 +136,7 @@ const VideoApp = ({ isActive, closeVideoApp }) => {
       />
       <Footer />
     </Base>
-  );
-};
+  )
+}
 
-export default VideoApp;
+export default VideoApp

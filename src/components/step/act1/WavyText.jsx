@@ -1,15 +1,15 @@
-import React, { memo } from "react";
-import { motion } from "framer-motion";
-import styled from "styled-components";
+import React, { memo } from "react"
+import { motion } from "framer-motion"
+import styled from "styled-components"
 
 const Letter = styled(motion.span)`
   display: inline-block;
   font-size: 2.4rem;
   color: #00122060;
-`;
+`
 
 const WavyText = ({ text, delay = 0, duration = 0.03, ...props }) => {
-  const letters = Array.from(text);
+  const letters = Array.from(text)
 
   const container = {
     hidden: {
@@ -19,7 +19,7 @@ const WavyText = ({ text, delay = 0, duration = 0.03, ...props }) => {
       opacity: 1,
       transition: { staggerChildren: duration, delayChildren: i * delay },
     }),
-  };
+  }
 
   const child = {
     visible: {
@@ -40,7 +40,7 @@ const WavyText = ({ text, delay = 0, duration = 0.03, ...props }) => {
         stiffness: 200,
       },
     },
-  };
+  }
 
   return (
     <motion.p
@@ -59,7 +59,7 @@ const WavyText = ({ text, delay = 0, duration = 0.03, ...props }) => {
         </Letter>
       ))}
     </motion.p>
-  );
-};
+  )
+}
 
-export default memo(WavyText);
+export default memo(WavyText)

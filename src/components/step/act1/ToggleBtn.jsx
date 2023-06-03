@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-import styled, { css } from "styled-components";
+import React from "react"
+import { motion } from "framer-motion"
+import styled, { css } from "styled-components"
 
 const Switch = styled(motion.button)`
   position: absolute;
@@ -18,7 +18,7 @@ const Switch = styled(motion.button)`
   padding: 4px;
   z-index: 1;
   cursor: pointer;
-`;
+`
 
 const Handle = styled(motion.div)`
   width: 30px;
@@ -32,28 +32,26 @@ const Handle = styled(motion.div)`
       background-color: transparent;
       box-shadow: inset -8px -8px 1px 1px #fff;
     `}
-`;
+`
 
 const spring = {
   type: "spring",
   stiffness: 700,
   damping: 30,
-};
+}
 
 const ToggleBtn = ({ isDark, setIsDark }) => {
-  const handleSwitchClick = () => setIsDark(!isDark);
-
   return (
     <Switch
       type="button"
       $isDark={isDark}
-      onClick={handleSwitchClick}
+      onClick={() => setIsDark(!isDark)}
       initial={{ translateX: "-50%" }}
       whileTap={{ scale: 0.8 }}
     >
       <Handle $isDark={isDark} layout transition={spring} />
     </Switch>
-  );
-};
+  )
+}
 
-export default ToggleBtn;
+export default ToggleBtn

@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import { IoMdArrowDropleftCircle } from "react-icons/io";
-import { useProgress } from "store/progress";
+import React from "react"
+import styled from "styled-components"
+import { IoMdArrowDropleftCircle } from "react-icons/io"
+import { useControl } from "context/control"
+import { navigate } from "gatsby"
 
-const PrevBtnIcon = styled.div`
+const PrevIcon = styled.button`
   cursor: pointer;
   font-size: 1.5rem;
   transition: 0.3s;
@@ -12,19 +13,16 @@ const PrevBtnIcon = styled.div`
   &:hover {
     color: ${({ color }) => color};
   }
-`;
+`
 
 const StepPrevBtn = ({ color = "#001220" }) => {
-  const { action } = useProgress();
-  const handleClickPrevStep = () => {
-    action.decrease();
-  };
+  const { step } = useControl()
 
   return (
-    <PrevBtnIcon color={color} onClick={handleClickPrevStep}>
+    <PrevIcon color={color} onClick={() => navigate(`/play/${step - 1}`)}>
       <IoMdArrowDropleftCircle />
-    </PrevBtnIcon>
-  );
-};
+    </PrevIcon>
+  )
+}
 
-export default StepPrevBtn;
+export default StepPrevBtn

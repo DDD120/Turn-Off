@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import { motion } from "framer-motion";
-import { DefaultText } from "components/common/GlobalStyle";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from "react"
+import styled, { css } from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import { motion } from "framer-motion"
+import { DefaultText } from "components/common/GlobalStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
@@ -18,7 +18,7 @@ const Base = styled.section`
   flex-direction: column;
   gap: 14px;
   position: relative;
-`;
+`
 
 const Chat = styled(motion.div)`
   width: 60%;
@@ -36,18 +36,18 @@ const Chat = styled(motion.div)`
         box-shadow: 0px 0px 20px 4px #73b8c2a2;
       }
     `}
-`;
+`
 
 const CutContainer = styled(motion.div)`
   position: relative;
   width: 40%;
-`;
+`
 
 const Chat2 = styled.div`
   text-align: center;
   word-break: keep-all;
   margin-bottom: 20px;
-`;
+`
 
 const CutContainer2 = styled(motion.div)`
   position: relative;
@@ -56,7 +56,7 @@ const CutContainer2 = styled(motion.div)`
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0px 0px 10px #00000036;
-`;
+`
 
 const Think = styled.div`
   width: 70%;
@@ -64,20 +64,17 @@ const Think = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-`;
+`
 
 const Chapter1Cut6 = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false)
 
-  const handleChatClick = () => {
-    setIsClicked(true);
-  };
   return (
     <Base>
       <Chat
         initial={{ opacity: 0 }}
         animate={{ opacity: [0, 1], y: [-10, 0] }}
-        onClick={handleChatClick}
+        onClick={() => setIsClicked(true)}
         $isClicked={isClicked}
       >
         <StaticImage
@@ -127,7 +124,7 @@ const Chapter1Cut6 = () => {
         </>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter1Cut6;
+export default Chapter1Cut6

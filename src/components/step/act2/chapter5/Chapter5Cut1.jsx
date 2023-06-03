@@ -1,11 +1,11 @@
-import React from "react";
-import StepBtn from "components/common/StepBtn";
-import { FcPlus } from "react-icons/fc";
-import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { DefaultText } from "components/common/GlobalStyle";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import StepBtn from "components/common/StepBtn"
+import { FcPlus } from "react-icons/fc"
+import { Bottom, IconWrapper, Active } from "components/common/WindowStyle"
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import { DefaultText } from "components/common/GlobalStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
@@ -16,14 +16,14 @@ const Base = styled.section`
   align-items: center;
   flex-direction: column;
   gap: 30px;
-`;
+`
 
 const Chat = styled(motion.div)`
   position: relative;
   width: 50%;
-`;
+`
 
-const CutContainer = styled.div``;
+const CutContainer = styled.div``
 
 const Chapter5Cut1 = () => {
   return (
@@ -31,7 +31,7 @@ const Chapter5Cut1 = () => {
       <CutContainer>
         <Bottom>
           <li>
-            <IconWrapper hover={true}>
+            <IconWrapper hover>
               <FcPlus />
             </IconWrapper>
             <Active />
@@ -52,7 +52,7 @@ const Chapter5Cut1 = () => {
       </Chat>
       <StepBtn />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter5Cut1;
+export default Chapter5Cut1

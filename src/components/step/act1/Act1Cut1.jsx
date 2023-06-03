@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import ToggleBtn from "./ToggleBtn";
-import { motion } from "framer-motion";
-import StepBtn from "components/common/StepBtn";
-import { DefaultText } from "components/common/GlobalStyle";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from "react"
+import styled from "styled-components"
+import ToggleBtn from "./ToggleBtn"
+import { motion } from "framer-motion"
+import StepBtn from "components/common/StepBtn"
+import { DefaultText } from "components/common/GlobalStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled(motion.section)`
   align-self: stretch;
@@ -25,7 +25,7 @@ const Base = styled(motion.section)`
     transition: opacity 0.5s linear;
     opacity: ${({ $isDark }) => ($isDark ? 1 : 0)};
   }
-`;
+`
 
 const SunAndMoon = styled.div`
   position: absolute;
@@ -47,35 +47,35 @@ const SunAndMoon = styled.div`
   &:hover {
     background-color: #fff3e3;
   }
-`;
+`
 
 const Chat = styled.div`
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
-`;
+`
 
 const Bubble = styled(motion.div)`
   width: 250px;
-`;
+`
 
 const TextBox = styled.div`
   color: #000;
-`;
+`
 
 const Text1 = styled(DefaultText)`
   top: 80px;
   left: 80px;
-`;
+`
 
 const Text2 = styled(DefaultText)`
   top: 200px;
   left: 160px;
-`;
+`
 
 const Act1Cut1 = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(false)
 
   return (
     <Base $isDark={isDark} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
@@ -100,11 +100,11 @@ const Act1Cut1 = () => {
               </TextBox>
             </Bubble>
           </Chat>
-          <StepBtn startStep={true} color="#ffffff" />
+          <StepBtn startStep color="#ffffff" />
         </>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default Act1Cut1;
+export default Act1Cut1

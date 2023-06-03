@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import Window from "components/common/Window";
-import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
-import { FcStart, FcPlus, FcHome } from "react-icons/fc";
-import VideoApp from "./VideoApp";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
-import useToast from "hooks/useToast";
-import { motion } from "framer-motion";
-import StepBtn from "components/common/StepBtn";
+import React, { useState } from "react"
+import styled from "styled-components"
+import Window from "components/common/Window"
+import { Bottom, IconWrapper, Active } from "components/common/WindowStyle"
+import { FcStart, FcPlus, FcHome } from "react-icons/fc"
+import VideoApp from "./VideoApp"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.min.css"
+import useToast from "hooks/useToast"
+import { motion } from "framer-motion"
+import StepBtn from "components/common/StepBtn"
 
 const Base = styled.section`
   align-self: stretch;
@@ -17,21 +17,16 @@ const Base = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Animation = styled(motion.div)`
   width: 80%;
   position: absolute;
-`;
+`
 
 const Chapter4Cut1 = () => {
-  const [showVideoApp, setShowVideoApp] = useState(false);
-
-  useToast("동영상 시청 프로그램을 켜보자");
-
-  const handleVideoAppClick = () => {
-    setShowVideoApp(true);
-  };
+  const [showVideoApp, setShowVideoApp] = useState(false)
+  useToast("동영상 시청 프로그램을 켜보자")
 
   return (
     <Base>
@@ -45,7 +40,7 @@ const Chapter4Cut1 = () => {
             </li>
             <li>
               <IconWrapper
-                onClick={handleVideoAppClick}
+                onClick={() => setShowVideoApp(true)}
                 cursor="true"
                 hover={true}
               >
@@ -54,7 +49,7 @@ const Chapter4Cut1 = () => {
               <Active />
             </li>
             <li>
-              <IconWrapper hover={true}>
+              <IconWrapper hover>
                 <FcPlus />
               </IconWrapper>
               <Active />
@@ -75,7 +70,7 @@ const Chapter4Cut1 = () => {
       )}
       <ToastContainer />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter4Cut1;
+export default Chapter4Cut1

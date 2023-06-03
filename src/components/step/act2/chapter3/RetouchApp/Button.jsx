@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const Base = styled.button`
   flex: 1;
@@ -11,14 +11,14 @@ const Base = styled.button`
   &:hover {
     background-color: ${({ bgColor }) => `${bgColor}cc`};
   }
-`;
+`
 
-const Button = ({ onBtnClick, bgColor, children }) => {
+const Button = ({ onClick, bgColor, children }) => {
   return (
-    <Base type="button" bgColor={bgColor} onClick={onBtnClick}>
+    <Base type="button" bgColor={bgColor} onClick={onClick}>
       {children}
     </Base>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

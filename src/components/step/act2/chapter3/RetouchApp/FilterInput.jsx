@@ -1,21 +1,21 @@
-import React, { useRef } from "react";
-import styled from "styled-components";
+import React, { useRef } from "react"
+import styled from "styled-components"
 
 const Base = styled.div`
   display: flex;
   gap: 10px;
   align-items: center;
-`;
+`
 
 const RangeLabel = styled.label`
   color: #cfcfcf;
   margin: 2px;
   flex: 1;
-`;
+`
 
 const Range = styled.input`
   height: 4px;
-  -webkit-appearance: none;
+  appearance: none;
   margin: 10px 0;
   width: 60%;
   background: transparent;
@@ -40,16 +40,16 @@ const Range = styled.input`
     background: #f06595;
     cursor: pointer;
   }
-`;
+`
 
 const FilterInput = ({ filter, filters, setFilters }) => {
-  const filterRef = useRef(null);
+  const filterRef = useRef(null)
 
   const updateFilter = () => {
     setFilters((prev) => {
-      return { ...prev, [filter]: filterRef.current.value };
-    });
-  };
+      return { ...prev, [filter]: filterRef.current.value }
+    })
+  }
   return (
     <Base>
       <RangeLabel htmlFor={filter}>{filter}</RangeLabel>
@@ -63,7 +63,7 @@ const FilterInput = ({ filter, filters, setFilters }) => {
         value={filters[filter]}
       />
     </Base>
-  );
-};
+  )
+}
 
-export default FilterInput;
+export default FilterInput

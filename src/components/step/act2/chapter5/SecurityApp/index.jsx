@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { FcPlus } from "react-icons/fc";
-import Main from "./Main";
-import CheckDetail from "./CheckDetail";
-import Cure from "./Cure";
-import { useProgress } from "store/progress";
+import React, { useState } from "react"
+import styled from "styled-components"
+import { FcPlus } from "react-icons/fc"
+import Main from "./Main"
+import CheckDetail from "./CheckDetail"
+import Cure from "./Cure"
+import { useControl } from "context/control"
+import { navigate } from "gatsby"
 
 const Base = styled.div`
   width: 100%;
@@ -16,7 +17,7 @@ const Base = styled.div`
   border-radius: 4px;
   overflow: hidden;
   position: relative;
-`;
+`
 
 const Header = styled.header`
   height: 30px;
@@ -27,7 +28,7 @@ const Header = styled.header`
     margin-left: 10px;
     font-size: 20px;
   }
-`;
+`
 
 const Body = styled.main`
   display: flex;
@@ -37,40 +38,35 @@ const Body = styled.main`
   &::-webkit-scrollbar {
     display: none;
   }
-`;
+`
 
 const SecurityApp = ({ isActive }) => {
-  const [showCheckDetail, setShowCheckDetail] = useState(false);
-  const [showCure, setShowCure] = useState(false);
-  const [completion, setCompletion] = useState(false);
-  const { action } = useProgress();
+  const [securStep, setSecurStep] = useState(0)
+  const { step } = useControl()
+
+  const nextSecurStep = () => {
+    setSecurStep((prev) => prev + 1)
+  }
 
   const handleCheckBtnClick = () => {
-    completion ? action.increase() : setShowCheckDetail(true);
-  };
+    securStep === 3 ? navigate(`/play/${step + 1}`) : nextSecurStep()
+  }
+
+  const securStepComponents = [
+    <Main onBtnClick={isActive ? handleCheckBtnClick : undefined} />,
+    <CheckDetail next={nextSecurStep} />,
+    <Cure next={nextSecurStep} />,
+    <Main onBtnClick={handleCheckBtnClick} isCompletion />,
+  ]
 
   return (
     <Base>
       <Header>
         <FcPlus />
       </Header>
-      <Body>
-        {!showCheckDetail && !completion && (
-          <Main
-            onBtnClick={isActive ? handleCheckBtnClick : undefined}
-            completion={completion}
-          />
-        )}
-        {showCheckDetail && !showCure && !completion && (
-          <CheckDetail setShowCure={setShowCure} />
-        )}
-        {showCure && !completion && <Cure setCompletion={setCompletion} />}
-        {completion && (
-          <Main onBtnClick={handleCheckBtnClick} completion={completion} />
-        )}
-      </Body>
+      <Body>{securStepComponents[securStep]}</Body>
     </Base>
-  );
-};
+  )
+}
 
-export default SecurityApp;
+export default SecurityApp

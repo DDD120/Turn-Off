@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const LoadingContainer = styled.div`
   margin: 100px auto;
   width: 40px;
   height: 40px;
   position: relative;
-`;
+`
 
 const Circle = styled.div`
   width: 100%;
@@ -103,7 +103,7 @@ const Circle = styled.div`
       opacity: 1;
     }
   }
-`;
+`
 
 const Loading = () => {
   return (
@@ -121,7 +121,7 @@ const Loading = () => {
       <Circle />
       <Circle />
     </LoadingContainer>
-  );
-};
+  )
+}
 
-export default Loading;
+export default Loading

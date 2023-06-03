@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import IMG1URL from "images/act2/blob1.webp";
-import IMG2URL from "images/act2/blob2.webp";
+import styled from "styled-components"
+import IMG1URL from "images/act2/blob1.webp"
+import IMG2URL from "images/act2/blob2.webp"
 
 export const Layout = styled.div`
   width: 85%;
@@ -17,7 +17,7 @@ export const Layout = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-`;
+`
 
 export const Top = styled.div`
   flex: 1;
@@ -34,7 +34,7 @@ export const Top = styled.div`
     border-radius: 50%;
     border: 2px solid #2b2e30;
   }
-`;
+`
 
 export const Main = styled.div`
   flex: 12;
@@ -42,7 +42,7 @@ export const Main = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
-`;
+`
 
 export const Bottom = styled.div`
   flex: 2;
@@ -55,7 +55,7 @@ export const Bottom = styled.div`
     display: flex;
     flex-direction: row;
   }
-`;
+`
 
 export const IconWrapper = styled.div`
   font-size: 2rem;
@@ -72,7 +72,7 @@ export const IconWrapper = styled.div`
     font-size: 1.4rem;
     padding: 2px;
   }
-`;
+`
 
 export const Active = styled.div`
   width: 30%;
@@ -80,4 +80,4 @@ export const Active = styled.div`
   background-color: #ffb32f;
   margin: 0 auto;
   border-radius: 20px;
-`;
+`

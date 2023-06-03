@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import StepBtn from "components/common/StepBtn";
+import React, { useState } from "react"
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import StepBtn from "components/common/StepBtn"
 
 const Base = styled.section`
   align-self: stretch;
@@ -11,20 +11,20 @@ const Base = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const CloseMsg = styled(motion.p)`
   color: #fff;
-`;
+`
 
 const Chapter5Cut17 = () => {
-  const [isClose, setIsClose] = useState(false);
+  const [isClose, setIsClose] = useState(false)
 
   const closeWindow = () => {
     setTimeout(() => {
-      setIsClose(true);
-    }, 5000);
-  };
+      setIsClose(true)
+    }, 5000)
+  }
 
   return (
     <Base isClose={isClose}>
@@ -40,7 +40,7 @@ const Chapter5Cut17 = () => {
       )}
       {isClose && <StepBtn color="#ffffff" />}
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter5Cut17;
+export default Chapter5Cut17

@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const Base = styled.div`
   color: #ffffff80;
   border-bottom: 1px solid #ffffff80;
   display: flex;
-`;
+`
 
 const FileTab = styled.div`
   flex: 1;
@@ -24,7 +24,7 @@ const FileTab = styled.div`
   &:nth-of-type(3) {
     background-color: ${({ currentFile }) => currentFile === 2 && "#1864ab"};
   }
-`;
+`
 
 const FilesTab = ({ currentFile, FILE_STATE }) => {
   return (
@@ -39,7 +39,7 @@ const FilesTab = ({ currentFile, FILE_STATE }) => {
         {FILE_STATE[2].title}
       </FileTab>
     </Base>
-  );
-};
+  )
+}
 
-export default FilesTab;
+export default FilesTab

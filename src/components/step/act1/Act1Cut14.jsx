@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import { motion } from "framer-motion";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from "react"
+import styled, { css } from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import { motion } from "framer-motion"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
   flex: 1;
   position: relative;
-`;
+`
 
 const CutContainer = styled(motion.div)`
   position: absolute;
@@ -34,39 +34,34 @@ const CutContainer = styled(motion.div)`
     top: 50%;
     right: 50px;
   }
-`;
+`
 
 const Act1_14 = () => {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleImageClick = () => {
-    setIsClicked(true);
-  };
+  const [isClicked, setIsClicked] = useState(false)
 
   return (
     <Base>
-      {!isClicked ? (
-        <CutContainer
-          onClick={handleImageClick}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 1] }}
-          $isClicked={isClicked}
-        >
-          <StaticImage
-            width={500}
-            height={242}
-            loading="eager"
-            src="../../../images/act1/act1_14-1.webp"
-            alt="한숨 쉬는 승현"
-            layout="constrained"
-            placeholder="none"
-          />
-          <p>하...</p>
-        </CutContainer>
-      ) : (
+      <CutContainer
+        onClick={() => setIsClicked(true)}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1] }}
+        $isClicked={isClicked}
+      >
+        <StaticImage
+          width={500}
+          height={242}
+          loading="eager"
+          src="../../../images/act1/act1_14-1.webp"
+          alt="한숨 쉬는 승현"
+          layout="constrained"
+          placeholder="none"
+        />
+        <p>하...</p>
+      </CutContainer>
+      {isClicked && (
         <>
           <CutContainer
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             $isClicked={isClicked}
           >
@@ -85,7 +80,7 @@ const Act1_14 = () => {
         </>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default Act1_14;
+export default Act1_14

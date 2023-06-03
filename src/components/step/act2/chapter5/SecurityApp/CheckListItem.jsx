@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const CheckListItem = ({ name, id, changeHandler }) => {
   return (
@@ -11,7 +11,7 @@ const CheckListItem = ({ name, id, changeHandler }) => {
       />
       <label htmlFor={id}>{name}</label>
     </li>
-  );
-};
+  )
+}
 
-export default CheckListItem;
+export default CheckListItem

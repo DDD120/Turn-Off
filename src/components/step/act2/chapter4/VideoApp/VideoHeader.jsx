@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { BsFillPlayFill } from "react-icons/bs";
+import React from "react"
+import styled from "styled-components"
+import { BsFillPlayFill } from "react-icons/bs"
 
 const Header = styled.header`
   height: 42px;
@@ -12,7 +12,7 @@ const Header = styled.header`
     color: #fff;
     font-size: 1.4rem;
   }
-`;
+`
 
 const ViewHistoryHeader = styled.div`
   padding: 10px 0;
@@ -25,7 +25,7 @@ const ViewHistoryHeader = styled.div`
   p {
     color: #868e96;
   }
-`;
+`
 
 const VideoHeader = () => {
   return (
@@ -38,7 +38,7 @@ const VideoHeader = () => {
         <p>오늘</p>
       </ViewHistoryHeader>
     </>
-  );
-};
+  )
+}
 
-export default VideoHeader;
+export default VideoHeader

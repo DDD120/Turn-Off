@@ -1,9 +1,9 @@
-import React from "react";
-import StepBtn from "components/common/StepBtn";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { DefaultText } from "components/common/GlobalStyle";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import StepBtn from "components/common/StepBtn"
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import { DefaultText } from "components/common/GlobalStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   padding: 10px;
@@ -13,13 +13,13 @@ const Base = styled.section`
   display: flex;
   align-items: center;
   background-image: linear-gradient(to top, #fff, #001220);
-`;
+`
 
 const Chat = styled(motion.div)`
   position: relative;
   margin: 0 auto;
   width: 60%;
-`;
+`
 
 const Chapter3Cut5 = () => {
   return (
@@ -38,7 +38,7 @@ const Chapter3Cut5 = () => {
       </Chat>
       <StepBtn />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter3Cut5;
+export default Chapter3Cut5

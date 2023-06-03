@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
-import styled from "styled-components";
-import CheckListItem from "./CheckListItem";
+import React, { useState, useEffect, useCallback } from "react"
+import styled from "styled-components"
+import CheckListItem from "./CheckListItem"
 
 const Base = styled.div`
   width: 100%;
   padding: 20px;
-`;
+`
 
 const Information = styled.p`
   margin-bottom: 10px;
@@ -23,14 +23,14 @@ const Information = styled.p`
     height: 4px;
     background-color: #82c91e;
   }
-`;
+`
 
 const Mode = styled.div`
   margin-bottom: 8px;
   p {
     margin-bottom: 4px;
   }
-`;
+`
 
 const CheckList = styled.ul`
   list-style: square inside;
@@ -46,7 +46,7 @@ const CheckList = styled.ul`
     margin-left: 4px;
     cursor: pointer;
   }
-`;
+`
 
 const ConfirmRadioBox = styled.fieldset`
   float: right;
@@ -58,11 +58,11 @@ const ConfirmRadioBox = styled.fieldset`
   input {
     vertical-align: middle;
   }
-`;
+`
 
 const Legend = styled.legend`
   float: left;
-`;
+`
 
 const StartCureBox = styled.div`
   button {
@@ -78,7 +78,7 @@ const StartCureBox = styled.div`
       filter: brightness(0.9);
     }
   }
-`;
+`
 
 const CHECK_LIST = {
   mode: {
@@ -121,11 +121,11 @@ const CHECK_LIST = {
     name: "항목 확인",
     properCheck: false,
   },
-};
+}
 
-const CheckDetail = ({ setShowCure }) => {
-  const [checkedInputs, setCheckedInputs] = useState(CHECK_LIST);
-  const [isAllProperCheck, setIsAllProperCheck] = useState(false);
+const CheckDetail = ({ next }) => {
+  const [checkedInputs, setCheckedInputs] = useState(CHECK_LIST)
+  const [isAllProperCheck, setIsAllProperCheck] = useState(false)
 
   const setProperCheckTrue = (id) => {
     setCheckedInputs((prev) => {
@@ -135,9 +135,9 @@ const CheckDetail = ({ setShowCure }) => {
           ...prev[id],
           properCheck: true,
         },
-      };
-    });
-  };
+      }
+    })
+  }
 
   const setProperCheckFalse = (id) => {
     setCheckedInputs((prev) => {
@@ -147,38 +147,37 @@ const CheckDetail = ({ setShowCure }) => {
           ...prev[id],
           properCheck: false,
         },
-      };
-    });
-  };
+      }
+    })
+  }
 
   const changeHandler = (checked, id) => {
     if (checkedInputs[id].id === "mode") {
-      checked === "sleep" ? setProperCheckTrue(id) : setProperCheckFalse(id);
-      return;
+      checked === "sleep" ? setProperCheckTrue(id) : setProperCheckFalse(id)
+      return
     }
     if (checkedInputs[id].id === "confirm") {
-      checked === "yes" ? setProperCheckTrue(id) : setProperCheckFalse(id);
-      return;
+      checked === "yes" ? setProperCheckTrue(id) : setProperCheckFalse(id)
+      return
     }
-    checked ? setProperCheckTrue(id) : setProperCheckFalse(id);
-    return;
-  };
+    checked ? setProperCheckTrue(id) : setProperCheckFalse(id)
+  }
 
   const checkAllProperCheck = useCallback(() => {
-    let checkStateArray = [];
+    let checkStateArray = []
     for (let item of Object.values(checkedInputs)) {
-      checkStateArray.push(item.properCheck);
+      checkStateArray.push(item.properCheck)
     }
-    return setIsAllProperCheck(!checkStateArray.includes(false));
-  }, [checkedInputs]);
+    setIsAllProperCheck(!checkStateArray.includes(false))
+  }, [checkedInputs])
 
   const handleStartCureBtnClick = () => {
-    isAllProperCheck && setShowCure(true);
-  };
+    if (isAllProperCheck) next()
+  }
 
   useEffect(() => {
-    checkAllProperCheck();
-  }, [checkedInputs, checkAllProperCheck]);
+    checkAllProperCheck()
+  }, [checkedInputs, checkAllProperCheck])
 
   return (
     <Base>
@@ -218,7 +217,7 @@ const CheckDetail = ({ setShowCure }) => {
         <button onClick={handleStartCureBtnClick}>치료 및 최적화 진행</button>
       </StartCureBox>
     </Base>
-  );
-};
+  )
+}
 
-export default CheckDetail;
+export default CheckDetail

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import Window from "components/common/Window";
-import Loading from "components/common/Loading";
-import MsgWindow from "components/step/act2/chapter1/MsgWindow";
-import { motion } from "framer-motion";
-import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
+import React, { useState } from "react"
+import styled from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import Window from "components/common/Window"
+import Loading from "components/common/Loading"
+import MsgWindow from "components/step/act2/chapter1/MsgWindow"
+import { motion } from "framer-motion"
+import { Bottom, IconWrapper, Active } from "components/common/WindowStyle"
 import {
   FcHome,
   FcDocument,
@@ -13,9 +13,9 @@ import {
   FcEditImage,
   FcStart,
   FcPlus,
-} from "react-icons/fc";
-import { DefaultText } from "components/common/GlobalStyle";
-import { StaticImage } from "gatsby-plugin-image";
+} from "react-icons/fc"
+import { DefaultText } from "components/common/GlobalStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
@@ -28,7 +28,7 @@ const Base = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-`;
+`
 
 const Chat = styled(motion.div)`
   width: 40%;
@@ -38,7 +38,7 @@ const Chat = styled(motion.div)`
   @media only screen and (max-width: 768px) {
     width: 60%;
   }
-`;
+`
 
 const MsgWindowWrapper = styled.div`
   width: 60%;
@@ -50,30 +50,30 @@ const MsgWindowWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     width: 70%;
   }
-`;
+`
 
 const WindowWrapper = styled(motion.div)`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Chapter1Cut5 = () => {
-  const [isClicked, setIsClicked] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isClicked, setIsClicked] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const loading = () => {
-    setIsLoading(true);
+    setIsLoading(true)
     setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  };
+      setIsLoading(false)
+    }, 2000)
+  }
 
   const handleMsgWindowBtnClick = () => {
-    setIsClicked(true);
-    loading();
-  };
+    setIsClicked(true)
+    loading()
+  }
 
   return (
     <Base>
@@ -156,7 +156,7 @@ const Chapter1Cut5 = () => {
         </>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter1Cut5;
+export default Chapter1Cut5

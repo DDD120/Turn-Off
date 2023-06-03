@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { FcHighPriority } from "react-icons/fc";
+import React from "react"
+import styled from "styled-components"
+import { FcHighPriority } from "react-icons/fc"
 
 const Base = styled.dialog`
   position: absolute;
@@ -13,13 +13,13 @@ const Base = styled.dialog`
   border: none;
   overflow: hidden;
   border-radius: 12px;
-`;
+`
 
 const Top = styled.div`
   padding: 8px;
   background-color: #eee;
   font-size: 0.8rem;
-`;
+`
 
 const MsgContent = styled.div`
   padding: 10px;
@@ -31,13 +31,13 @@ const MsgContent = styled.div`
   svg {
     font-size: 1.4rem;
   }
-`;
+`
 
 const ButtonBox = styled.div`
   display: flex;
   gap: 8px;
   padding: 10px;
-`;
+`
 
 const Button = styled.button`
   flex: 1;
@@ -53,7 +53,7 @@ const Button = styled.button`
     cursor: pointer;
     filter: brightness(0.8);
   }
-`;
+`
 
 const ConfirmMsgBox = ({ modalRef, onYesBtnClick, onNoBtnClick }) => {
   return (
@@ -73,7 +73,7 @@ const ConfirmMsgBox = ({ modalRef, onYesBtnClick, onNoBtnClick }) => {
         </Button>
       </ButtonBox>
     </Base>
-  );
-};
+  )
+}
 
-export default ConfirmMsgBox;
+export default ConfirmMsgBox

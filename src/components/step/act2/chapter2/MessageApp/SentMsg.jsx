@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const Base = styled.li`
   max-width: 70%;
@@ -9,7 +9,7 @@ const Base = styled.li`
   gap: 20px;
   justify-content: flex-end;
   white-space: pre;
-`;
+`
 
 const Bubble = styled.span`
   display: inline-block;
@@ -30,12 +30,12 @@ const Bubble = styled.span`
     right: 0;
     transform: translateX(calc(100% - 10px)) rotate(45deg);
   }
-`;
+`
 
 const Text = styled.p`
   word-break: keep-all;
   word-wrap: break-word;
-`;
+`
 
 const SentMsg = ({ children }) => {
   return (
@@ -44,7 +44,7 @@ const SentMsg = ({ children }) => {
         <Text>{children}</Text>
       </Bubble>
     </Base>
-  );
-};
+  )
+}
 
-export default SentMsg;
+export default SentMsg

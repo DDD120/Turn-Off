@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import { RiStickyNoteFill } from "react-icons/ri";
+import { RiStickyNoteFill } from "react-icons/ri"
 
 const Base = styled(motion.div)`
   position: absolute;

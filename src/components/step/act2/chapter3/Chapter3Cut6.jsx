@@ -1,9 +1,9 @@
-import React from "react";
-import RetouchApp from "./RetouchApp";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
-import useToast from "hooks/useToast";
-import styled from "styled-components";
+import React from "react"
+import RetouchApp from "./RetouchApp"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.min.css"
+import useToast from "hooks/useToast"
+import styled from "styled-components"
 
 const Base = styled.section`
   align-self: stretch;
@@ -11,14 +11,14 @@ const Base = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const RetouchAppWrapper = styled.div`
   width: 100%;
-`;
+`
 
 const Chapter3Cut6 = () => {
-  useToast("사진 보정을 완료하자");
+  useToast("사진 보정을 완료하자")
 
   return (
     <Base>
@@ -27,7 +27,7 @@ const Chapter3Cut6 = () => {
       </RetouchAppWrapper>
       <ToastContainer />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter3Cut6;
+export default Chapter3Cut6

@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import styled from "styled-components";
+import React, { useRef, useState } from "react"
+import styled from "styled-components"
 import {
   FcDocument,
   FcStart,
@@ -7,15 +7,15 @@ import {
   FcEditImage,
   FcPlus,
   FcHome,
-} from "react-icons/fc";
-import StepBtn from "components/common/StepBtn";
-import MemoLayout from "./MemoApp/MemoLayout";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
-import useToast from "hooks/useToast";
-import { motion } from "framer-motion";
-import Window from "components/common/Window";
-import { Bottom, IconWrapper, Active } from "components/common/WindowStyle";
+} from "react-icons/fc"
+import StepBtn from "components/common/StepBtn"
+import MemoLayout from "./MemoApp/MemoLayout"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.min.css"
+import useToast from "hooks/useToast"
+import { motion } from "framer-motion"
+import Window from "components/common/Window"
+import { Bottom, IconWrapper, Active } from "components/common/WindowStyle"
 
 const Base = styled.section`
   align-self: stretch;
@@ -24,24 +24,19 @@ const Base = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-`;
+`
 
 const Animation = styled(motion.div)`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Chapter1Cut9 = () => {
-  const [isClicked, setIsClicked] = useState(false);
-  const dragRef = useRef(null);
-
-  useToast("맨 왼쪽 메모장부터 클릭해볼까?");
-
-  const handleMemoClick = () => {
-    setIsClicked(true);
-  };
+  const [isClicked, setIsClicked] = useState(false)
+  const dragRef = useRef(null)
+  useToast("맨 왼쪽 메모장부터 클릭해볼까?")
 
   return (
     <Base ref={dragRef}>
@@ -55,7 +50,11 @@ const Chapter1Cut9 = () => {
                 </IconWrapper>
               </li>
               <li>
-                <IconWrapper onClick={handleMemoClick} cursor="true" hover>
+                <IconWrapper
+                  onClick={() => setIsClicked(true)}
+                  cursor="true"
+                  hover
+                >
                   <FcDocument />
                 </IconWrapper>
                 <Active />
@@ -96,7 +95,7 @@ const Chapter1Cut9 = () => {
         </>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter1Cut9;
+export default Chapter1Cut9

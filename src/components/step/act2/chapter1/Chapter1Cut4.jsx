@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import StepBtn from "components/common/StepBtn";
-import MsgWindow from "components/step/act2/chapter1/MsgWindow";
-import { motion } from "framer-motion";
-import { DefaultText } from "components/common/GlobalStyle";
-import { StaticImage } from "gatsby-plugin-image";
+import React from "react"
+import styled from "styled-components"
+import StepBtn from "components/common/StepBtn"
+import MsgWindow from "components/step/act2/chapter1/MsgWindow"
+import { motion } from "framer-motion"
+import { DefaultText } from "components/common/GlobalStyle"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Base = styled.section`
   align-self: stretch;
@@ -17,31 +17,31 @@ const Base = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-`;
+`
 
 const Animation = styled(motion.div)`
   width: 90%;
   position: absolute;
-`;
+`
 
 const Chat = styled.div`
   max-width: 200px;
   position: absolute;
   top: 50%;
   left: 50%;
-`;
+`
 
 const Chat1 = styled(Chat)`
   transform: translateX(calc(-50% - 100px)) translateY(calc(-50% - 200px));
-`;
+`
 
 const Chat2 = styled(Chat)`
   transform: translateX(calc(-50% + 100px)) translateY(calc(-50% + 200px));
-`;
+`
 
 const CutContainer = styled.div`
   width: 70%;
-`;
+`
 
 const MsgWindowWrapper = styled.div`
   width: 50%;
@@ -54,7 +54,7 @@ const MsgWindowWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     width: 70%;
   }
-`;
+`
 
 const Chapter1Cut4 = () => {
   return (
@@ -111,7 +111,7 @@ const Chapter1Cut4 = () => {
 
       <StepBtn />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter1Cut4;
+export default Chapter1Cut4

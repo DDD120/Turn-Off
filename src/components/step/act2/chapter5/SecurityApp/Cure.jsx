@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { GiMedicines } from "react-icons/gi";
-import { motion } from "framer-motion";
-import Loading from "components/common/Loading";
+import React, { useState } from "react"
+import styled from "styled-components"
+import { GiMedicines } from "react-icons/gi"
+import { motion } from "framer-motion"
+import Loading from "components/common/Loading"
 
 const Base = styled.div`
   width: 100%;
@@ -11,7 +11,7 @@ const Base = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-`;
+`
 
 const Content = styled.div`
   flex: 1;
@@ -25,7 +25,7 @@ const Content = styled.div`
     margin: 4px 0;
     color: #868e96;
   }
-`;
+`
 
 const ProgressBar = styled.div`
   margin: 20px 0;
@@ -34,25 +34,25 @@ const ProgressBar = styled.div`
   background-color: #dee2e6;
   position: relative;
   overflow: hidden;
-`;
+`
 
 const Progress = styled(motion.div)`
   position: absolute;
   left: 0;
   height: 8px;
   background-color: #66a80f;
-`;
+`
 
-const Cure = ({ setCompletion }) => {
-  const [isLoading, setIsLoading] = useState(false);
+const Cure = ({ next }) => {
+  const [isLoading, setIsLoading] = useState(false)
 
   const loading = () => {
-    setIsLoading(true);
+    setIsLoading(true)
     setTimeout(() => {
-      setCompletion(true);
-      setIsLoading(false);
-    }, 2000);
-  };
+      next()
+      setIsLoading(false)
+    }, 2000)
+  }
 
   return (
     <Base>
@@ -75,7 +75,7 @@ const Cure = ({ setCompletion }) => {
         </Content>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default Cure;
+export default Cure

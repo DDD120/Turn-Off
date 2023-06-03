@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import Window from "components/common/Window";
-import { Bottom, IconWrapper } from "components/common/WindowStyle";
-import { FcHome, FcFullTrash } from "react-icons/fc";
-import styled from "styled-components";
-import TrashFolder from "./TrashFolder";
-import useToast from "hooks/useToast";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
-import StepBtn from "components/common/StepBtn";
-import { motion } from "framer-motion";
+import React, { useState } from "react"
+import Window from "components/common/Window"
+import { Bottom, IconWrapper } from "components/common/WindowStyle"
+import { FcHome, FcFullTrash } from "react-icons/fc"
+import styled from "styled-components"
+import TrashFolder from "./TrashFolder"
+import useToast from "hooks/useToast"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.min.css"
+import StepBtn from "components/common/StepBtn"
+import { motion } from "framer-motion"
 
 const Base = styled.section`
   align-self: stretch;
@@ -17,20 +17,16 @@ const Base = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Animation = styled(motion.div)`
   width: 90%;
   position: absolute;
-`;
+`
 
 const Chapter5Cut9 = () => {
-  const [showTrashFolder, setShowTrashFolder] = useState(false);
-  useToast("휴지통을 열어보자!");
-
-  const handleHomeBtnClick = () => {
-    setShowTrashFolder(true);
-  };
+  const [showTrashFolder, setShowTrashFolder] = useState(false)
+  useToast("휴지통을 열어보자!")
 
   return (
     <Base>
@@ -44,7 +40,7 @@ const Chapter5Cut9 = () => {
             </li>
             <li>
               <IconWrapper
-                onClick={handleHomeBtnClick}
+                onClick={() => setShowTrashFolder(true)}
                 cursor="true"
                 hover="true"
               >
@@ -67,7 +63,7 @@ const Chapter5Cut9 = () => {
       )}
       <ToastContainer />
     </Base>
-  );
-};
+  )
+}
 
-export default Chapter5Cut9;
+export default Chapter5Cut9

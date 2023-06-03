@@ -1,8 +1,8 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import { AiFillSetting } from "react-icons/ai";
-import Loading from "components/common/Loading";
-import { DefaultImage } from "components/common/GlobalStyle";
+import React from "react"
+import styled, { css } from "styled-components"
+import { AiFillSetting } from "react-icons/ai"
+import Loading from "components/common/Loading"
+import { DefaultImage } from "components/common/GlobalStyle"
 
 const Base = styled.ul`
   background-color: #fff;
@@ -16,13 +16,13 @@ const Base = styled.ul`
   &::-webkit-scrollbar {
     width: 0;
   }
-`;
+`
 
 const ViewHistoryItem = styled.li`
   width: 90%;
   color: #000;
   margin: 10px 0;
-`;
+`
 
 const ImgContainer = styled.div`
   position: relative;
@@ -31,7 +31,7 @@ const ImgContainer = styled.div`
     aspect-ratio: 4/3;
     width: 100%;
   }
-`;
+`
 
 const RunningTime = styled.span`
   display: inline-block;
@@ -42,7 +42,7 @@ const RunningTime = styled.span`
   right: 12px;
   bottom: 12px;
   font-size: 0.8rem;
-`;
+`
 
 const PlayBar = styled.div`
   position: absolute;
@@ -52,7 +52,7 @@ const PlayBar = styled.div`
   height: 4px;
   background-color: #c2255c;
   z-index: 99;
-`;
+`
 
 const Setting = styled.button`
   font-size: 1.2rem;
@@ -79,7 +79,7 @@ const Setting = styled.button`
   &:hover {
     filter: brightness(0.9);
   }
-`;
+`
 
 const NoViewHistoryMsg = styled.p`
   position: absolute;
@@ -89,7 +89,7 @@ const NoViewHistoryMsg = styled.p`
   color: #777;
   word-break: keep-all;
   text-align: center;
-`;
+`
 
 const ViewHistoryList = ({ videos, isLoading, onSettingBtnClick }) => {
   return (
@@ -109,6 +109,9 @@ const ViewHistoryList = ({ videos, isLoading, onSettingBtnClick }) => {
                   height={290}
                   src={video.thumbnail}
                   alt={video.title}
+                  loading="eager"
+                  layout="constrained"
+                  placeholder="none"
                 />
                 <RunningTime>{video.running_time}</RunningTime>
                 <PlayBar currentTime={video.current_time} />
@@ -123,7 +126,7 @@ const ViewHistoryList = ({ videos, isLoading, onSettingBtnClick }) => {
         </>
       )}
     </Base>
-  );
-};
+  )
+}
 
-export default ViewHistoryList;
+export default ViewHistoryList

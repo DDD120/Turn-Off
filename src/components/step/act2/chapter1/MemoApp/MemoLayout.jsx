@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import Memo from "./Memo";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react"
+import Memo from "./Memo"
+import { motion } from "framer-motion"
 
 const container = {
   start: { opacity: 0 },
@@ -10,15 +10,15 @@ const container = {
       staggerChildren: 0.1,
     },
   },
-};
+}
 
 const MemoLayout = ({ dragRef, initial, setHasChildElement = false }) => {
-  const memoLayoutRef = useRef(null);
-  const [closeCount, setCloseCount] = useState(0);
+  const memoLayoutRef = useRef(null)
+  const [closeCount, setCloseCount] = useState(0)
 
   useEffect(() => {
-    memoLayoutRef.current.childNodes.length === 0 && setHasChildElement(false);
-  }, [setHasChildElement, closeCount]);
+    memoLayoutRef.current.childNodes.length === 0 && setHasChildElement(false)
+  }, [setHasChildElement, closeCount])
 
   return (
     <motion.div
@@ -174,7 +174,7 @@ const MemoLayout = ({ dragRef, initial, setHasChildElement = false }) => {
         과제 이번주까지인데...빨리 해야하는데....
       </Memo>
     </motion.div>
-  );
-};
+  )
+}
 
-export default MemoLayout;
+export default MemoLayout

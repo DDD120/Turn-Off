@@ -1,6 +1,6 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import { motion } from "framer-motion";
+import React from "react"
+import styled, { css } from "styled-components"
+import { motion } from "framer-motion"
 
 const Base = styled.dialog`
   position: absolute;
@@ -13,7 +13,7 @@ const Base = styled.dialog`
   padding: 20px;
   box-shadow: 0px 0px 10px #c9ccd5;
   z-index: 19;
-`;
+`
 
 const ToggleBtn = styled.button`
   width: 60px;
@@ -28,20 +28,20 @@ const ToggleBtn = styled.button`
   padding: 4px;
   z-index: 1;
   cursor: pointer;
-`;
+`
 
 const Handle = styled(motion.div)`
   width: 20px;
   height: 20px;
   background-color: ${({ $isActive }) => ($isActive ? "#5f3dc4" : "#495057")};
   border-radius: 50%;
-`;
+`
 
 const SettingMenu = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
+`
 
 const ApplyBtn = styled.button`
   font-size: 1.2rem;
@@ -63,7 +63,7 @@ const ApplyBtn = styled.button`
         cursor: pointer;
       `}
   }
-`;
+`
 
 const SettingModal = ({
   modalRef,
@@ -74,8 +74,8 @@ const SettingModal = ({
   onApplyBtnClick,
 }) => {
   const handleSwitchBtnClick = (state, value) => {
-    state(!value);
-  };
+    state(!value)
+  }
   return (
     <Base ref={modalRef}>
       <ul>
@@ -109,7 +109,7 @@ const SettingModal = ({
         적용
       </ApplyBtn>
     </Base>
-  );
-};
+  )
+}
 
-export default SettingModal;
+export default SettingModal

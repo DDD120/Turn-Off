@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import { FcFullTrash } from "react-icons/fc";
-import { HiOutlineTrash } from "react-icons/hi";
-import { RiCloseFill } from "react-icons/ri";
-import ConfirmMsgBox from "./ConfirmMsgBox";
-import { useRef } from "react";
-import TrashFiles from "./TrashFiles";
+import React, { useState } from "react"
+import styled, { css } from "styled-components"
+import { FcFullTrash } from "react-icons/fc"
+import { HiOutlineTrash } from "react-icons/hi"
+import { RiCloseFill } from "react-icons/ri"
+import ConfirmMsgBox from "./ConfirmMsgBox"
+import { useRef } from "react"
+import TrashFiles from "./TrashFiles"
 
 const Base = styled.div`
   width: 100%;
@@ -18,12 +18,12 @@ const Base = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-`;
+`
 
 const Top = styled.div`
   display: flex;
   justify-content: space-between;
-`;
+`
 
 const Title = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ const Title = styled.div`
   svg {
     font-size: 1.2rem;
   }
-`;
+`
 
 const Menu = styled.div`
   width: 100%;
@@ -40,7 +40,7 @@ const Menu = styled.div`
   display: flex;
   justify-content: flex-end;
   border-bottom: 2px solid #ccc;
-`;
+`
 
 const EmptyTrashBtn = styled.button`
   display: flex;
@@ -62,11 +62,11 @@ const EmptyTrashBtn = styled.button`
         cursor: pointer;
       }
     `}
-`;
+`
 const EmptyFolderMsg = styled.p`
   text-align: center;
   color: #666;
-`;
+`
 
 const CloseIcon = styled.div`
   padding: 4px;
@@ -74,7 +74,7 @@ const CloseIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Content = styled.div`
   margin: 10px 0;
@@ -92,24 +92,16 @@ const Content = styled.div`
   &::-webkit-scrollbar-track {
     background: none;
   }
-`;
+`
 
 const TrashFolder = ({ isActive, onCloseBtnClick }) => {
-  const [isEmptyTrashFolder, setIsEmptyTrashFolder] = useState(false);
-  const modalRef = useRef(null);
-
-  const handleEmptyTrashClick = () => {
-    modalRef.current.showModal();
-  };
-
-  const handleNoBtnClick = () => {
-    modalRef.current.close();
-  };
+  const [isEmptyTrashFolder, setIsEmptyTrashFolder] = useState(false)
+  const modalRef = useRef(null)
 
   const handleYesBtnClick = () => {
-    modalRef.current.close();
-    setIsEmptyTrashFolder(true);
-  };
+    modalRef.current.close()
+    setIsEmptyTrashFolder(true)
+  }
 
   return (
     <Base>
@@ -129,7 +121,7 @@ const TrashFolder = ({ isActive, onCloseBtnClick }) => {
           <EmptyTrashBtn
             $isActive={isActive}
             type="button"
-            onClick={isActive ? handleEmptyTrashClick : undefined}
+            onClick={isActive ? () => modalRef.current.showModal() : undefined}
           >
             <HiOutlineTrash /> 휴지통 비우기
           </EmptyTrashBtn>
@@ -145,10 +137,10 @@ const TrashFolder = ({ isActive, onCloseBtnClick }) => {
       <ConfirmMsgBox
         modalRef={modalRef}
         onYesBtnClick={handleYesBtnClick}
-        onNoBtnClick={handleNoBtnClick}
+        onNoBtnClick={() => modalRef.current.close()}
       />
     </Base>
-  );
-};
+  )
+}
 
-export default TrashFolder;
+export default TrashFolder

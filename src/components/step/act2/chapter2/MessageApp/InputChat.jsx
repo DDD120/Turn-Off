@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
-import styled from "styled-components";
-import Filter from "badwords-ko";
-import newBadWords from "./badwords";
+import React, { useRef } from "react"
+import styled from "styled-components"
+import Filter from "badwords-ko"
+import newBadWords from "./badwords"
 
 const TextField = styled.div`
   flex: 1;
   display: flex;
-`;
+`
 
 const Text = styled.textarea`
   font-family: "NanumGothicBold";
@@ -20,7 +20,7 @@ const Text = styled.textarea`
   &::-webkit-scrollbar {
     display: none;
   }
-`;
+`
 
 const SendBtn = styled.button`
   background-color: #ffce63;
@@ -32,21 +32,21 @@ const SendBtn = styled.button`
   &:hover {
     filter: ${({ isActive }) => isActive && "brightness(0.9)"};
   }
-`;
+`
 
 const InputChat = ({ isActive, setMessages }) => {
-  const msgRef = useRef(null);
-  const filter = new Filter();
-  filter.addWords(...newBadWords);
+  const msgRef = useRef(null)
+  const filter = new Filter()
+  filter.addWords(...newBadWords)
 
   const handleClickSendBtn = () => {
-    const msg = msgRef.current.value;
-    if (msg.trim() === "") return;
-    const type = filter.isProfane(msg) ? "NOTICE" : "SENT";
-    setMessages((prev) => [...prev, { type: type, content: msg }]);
+    const msg = msgRef.current.value
+    if (msg.trim() === "") return
+    const type = filter.isProfane(msg) ? "NOTICE" : "SENT"
+    setMessages((prev) => [...prev, { type: type, content: msg }])
 
-    msgRef.current.value = "";
-  };
+    msgRef.current.value = ""
+  }
 
   return (
     <TextField>
@@ -58,7 +58,7 @@ const InputChat = ({ isActive, setMessages }) => {
         전송
       </SendBtn>
     </TextField>
-  );
-};
+  )
+}
 
-export default InputChat;
+export default InputChat
