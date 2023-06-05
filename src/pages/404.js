@@ -33,13 +33,13 @@ const ErrorCode = styled.p`
 
 const ErrorPage = () => {
   return (
-    <Base>
-      <Content>
-        <ErrorCode>404</ErrorCode>
-        <p>없는 페이지입니다.</p>
-        <Menu to="/">홈으로가기</Menu>
-      </Content>
-    </Base>
+      <Base>
+        <Content>
+          <ErrorCode>404</ErrorCode>
+          <p>없는 페이지입니다.</p>
+          <Menu to="/">홈으로가기</Menu>
+        </Content>
+      </Base>
   )
 }
 

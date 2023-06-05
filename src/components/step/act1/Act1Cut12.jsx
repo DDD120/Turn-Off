@@ -23,7 +23,7 @@ const Act1Cut12 = () => {
       <Animation
         initial={{ opacity: 1 }}
         animate={{ opacity: [1, 0.5, 1] }}
-        transition={{ duration: 2, repeat: "Infinity" }}
+        transition={{ duration: 2, repeat: 20 }}
       >
         <span>20 분 후</span>
       </Animation>

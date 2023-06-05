@@ -1,8 +1,19 @@
-import React, { createContext, useContext, useMemo, useState } from "react"
+import React, {
+  createContext,
+  useEffect,
+  useContext,
+  useMemo,
+  useState,
+} from "react"
 const ControlContext = createContext()
 
 const ControlProvider = ({ children }) => {
-  const [step, setStep] = useState(Number(localStorage.getItem("step")) ?? 0)
+  const [step, setStep] = useState(0)
+
+  useEffect(() => {
+    setStep(Number(localStorage.getItem("step")) ?? 0)
+  }, [])
+
   const action = useMemo(
     () => ({
       set(step) {

@@ -32,7 +32,7 @@ const Chapter5Cut17 = () => {
         <CloseMsg
           initial={{ opacity: 1 }}
           animate={{ opacity: [1, 0.5, 1] }}
-          transition={{ duration: 2, repeat: "Infinity" }}
+          transition={{ duration: 2, repeat: 20 }}
           onAnimationStart={closeWindow}
         >
           종료하는 중 . . .

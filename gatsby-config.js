@@ -9,7 +9,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-styled-components",
-    `gatsby-plugin-layout`,
     {
       resolve: "gatsby-plugin-html-attributes",
       options: {
