@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "private": true,
-  "description": "turn-off",
+  "description": "인터랙티브 웹툰",
   "author": "DDD120",
   "build": {
     "icon": "src/images/favicon.ico",
