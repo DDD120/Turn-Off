@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `turn-off`,
     siteUrl: `https://turn-off.netlify.app`,
-    ogImage: "/src/images/og.png",
+    ogImage: "/og.png",
   },
   plugins: [
     `gatsby-plugin-image`,
